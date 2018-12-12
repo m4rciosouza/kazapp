@@ -1,0 +1,255 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprenda Java e Algoritmos | Kazapp</title>
+    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
+    <style>
+        body { background-color: #EEE; padding: 1px } 
+    </style>
+  </head>
+  <body>      
+    <!-- Set up Off-canvas -->
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+          <!-- left off-canvas markup -->
+            <button class="close-button" aria-label="Close menu" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <br />
+            <br />
+            <ul class="vertical menu">
+              <li><a href="#">One</a></li>
+              <li><a href="#">Two</a></li>
+              <li><a href="#">Three</a></li>
+              <li><a href="#">Four</a></li>
+            </ul>
+        </div>
+        <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
+          <!-- right off-canvas markup -->
+        </div>
+        <div class="off-canvas-content" data-off-canvas-content>
+            <div class="title-bar">
+              <div class="title-bar-left">
+                <!-- Fire Off-canvas -->
+                <button class="menu-icon" type="button" data-toggle="offCanvasLeft"></button>
+                <span class="title-bar-title">Kazapp - Java e Algoritmos</span>
+              </div>
+              <div class="title-bar-right" style="display: none">
+                <button class="menu-icon" type="button"></button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+      
+    <!-- MAIN:BEGIN -->
+    <div>
+        <!-- BREADCRUMBS:BEGIN -->
+        <br />
+        <nav role="navigation">
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#java-basico">Java Básico</a></li>
+            <li>If/Else</li>
+          </ul>
+        </nav>
+        <!-- BREADCRUMBS:END -->
+        
+        <!-- PROGRESS:BEGIN -->
+        <div class="primary progress" role="progressbar" tabindex="0" aria-valuenow="50" 
+             aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+          <div class="progress-meter" style="width: 50%">
+            <p class="progress-meter-text">50%</p>
+          </div>
+        </div>
+        <!-- PROGRESS:END -->
+        
+      <div class="pag1">
+        <h2>Entendo o If/Else</h2>
+        
+        <div class="callout">
+          <p>1. Na criação de qualquer código, necessitamos utilizar a todo tempo condicionais para direcionar as etapas de execução de nosso algoritmo.</p>
+        </div>
+          
+         <div class="callout">
+          <p>2. Para isso existe o If e Else, para nos permitir executar um determinado bloco de código dependendo se uma condição é válida.</p>
+        </div>
+          
+        <div class="callout">
+          <p>3. A condicional a ser executada pode conter diferentes variações, vamos estudar a seguir as principais delas.</p>
+        </div>
+        
+      </div>
+        
+      <div class="pag2">    
+        <h2>Criando o primero programa - "Olá mundo!"</h2>
+          
+        <div class="callout">
+          <p>1. A mais simples delas é o uso apenas do <b>if</b>, em conjunto com uma única condição, conforme o código a seguir:</p>
+        </div>
+        
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+boolean passouNoTeste = true;
+int nota = 80;
+
+if (passouNoTeste) {
+  System.out.println("Passou no teste!");
+}
+
+if (!passouNoTeste) {
+  System.out.println("Não passou no teste.");
+}
+
+if (nota >= 70)
+  System.out.println("Passou no teste!");
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          
+        <div class="callout">
+          <p>2. Repare que usamos a palavra chave <b>if</b> seguida da condição, que estará entre parênteses.</p>
+        </div>
+          
+        <div class="callout">
+          <p>3. A condição deverá sempre retornar um valor booleano, para que o código contido entre chaves seja ou não executado.</p>
+        </div>
+          
+        <div class="callout">
+          <p>4. O operador "!" significa negação, ou seja, caso o resultado da condição seja verdadeira, ele será convertido para falso, e vice versa.</p>
+        </div>
+          
+        <div class="callout">
+          <p>5. Podemos também utilizar operadores de comparação, que são os "==", "&lt;", "&gt;", "&ge;" e "&le;", onde comparamos se os valores são iguais, menores, maiores, maiores ou igual, e menores ou igual, respectivamente.</p>
+        </div>
+        
+        <div class="callout primary">
+          <h5>Uso das chaves</h5>
+            <p>Quando temos uma única linha de código em nosso bloco <b>if</b>, podemos simplesmente omitir as chaves.</p>
+        </div>
+      </div>
+        
+      <div class="pag3">
+        <h2>Condicionais compostas</h2>
+        
+        <div class="callout">
+          <p>1. Com o uso dos operadores "e", representado por <b>&amp;&amp;</b>, e do operador "ou", representado por <b>||</b>, podemos encadear múltiplas condições em um mesmo <b>if</b>, conforme o código a seguir:</p>
+        </div>
+        
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+boolean passouNoTeste = true;
+int nota = 80;
+
+if (nota >= 70 && nota <= 80) {
+  System.out.println("Passou no teste com nota B.");
+}
+
+if (passouNoTeste || nota >= 70) {
+  System.out.println("Passou no teste!");
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+            
+        <div class="callout">
+          <p>2. Basicamente o operador "e" fará com que o bloco de código seja executado, somente se ambas condições forem verdadeiras, enquanto que o operador "ou" será executado se ao menos uma das condições for verdadeira.</p>
+        </div>
+            
+        <div class="callout primary">
+          <h5>Múltiplas condicionais</h5>
+            <p>Embora não exista um limite de condições, adicionar muitas delas em um mesmo <b>if</b> tornará o código de difícil legibilidade, portanto o recomendado é limitar ao máximo o número de condições em sequência.</p>
+        </div>
+      </div>
+          
+      <div class="pag4">
+        <h2>If e Else em conjunto</h2>
+        
+        <div class="callout">
+          <p>1. Muitas vezes queremos não somente executar o código para o resultado verdadeiro de uma condição, mas sim também para quando o resultado for falso, e para isso utilizamos o <b>else</b>, conforme o código abaixo:</p>
+        </div>
+        
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+boolean passouNoTeste = true;
+int nota = 80;
+
+if (passouNoTeste) {
+  System.out.println("Passou no teste!");
+} else {
+  System.out.println("Não passou no teste.");
+}
+
+if (nota % 2 == 0) {
+  System.out.println("Nota é um número par.");
+} else {
+  System.out.println("Nota é um número ímpar.");
+}
+
+if (nota < 70) {
+  System.out.println("Não passou no teste.");
+} else if (nota >= 70 && nota <= 90) {
+  System.out.println("Passou no teste com nota B.");
+} else {
+  System.out.println("Passou no teste com nota A.");
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+            
+        <div class="callout">
+          <p>2. No primeiro e segundo <b>if</b> do código acima, executamos uma ação para quando o resultado for verdadeiro, e outra para quando ele for falso (<b>else</b>).</p>
+        </div>
+            
+        <div class="callout">
+          <p>3. No terceiro <b>if</b> do código acima, verificamos não somente duas, mas três condições distintas, combinando o <b>else</b> com o <b>if</b>, onde poderemos verificar quantas condições forem necessárias.</p>
+        </div>
+            
+        <div class="callout primary">
+          <h5>Operador "%"</h5>
+            <p>O operador "%", ou módulo como é chamado, retorna o restante de uma divisão. Um clássico exemplo é testar se um número é par ou ímpar, conforme o código acima, onde ao dividirmos um número por 2, caso o restante seja 0, significa que ele é par, e para qualquer outro valor ele será ímpar.</p>
+        </div>
+        
+        <div class="callout primary">
+          <h5>Múltiplos <b>if</b>s e <b>else</b>s</h5>
+            <p>Encadear múltiplas condições nem sempre é uma boa ideia, e muitas vezes é melhor utilizar o operador <b>switch</b> para isso, que estudaremos em breve.</p>
+        </div>
+      </div>
+        
+        <!-- PAGINATION:BEGIN -->
+        <br />
+        <div style="text-align: center">
+            <ul class="pagination" role="navigation" aria-label="Pagination">
+              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()">Anterior</li>
+              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()">Próximo</li>
+            </ul>
+        </div>
+        <!-- PAGINATION:END -->
+        
+        <!-- END_CLASS:BEGIN -->
+        <a class="button success expanded concluir" href="../index.html#java-basico" onclick="return Persistencia.completar('.if-else', '.for');">Concluir lição</a>
+        <a class="button secondary expanded sair" href="../index.html#java-basico">Sair da lição</a>
+        <!-- END_CLASS:END -->
+        
+    </div>
+    <!-- MAIN:END -->
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/paginacao.js"></script>
+    <script src="../assets/js/localstorage-persistencia.js"></script>
+    <script>
+        $(document).foundation();
+        hljs.initHighlightingOnLoad();
+        Paginacao.init(4);
+        Paginacao.paginar();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,280 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprenda Java e Algoritmos | Kazapp</title>
+    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
+    <style>
+        body { background-color: #EEE; padding: 1px } 
+    </style>
+  </head>
+  <body>      
+    <!-- Set up Off-canvas -->
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+          <!-- left off-canvas markup -->
+            <button class="close-button" aria-label="Close menu" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <br />
+            <br />
+            <ul class="vertical menu">
+              <li><a href="#">One</a></li>
+              <li><a href="#">Two</a></li>
+              <li><a href="#">Three</a></li>
+              <li><a href="#">Four</a></li>
+            </ul>
+        </div>
+        <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
+          <!-- right off-canvas markup -->
+        </div>
+        <div class="off-canvas-content" data-off-canvas-content>
+            <div class="title-bar">
+              <div class="title-bar-left">
+                <!-- Fire Off-canvas -->
+                <button class="menu-icon" type="button" data-toggle="offCanvasLeft"></button>
+                <span class="title-bar-title">Kazapp - Java e Algoritmos</span>
+              </div>
+              <div class="title-bar-right" style="display: none">
+                <button class="menu-icon" type="button"></button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+      
+    <!-- MAIN:BEGIN -->
+    <div>
+        <!-- BREADCRUMBS:BEGIN -->
+        <br />
+        <nav role="navigation">
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#java-basico">Java Básico</a></li>
+            <li>"Olá mundo!"</li>
+          </ul>
+        </nav>
+        <!-- BREADCRUMBS:END -->
+        
+        <!-- PROGRESS:BEGIN -->
+        <div class="primary progress" role="progressbar" tabindex="0" aria-valuenow="50" 
+             aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+          <div class="progress-meter" style="width: 50%">
+            <p class="progress-meter-text">50%</p>
+          </div>
+        </div>
+        <!-- PROGRESS:END -->
+        
+      <div class="pag1">
+        <h2>Instalando o Java</h2>
+        
+        <div class="callout">
+          <p>1. O Java necessita ser executado em uma máquina virtual, a JVM (Java Virtual Machine).</p>
+        </div>
+        <div class="callout">
+          <p>2. Para o desenvolvimento de aplicações Java, precisamos instalar a JDK (Java Development Kit), que nos permite compilar e executar códigos Java.</p>
+        </div>
+        <div class="callout">
+            <p>3. Para instalar a JDK, devemos realizar o download <a href="https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">AQUI</a>.</p>
+        </div>
+        <div class="callout">
+          <p>4. Acessando a URL acima, faça o download referênte ao sistema operacional e execute o instalador.</p>
+        </div>
+        <div class="callout">
+          <p>5. Para verificar a sua instação, execute o seguinte comando no terminal:</p>
+        </div>
+        
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+java -version
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        
+        <div class="callout">
+          <p>6. Você deverá ver algo semelhante a:</p>
+        </div>
+        
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+java version "1.8.0_45"
+Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
+        </code></pre></div>
+        <!-- CODE:END -->        
+      </div>
+        
+      <div class="pag2">    
+        <h2>Criando o primero programa - "Olá mundo!"</h2>
+        
+        <div class="callout">
+          <p>1. Primeiramente, crie em algum diretório um arquivo chamado OlaMundo.java, com o seguinte conteúdo:</p>
+        </div>
+        
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+public class OlaMundo {
+  public static void main(String[] args) {
+    System.out.println("Olá mundo!!!");
+  }
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        
+        <div class="callout">
+          <p>2. Após a criação do arquivo, devemos compilar o mesmo com o seguinte comando (executado pelo terminal na raiz do diretório onde você criou o arquivo):</p>
+        </div>
+        
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+javac OlaMundo.java
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        
+        <div class="callout">
+          <p>3. Após a compilação, o arquivo OlaMundo.class será gerado no mesmo diretório.</p>
+        </div>
+        
+        <div class="callout">
+          <p>4. Para executar o código, execute o seguinte comando na raiz do diretório onde você criou o arquivo Java:</p>
+        </div>
+        
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+java OlaMundo
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        
+        <div class="callout">
+          <p>5. Você deverá vizualizar o seguinte:</p>
+        </div>
+        
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+Olá mundo!!!
+        </code></pre></div>
+        <!-- CODE:END -->
+        
+        <br />
+        <div class="callout primary">
+          <h5>Utilizando uma IDE</h5>
+            <p>No curso utilizaremos apenas a linha de comando para criar os arquivos, mas você poderá utilizar uma IDE para facilitar o trabalho, para isso você poderá baixa o <a href="https://www.jetbrains.com/idea/download" target="_blank">IntelliJ</a> ou o <a href="https://www.eclipse.org/downloads" target="_blank">Eclipse</a> por exemplo.</p>
+        </div>
+      </div>
+        
+      <div class="pag3">
+        <h2>Entendendo o código do programa - "Olá mundo!"</h2>
+        
+        <div class="callout">
+          <p>1. Vamos começar analisando a linha da declaração da classe:</p>
+        </div>
+        
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+public class OlaMundo {
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          
+        <div class="callout">
+          <p>2. <b>public</b> significa que a classe pode ser acessada de qualquer local, ela é pública.</p>
+        </div>
+          
+        <div class="callout primary">
+          <h5>Escopo das classes</h5>
+            <p>Existem outros escopos de classe, como o <b>protected</b>, <b>private</b> e <b>default</b>, que serão apresentados futuramente, por hora vamos utilizar somente o <b>public</b>.</p>
+        </div>
+          
+        <div class="callout">
+          <p>3. <b>class</b> significa que esse arquivo é uma classe, que será utilizado para criar objetos (instâncias) em Java, e toda classe deve possuir um nome, no nosso caso <b>OlaMundo</b>.</p>
+        </div>
+          
+        <div class="callout primary">
+          <h5>Nomes das classes</h5>
+            <p>Existe uma convenção na nomenclatura de classes, que basicamente é a primeira letra sempre maiúscula, e para cada nova palavra usamos sempre a primeira letra maiúscula também. Não devemos utilizar espaços nem caracteres especiais em seu nome.</p>
+        </div>
+          
+        <div class="callout primary">
+          <h5>Nomes dos arquivos</h5>
+            <p>Todos os arquivos deverão ser nomeados com o mesmo nome definido na classe, mais a extensão <b>.java</b>.</p>
+        </div>
+        
+        <div class="callout">
+          <p>4. Logo na sequência temos o método principal, <b>main</b>, que é o método padrão em classes Java a ser executado sempre que a executamos, conforme o código a seguir:</p>
+        </div>
+        
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+public static void main(String[] args) {
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          
+        <div class="callout">
+          <p>5. Nesse método a declaração <b>public</b> significa que o método é público, ou seja, pode acessado de qualquer local, visível por qualquer outra classe que tenha acesso a uma instância da classe.</p>
+        </div>
+          
+        <div class="callout">
+          <p>6. <b>static</b> significa que o método é estático, ou seja, que ele pode acessado sem que tenhamos uma instância da classe, é um operador que estudaremos em maiores detalhes mais adiante.</p>
+        </div>
+          
+        <div class="callout">
+          <p>7. <b>void</b> significa que o método não retorna nenhum valor.</p>
+        </div>
+          
+        <div class="callout">
+          <p>8. <b>String[] args</b> significa que o método <b>main</b> ao ser executado, caso sejam passados valores pela linha de comando, as informações estarão disponíveis nessa lista de Strings.</p>
+        </div>
+          
+        <div class="callout">
+          <p>9. Para finalizar utilizamos o comando padrão para imprimir uma linha no terminal, conforme o código a seguir:</p>
+        </div>
+        
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+System.out.println("Olá mundo!!!");
+        </code></pre></div>
+        <!-- CODE:END -->
+      </div>
+        
+        <!-- PAGINATION:BEGIN -->
+        <br />
+        <div style="text-align: center">
+            <ul class="pagination" role="navigation" aria-label="Pagination">
+              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()">Anterior</li>
+              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()">Próximo</li>
+            </ul>
+        </div>
+        <!-- PAGINATION:END -->
+        
+        <!-- END_CLASS:BEGIN -->
+        <a class="button success expanded concluir" href="../index.html#java-basico" onclick="return Persistencia.completar('.ola-mundo', '.if-else');">Concluir lição</a>
+        <a class="button secondary expanded sair" href="../index.html#java-basico">Sair da lição</a>
+        <!-- END_CLASS:END -->
+        
+    </div>
+    <!-- MAIN:END -->
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/paginacao.js"></script>
+    <script src="../assets/js/localstorage-persistencia.js"></script>
+    <script>
+        $(document).foundation();
+        hljs.initHighlightingOnLoad();
+        Paginacao.init(3);
+        Paginacao.paginar();
+    </script>
+  </body>
+</html>

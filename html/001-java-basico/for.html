@@ -1,0 +1,236 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprenda Java e Algoritmos | Kazapp</title>
+    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
+    <style>
+        body { background-color: #EEE; padding: 1px } 
+    </style>
+  </head>
+  <body>      
+    <!-- Set up Off-canvas -->
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+          <!-- left off-canvas markup -->
+            <button class="close-button" aria-label="Close menu" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <br />
+            <br />
+            <ul class="vertical menu">
+              <li><a href="#">One</a></li>
+              <li><a href="#">Two</a></li>
+              <li><a href="#">Three</a></li>
+              <li><a href="#">Four</a></li>
+            </ul>
+        </div>
+        <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
+          <!-- right off-canvas markup -->
+        </div>
+        <div class="off-canvas-content" data-off-canvas-content>
+            <div class="title-bar">
+              <div class="title-bar-left">
+                <!-- Fire Off-canvas -->
+                <button class="menu-icon" type="button" data-toggle="offCanvasLeft"></button>
+                <span class="title-bar-title">Kazapp - Java e Algoritmos</span>
+              </div>
+              <div class="title-bar-right" style="display: none">
+                <button class="menu-icon" type="button"></button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+      
+    <!-- MAIN:BEGIN -->
+    <div>
+        <!-- BREADCRUMBS:BEGIN -->
+        <br />
+        <nav role="navigation">
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#java-basico">Java Básico</a></li>
+            <li>For</li>
+          </ul>
+        </nav>
+        <!-- BREADCRUMBS:END -->
+        
+        <!-- PROGRESS:BEGIN -->
+        <div class="primary progress" role="progressbar" tabindex="0" aria-valuenow="50" 
+             aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+          <div class="progress-meter" style="width: 50%">
+            <p class="progress-meter-text">50%</p>
+          </div>
+        </div>
+        <!-- PROGRESS:END -->
+        
+      <div class="pag1">
+        <h2>Introdução ao laço For</h2>
+        
+        <div class="callout">
+          <p>1. O laço <b>for</b> é utilizado quando queremos realizar uma operação por múltiplas vezes.</p>
+        </div>
+          
+        <div class="callout">
+          <p>2. Exemplos de sua utilização seriam para realizar uma operação múltiplas vezes, iterar sob listas de dados, entre outros.</p>
+        </div>
+          
+        <div class="callout">
+          <p>3. O laço <b>for</b> trabalha com três parâmetros, separados por ";", sendo o primeiro deles a inicialização de valores, o segundo é a condição de fim de execução, similar a condição utilizada no <b>if</b>, e o terceiro é deles é o critério de incremento para a satisfazer a condição de para definida na condição anterior.</p>
+        </div>
+          
+        <div class="callout">
+            <p>4. O laço <b>for</b> é mais utilizado para iterações com um início e fim definidos, e embora possam ser feitos laços infinitos com ele, o recomendado para tal operação seria o laço <b>while</b>, que estudaremos na sequência.</p>
+        </div>  
+    </div>
+        
+    <div class="pag2">
+        <h2>O laço For na prática</h2>
+          
+        <div class="callout">
+          <p>1. Verifique o código a seguir para visualizar o uso do laço <b>for</b>:</p>
+        </div>
+        
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+int[] numeros = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    
+for (int i=0; i<=10; i++) {
+  System.out.println(i);
+}
+
+for (int i=10; i>=0; i--) {
+  System.out.println(i);
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+            
+        <div class="callout">
+          <p>2. No código acima, criamos uma lista com os números de 0 a 10, o qual usaremos para iteração no laço <b>for</b>.</p>
+        </div>
+            
+        <div class="callout">
+          <p>3. Repare que em ambos laços <b>for</b> do código acima, primeiramente inicializamos a variável de controle de nossas iterações, que no caso é a variável chamada "i".</p>
+        </div>
+            
+        <div class="callout">
+          <p>4. Iniciamos a primeira com o valor 0 e a segunda com o valor 10, porque no primeiro laço <b>for</b> queremos imprimir os números de 0 a 10, e no segundo de 10 a 0.</p>
+        </div>
+            
+        <div class="callout">
+          <p>5. No segundo parâmetro temos a condição de térmido da execução do laço <b>for</b>, que indica que queremos prosseguir com a execução do laço enquanto o valor de "i" for menor ou igual a 10, ou no segundo caso, enquanto "i" for maior ou igual a 0.</p>
+        </div>
+            
+        <div class="callout">
+          <p>6. O terceiro parâmetro indica como chegaremos da inicialização até a condição de parada, que no nosso caso, consiste em incrementar o "i" em 1 a cada laço no primeiro caso, e decrementar "i" em 1 no segundo caso.</p>
+        </div>
+        
+        <br />
+        <div class="callout primary">
+          <h5>Simulando o primeiro laço <b>for</b></h5>
+            <p>No caso do priimeiro laço <b>for</b>, inicializamos o valor de "i" com o valor 0, e para cada iteração imprimimos no terminal o valor corrente de "i", e logo em seguida o incrementamos em 1. Esse processo se repetirá até que a condição seja atingida, que nesse caso é quando o valor de "i" for incrementado a 11, informando que é hora de parar, uma vez que 11 é maior do que 10, conforme definimos nossa condição.</p>
+            <p>Já no terminal, deverão ser impressos os valores: 0 1 2 3 4 5 6 7 8 9 10.</p>
+        </div>
+        
+      </div>
+        
+      <div class="pag3">
+        <h2>Break e Continue</h2>
+        
+        <div class="callout">
+          <p>1. O Java necessita ser executado em uma máquina virtual, a JVM (Java Virtual Machine).</p>
+        </div>
+        
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+int[] numeros = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+for (int i=0; i<=10; i++) {
+  if (i % 2 == 0) {
+    continue;
+  }
+  System.out.println(i);
+}
+
+for (int i=0; i<=10; i++) {
+  System.out.println(i);
+  if (i == 5) {
+    break;
+  }
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        
+        <br />
+        <div class="callout primary">
+          <h5>Utilizando uma IDE</h5>
+            <p>blah</p>
+        </div>
+        
+      </div>
+          
+      <div class="pag4">
+        <h2>Forma alternativa do laço For</h2>
+        
+        <div class="callout">
+          <p>1. O Java necessita ser executado em uma máquina virtual, a JVM (Java Virtual Machine).</p>
+        </div>
+        
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+int[] numeros = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+for (int numero: numeros) {
+  System.out.println(numero);
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        
+        <br />
+        <div class="callout primary">
+          <h5>Utilizando uma IDE</h5>
+            <p>No curso utilizaremos apenas a linha de comando para criar os arquivos, mas você poderá utilizar uma IDE para facilitar o trabalho, para isso você poderá baixa o <a href="https://www.jetbrains.com/idea/download" target="_blank">IntelliJ</a> ou o <a href="https://www.eclipse.org/downloads" target="_blank">Eclipse</a> por exemplo.</p>
+        </div>
+        
+      </div>
+        
+        <!-- PAGINATION:BEGIN -->
+        <br />
+        <div style="text-align: center">
+            <ul class="pagination" role="navigation" aria-label="Pagination">
+              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()">Anterior</li>
+              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()">Próximo</li>
+            </ul>
+        </div>
+        <!-- PAGINATION:END -->
+        
+        <!-- END_CLASS:BEGIN -->
+        <a class="button success expanded concluir" href="../index.html#java-basico" onclick="return Persistencia.completar('.ola-mundo', '.if-else');">Concluir lição</a>
+        <a class="button secondary expanded sair" href="../index.html#java-basico">Sair da lição</a>
+        <!-- END_CLASS:END -->
+        
+    </div>
+    <!-- MAIN:END -->
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/paginacao.js"></script>
+    <script src="../assets/js/localstorage-persistencia.js"></script>
+    <script>
+        $(document).foundation();
+        hljs.initHighlightingOnLoad();
+        Paginacao.init(4);
+        Paginacao.paginar();
+    </script>
+  </body>
+</html>
