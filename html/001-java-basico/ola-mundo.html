@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
     <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
     <style>
-        body { background-color: #EEE; padding: 1px } 
+        body { background-color: #FFF; padding: 5px; } 
     </style>
   </head>
   <body>      
@@ -72,34 +72,18 @@
         
       <div class="pag1">
         <h2>Instalando o Java</h2>
-        
-        <div class="callout">
-          <p>1. O Java necessita ser executado em uma máquina virtual, a JVM (Java Virtual Machine).</p>
-        </div>
-        <div class="callout">
-          <p>2. Para o desenvolvimento de aplicações Java, precisamos instalar a JDK (Java Development Kit), que nos permite compilar e executar códigos Java.</p>
-        </div>
-        <div class="callout">
-            <p>3. Para instalar a JDK, devemos realizar o download <a href="https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">AQUI</a>.</p>
-        </div>
-        <div class="callout">
-          <p>4. Acessando a URL acima, faça o download referênte ao sistema operacional e execute o instalador.</p>
-        </div>
-        <div class="callout">
-          <p>5. Para verificar a sua instação, execute o seguinte comando no terminal:</p>
-        </div>
-        
+        <p>O Java necessita ser executado em uma máquina virtual, a JVM (Java Virtual Machine).</p>
+        <p>Para o desenvolvimento de aplicações Java, precisamos instalar a JDK (Java Development Kit), que nos permite compilar e executar códigos Java.</p>
+        <p>Para instalar a JDK, devemos realizar o download <a href="https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">aqui</a>.</p>
+        <p>Acessando a URL acima, faça o download referênte ao sistema operacional e execute o instalador.</p>
+        <p>Para verificar a sua instação, execute o seguinte comando no terminal:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 java -version
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-        
-        <div class="callout">
-          <p>6. Você deverá ver algo semelhante a:</p>
-        </div>
-        
+        <p>Você deverá ver algo semelhante a:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 java version "1.8.0_45"
@@ -111,11 +95,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
         
       <div class="pag2">    
         <h2>Criando o primero programa - "Olá mundo!"</h2>
-        
-        <div class="callout">
-          <p>1. Primeiramente, crie em algum diretório um arquivo chamado OlaMundo.java, com o seguinte conteúdo:</p>
-        </div>
-        
+        <p>Primeiramente, crie em algum diretório um arquivo chamado <b>OlaMundo.java</b>, com o seguinte conteúdo:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 public class OlaMundo {
@@ -126,43 +106,27 @@ public class OlaMundo {
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-        
-        <div class="callout">
-          <p>2. Após a criação do arquivo, devemos compilar o mesmo com o seguinte comando (executado pelo terminal na raiz do diretório onde você criou o arquivo):</p>
-        </div>
-        
+        <p>Após a criação do arquivo, devemos compilar o mesmo com o seguinte comando (executado pelo terminal na raiz do diretório onde você criou o arquivo):</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 javac OlaMundo.java
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-        
-        <div class="callout">
-          <p>3. Após a compilação, o arquivo OlaMundo.class será gerado no mesmo diretório.</p>
-        </div>
-        
-        <div class="callout">
-          <p>4. Para executar o código, execute o seguinte comando na raiz do diretório onde você criou o arquivo Java:</p>
-        </div>
-        
+        <p>Após a compilação, o arquivo <b>OlaMundo.class</b> será gerado no mesmo diretório.</p>
+        <p>Para executar o código, execute o seguinte comando na raiz do diretório onde você criou o arquivo Java:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 java OlaMundo
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-        
-        <div class="callout">
-          <p>5. Você deverá vizualizar o seguinte:</p>
-        </div>
-        
+        <p>Você deverá vizualizar o seguinte:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 Olá mundo!!!
         </code></pre></div>
         <!-- CODE:END -->
-        
         <br />
         <div class="callout primary">
           <h5>Utilizando uma IDE</h5>
@@ -172,11 +136,7 @@ Olá mundo!!!
         
       <div class="pag3">
         <h2>Entendendo o código do programa - "Olá mundo!"</h2>
-        
-        <div class="callout">
-          <p>1. Vamos começar analisando a linha da declaração da classe:</p>
-        </div>
-        
+        <p>Vamos começar analisando a linha da declaração da classe:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 public class OlaMundo {
@@ -184,34 +144,21 @@ public class OlaMundo {
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-          
-        <div class="callout">
-          <p>2. <b>public</b> significa que a classe pode ser acessada de qualquer local, ela é pública.</p>
-        </div>
-          
+        <p>O <b>public</b> significa que a classe pode ser acessada de qualquer local, ela é pública.</p>
         <div class="callout primary">
           <h5>Escopo das classes</h5>
             <p>Existem outros escopos de classe, como o <b>protected</b>, <b>private</b> e <b>default</b>, que serão apresentados futuramente, por hora vamos utilizar somente o <b>public</b>.</p>
         </div>
-          
-        <div class="callout">
-          <p>3. <b>class</b> significa que esse arquivo é uma classe, que será utilizado para criar objetos (instâncias) em Java, e toda classe deve possuir um nome, no nosso caso <b>OlaMundo</b>.</p>
-        </div>
-          
+        <p>O <b>class</b> significa que esse arquivo é uma classe, que será utilizado para criar objetos (instâncias) em Java, e toda classe deve possuir um nome, no nosso caso <b>OlaMundo</b>.</p>
         <div class="callout primary">
           <h5>Nomes das classes</h5>
             <p>Existe uma convenção na nomenclatura de classes, que basicamente é a primeira letra sempre maiúscula, e para cada nova palavra usamos sempre a primeira letra maiúscula também. Não devemos utilizar espaços nem caracteres especiais em seu nome.</p>
         </div>
-          
         <div class="callout primary">
           <h5>Nomes dos arquivos</h5>
             <p>Todos os arquivos deverão ser nomeados com o mesmo nome definido na classe, mais a extensão <b>.java</b>.</p>
         </div>
-        
-        <div class="callout">
-          <p>4. Logo na sequência temos o método principal, <b>main</b>, que é o método padrão em classes Java a ser executado sempre que a executamos, conforme o código a seguir:</p>
-        </div>
-        
+        <p>Logo na sequência temos o método principal, <b>main</b>, que é o método padrão em classes Java a ser executado sempre que a executamos, conforme o código a seguir:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 public static void main(String[] args) {
@@ -219,27 +166,11 @@ public static void main(String[] args) {
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-          
-        <div class="callout">
-          <p>5. Nesse método a declaração <b>public</b> significa que o método é público, ou seja, pode acessado de qualquer local, visível por qualquer outra classe que tenha acesso a uma instância da classe.</p>
-        </div>
-          
-        <div class="callout">
-          <p>6. <b>static</b> significa que o método é estático, ou seja, que ele pode acessado sem que tenhamos uma instância da classe, é um operador que estudaremos em maiores detalhes mais adiante.</p>
-        </div>
-          
-        <div class="callout">
-          <p>7. <b>void</b> significa que o método não retorna nenhum valor.</p>
-        </div>
-          
-        <div class="callout">
-          <p>8. <b>String[] args</b> significa que o método <b>main</b> ao ser executado, caso sejam passados valores pela linha de comando, as informações estarão disponíveis nessa lista de Strings.</p>
-        </div>
-          
-        <div class="callout">
-          <p>9. Para finalizar utilizamos o comando padrão para imprimir uma linha no terminal, conforme o código a seguir:</p>
-        </div>
-        
+        <p>Nesse método a declaração <b>public</b> significa que o método é público, ou seja, pode acessado de qualquer local, visível por qualquer outra classe que tenha acesso a uma instância da classe.</p>
+        <p>O <b>static</b> significa que o método é estático, ou seja, que ele pode acessado sem que tenhamos uma instância da classe, é um operador que estudaremos em maiores detalhes mais adiante.</p>
+        <p>O <b>void</b> significa que o método não retorna nenhum valor.</p>
+        <p>O <b>String[] args</b> significa que o método <b>main</b> ao ser executado, caso sejam passados valores pela linha de comando, as informações estarão disponíveis nessa lista de Strings.</p>
+        <p>Para finalizar utilizamos o comando padrão para imprimir uma linha no terminal, conforme o código a seguir:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 System.out.println("Olá mundo!!!");
