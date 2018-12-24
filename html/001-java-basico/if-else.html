@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
     <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
     <style>
-        body { background-color: #EEE; padding: 1px } 
+        body { background-color: #FFF; padding: 5px; } 
     </style>
   </head>
   <body>      
@@ -72,28 +72,14 @@
         
       <div class="pag1">
         <h2>Entendo o If/Else</h2>
-        
-        <div class="callout">
-          <p>1. Na criação de qualquer código, necessitamos utilizar a todo tempo condicionais para direcionar as etapas de execução de nosso algoritmo.</p>
-        </div>
-          
-         <div class="callout">
-          <p>2. Para isso existe o If e Else, para nos permitir executar um determinado bloco de código dependendo se uma condição é válida.</p>
-        </div>
-          
-        <div class="callout">
-          <p>3. A condicional a ser executada pode conter diferentes variações, vamos estudar a seguir as principais delas.</p>
-        </div>
-        
+        <p>Na criação de qualquer código, necessitamos utilizar a todo tempo condicionais para direcionar as etapas de execução de nosso algoritmo.</p>
+        <p>Para isso existe o If e Else, para nos permitir executar um determinado bloco de código dependendo se uma condição é válida.</p>
+        <p>A condicional a ser executada pode conter diferentes variações, vamos estudar a seguir as principais delas.</p>
       </div>
         
       <div class="pag2">    
         <h2>Criando o primero programa - "Olá mundo!"</h2>
-          
-        <div class="callout">
-          <p>1. A mais simples delas é o uso apenas do <b>if</b>, em conjunto com uma única condição, conforme o código a seguir:</p>
-        </div>
-        
+        <p>A mais simples delas é o uso apenas do <b>if</b>, em conjunto com uma única condição, conforme o código a seguir:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 boolean passouNoTeste = true;
@@ -112,23 +98,10 @@ if (nota >= 70)
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-          
-        <div class="callout">
-          <p>2. Repare que usamos a palavra chave <b>if</b> seguida da condição, que estará entre parênteses.</p>
-        </div>
-          
-        <div class="callout">
-          <p>3. A condição deverá sempre retornar um valor booleano, para que o código contido entre chaves seja ou não executado.</p>
-        </div>
-          
-        <div class="callout">
-          <p>4. O operador "!" significa negação, ou seja, caso o resultado da condição seja verdadeira, ele será convertido para falso, e vice versa.</p>
-        </div>
-          
-        <div class="callout">
-          <p>5. Podemos também utilizar operadores de comparação, que são os "==", "&lt;", "&gt;", "&ge;" e "&le;", onde comparamos se os valores são iguais, menores, maiores, maiores ou igual, e menores ou igual, respectivamente.</p>
-        </div>
-        
+        <p>Repare que usamos a palavra chave <b>if</b> seguida da condição, que estará entre parênteses.</p>
+        <p>A condição deverá sempre retornar um valor booleano, para que o código contido entre chaves seja ou não executado.</p>
+        <p>O operador "!" significa negação, ou seja, caso o resultado da condição seja verdadeira, ele será convertido para falso, e vice versa.</p>
+        <p>Podemos também utilizar operadores de comparação, que são os "==", "&lt;", "&gt;", "&ge;" e "&le;", onde comparamos se os valores são iguais, menores, maiores, maiores ou igual, e menores ou igual, respectivamente.</p>
         <div class="callout primary">
           <h5>Uso das chaves</h5>
             <p>Quando temos uma única linha de código em nosso bloco <b>if</b>, podemos simplesmente omitir as chaves.</p>
@@ -137,11 +110,7 @@ if (nota >= 70)
         
       <div class="pag3">
         <h2>Condicionais compostas</h2>
-        
-        <div class="callout">
-          <p>1. Com o uso dos operadores "e", representado por <b>&amp;&amp;</b>, e do operador "ou", representado por <b>||</b>, podemos encadear múltiplas condições em um mesmo <b>if</b>, conforme o código a seguir:</p>
-        </div>
-        
+        <p>Com o uso dos operadores "e", representado por <b>&amp;&amp;</b>, e do operador "ou", representado por <b>||</b>, podemos encadear múltiplas condições em um mesmo <b>if</b>, conforme o código a seguir:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 boolean passouNoTeste = true;
@@ -157,11 +126,7 @@ if (passouNoTeste || nota >= 70) {
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-            
-        <div class="callout">
-          <p>2. Basicamente o operador "e" fará com que o bloco de código seja executado, somente se ambas condições forem verdadeiras, enquanto que o operador "ou" será executado se ao menos uma das condições for verdadeira.</p>
-        </div>
-            
+        <p>Basicamente o operador "e" fará com que o bloco de código seja executado, somente se ambas condições forem verdadeiras, enquanto que o operador "ou" será executado se ao menos uma das condições for verdadeira.</p>
         <div class="callout primary">
           <h5>Múltiplas condicionais</h5>
             <p>Embora não exista um limite de condições, adicionar muitas delas em um mesmo <b>if</b> tornará o código de difícil legibilidade, portanto o recomendado é limitar ao máximo o número de condições em sequência.</p>
@@ -170,11 +135,7 @@ if (passouNoTeste || nota >= 70) {
           
       <div class="pag4">
         <h2>If e Else em conjunto</h2>
-        
-        <div class="callout">
-          <p>1. Muitas vezes queremos não somente executar o código para o resultado verdadeiro de uma condição, mas sim também para quando o resultado for falso, e para isso utilizamos o <b>else</b>, conforme o código abaixo:</p>
-        </div>
-        
+        <p>Muitas vezes queremos não somente executar o código para o resultado verdadeiro de uma condição, mas sim também para quando o resultado for falso, e para isso utilizamos o <b>else</b>, conforme o código abaixo:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 boolean passouNoTeste = true;
@@ -202,20 +163,12 @@ if (nota < 70) {
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-            
-        <div class="callout">
-          <p>2. No primeiro e segundo <b>if</b> do código acima, executamos uma ação para quando o resultado for verdadeiro, e outra para quando ele for falso (<b>else</b>).</p>
-        </div>
-            
-        <div class="callout">
-          <p>3. No terceiro <b>if</b> do código acima, verificamos não somente duas, mas três condições distintas, combinando o <b>else</b> com o <b>if</b>, onde poderemos verificar quantas condições forem necessárias.</p>
-        </div>
-            
+        <p>No primeiro e segundo <b>if</b> do código acima, executamos uma ação para quando o resultado for verdadeiro, e outra para quando ele for falso (<b>else</b>).</p>
+        <p>No terceiro <b>if</b> do código acima, verificamos não somente duas, mas três condições distintas, combinando o <b>else</b> com o <b>if</b>, onde poderemos verificar quantas condições forem necessárias.</p>
         <div class="callout primary">
           <h5>Operador "%"</h5>
             <p>O operador "%", ou módulo como é chamado, retorna o restante de uma divisão. Um clássico exemplo é testar se um número é par ou ímpar, conforme o código acima, onde ao dividirmos um número por 2, caso o restante seja 0, significa que ele é par, e para qualquer outro valor ele será ímpar.</p>
         </div>
-        
         <div class="callout primary">
           <h5>Múltiplos <b>if</b>s e <b>else</b>s</h5>
             <p>Encadear múltiplas condições nem sempre é uma boa ideia, e muitas vezes é melhor utilizar o operador <b>switch</b> para isso, que estudaremos em breve.</p>
