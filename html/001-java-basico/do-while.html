@@ -79,7 +79,7 @@
       </div>
         
       <div class="pag2">    
-        <h2>While</h2>
+        <h2>O while na prática</h2>
         <p>Vamos iniciar com um exemplo do laço <b>while</b>:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
@@ -116,12 +116,13 @@ numero = numero + 1; // ou
 numero += 1;
             </code></pre></div>
             <!-- CODE:END -->
+            <br />
             <p>O mesmo código é válido para o operador de decremento, que no caso seria "--".</p>
         </div>
       </div>
         
       <div class="pag3">
-        <h2>Do/While</h2>
+        <h2>O do/while na prática</h2>
         <p>Vamos agora analisar um exemplo do laço <b>do/while</b>:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
@@ -139,8 +140,87 @@ do {
         <p>A diferença desse código para o estudado na página anterior, é que a condição é verificada no final da execução do laço, e não no início como o <b>while</b>.</p>
         <div class="callout primary">
           <h5>Quando usar um ou outro?</h5>
-            <p>A escolha de qual usar dependerá muito do seu algoritmo, pois ambos trabalham de modo muito similar, mas na prática você preceberá que na maioria dos casos o <b>while</b> por si só atenderá a quase todos os casos, sendo o mais utilizado.</p>
+            <p>A escolha de qual usar dependerá muito do seu algoritmo, pois ambos trabalham de modo muito similar, mas na prática você perceberá que na maioria dos casos o <b>while</b> por si só atenderá a quase todos os casos, sendo o mais utilizado.</p>
+            <p>O <b>do/while</b> será utilizado se você deseja que uma ação seja executada ao menos uma única vez sem que a condição seja verificada.</p>
         </div>
+      </div>
+          
+      <div class="pag4">
+        <h2>Vamos praticar?</h2>
+        <p>A melhor forma de aprender é praticando, portanto vamos seguir um passo a passo para executar o código estudado nas aulas anteriores.</p>
+        <p>Crie o arquivo <b>WhileDoWhile.java</b> em um diretório de sua preferência.</p>
+        <p>Adicione o seguinte código nele:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+public class WhileDoWhile {
+
+  public static void main(String[] args) {
+    int numero = 1;
+    boolean fim = false;
+
+    while (!fim) {
+      System.out.println("Ainda não terminou...");
+      fim = true;
+    }
+
+    while (numero <= 10) {
+      System.out.println(numero);
+      numero++;
+    }
+
+    numero = 1;
+    do {
+      System.out.println(numero);
+      numero++;
+    } while (numero <= 10);
+  }
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>Compile o código fonte, executando no terminal no diretório onde o arquivo foi criado:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+javac WhileDoWhile.java        
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>O arquivo <b>WhileDoWhile.class</b> será gerado no mesmo diretório.</p>
+        <p>Execute o código compilado no terminal com:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+java WhileDoWhile        
+        </code></pre></div>
+        <!-- CODE:END --> 
+        <br />
+        <p>Você deverá ver o seguinte no terminal:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+Ainda não terminou...
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10   
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>Parabéns!!! Você concluiu com sucesso o seu estudo do comando <b>while/do while</b>.</p>
       </div>
         
         <!-- PAGINATION:BEGIN -->
@@ -169,7 +249,7 @@ do {
     <script>
         $(document).foundation();
         hljs.initHighlightingOnLoad();
-        Paginacao.init(3);
+        Paginacao.init(4);
         Paginacao.paginar();
     </script>
   </body>

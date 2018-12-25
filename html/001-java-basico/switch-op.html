@@ -1,0 +1,400 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprenda Java e Algoritmos | Kazapp</title>
+    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
+    <style>
+        body { background-color: #FFF; padding: 5px; } 
+    </style>
+  </head>
+  <body>      
+    <!-- Set up Off-canvas -->
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+          <!-- left off-canvas markup -->
+            <button class="close-button" aria-label="Close menu" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <br />
+            <br />
+            <ul class="vertical menu">
+              <li><a href="#">One</a></li>
+              <li><a href="#">Two</a></li>
+              <li><a href="#">Three</a></li>
+              <li><a href="#">Four</a></li>
+            </ul>
+        </div>
+        <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
+          <!-- right off-canvas markup -->
+        </div>
+        <div class="off-canvas-content" data-off-canvas-content>
+            <div class="title-bar">
+              <div class="title-bar-left">
+                <!-- Fire Off-canvas -->
+                <button class="menu-icon" type="button" data-toggle="offCanvasLeft"></button>
+                <span class="title-bar-title">Kazapp - Java e Algoritmos</span>
+              </div>
+              <div class="title-bar-right" style="display: none">
+                <button class="menu-icon" type="button"></button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+      
+    <!-- MAIN:BEGIN -->
+    <div>
+        <!-- BREADCRUMBS:BEGIN -->
+        <br />
+        <nav role="navigation">
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#java-basico">Java Básico</a></li>
+            <li>Switch</li>
+          </ul>
+        </nav>
+        <!-- BREADCRUMBS:END -->
+        
+        <!-- PROGRESS:BEGIN -->
+        <div class="primary progress" role="progressbar" tabindex="0" aria-valuenow="50" 
+             aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+          <div class="progress-meter" style="width: 50%">
+            <p class="progress-meter-text">50%</p>
+          </div>
+        </div>
+        <!-- PROGRESS:END -->
+        
+      <div class="pag1">
+        <h2>Switch</h2>
+        <p>O <b>switch</b> é um comando utilizado para executar uma determinada ação de acordo com o valor passado a ele para verificação.</p>
+        <p>Ele recebe um único parâmetro como entrada, e para este valor ele verifica se existe uma condição (case) definida nele.</p>
+        <p>O <b>switch</b> pode possuir inúmeros "cases", assim como uma codição padrão (default), que será executada caso a entrada não atenda a nenhum "case".</p>
+        <p>O <b>switch</b> é bastante similar ao <b>if/else</b>, mas sua grande vantagem é que sua legibilidade é melhor para quando queremos fazer diversas verificações.</p>
+      </div>
+        
+      <div class="pag2">    
+        <h2>Sintaxe do switch</h2>
+        <p>Verifique no código a seguir a definição do comando <b>switch</b>:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+switch(VALOR_A_SER_VERIFICADO) {
+   // o VALOR_A_SER_VERIFICADO deve ser do mesmo tipo do validado a seguir
+   case VALOR_1:
+      // seu código para o VALOR_1
+      break; // opcional, interrompe a execução do switch
+   
+   case VALOR_2:
+      // seu código para o VALOR_2
+      break; // opcional, interrompe a execução do switch
+   
+   default : 
+      // código padrão para quando nenhuma condição for válida
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>O <b>switch</b> recebe um valor que será utilizado nas verificações das possibilidades (case).</p>
+          <p>Dentro do <b>switch</b> temos as definições das condições (case), onde verificamos cada um dos possíveis valores.</p>
+          <p>Utilizamos o <b>break</b>, que é opcional para terminar a execução para cada caso.</p>
+          <p>Podemos também adicionar a entrada <b>default</b>, que é um <b>case</b> especial para quando nenhuma condição for encontrada.</p>
+      </div>
+        
+      <div class="pag3">    
+        <h2>O switch na prática</h2>
+        <p>Vamos primeiramente estudar o uso do <b>switch</b> para retornar o nome de um mês dado um valor numérico entre 1 e 12.</p>
+          <p>Para qualquer outro valor retornamos que o mês é inválido.</p>
+          <p>Veja a seguir o código:</p>
+          
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+int mes = 7;
+String nomeMes;
+
+switch (mes) {
+  case 1:
+    nomeMes = "Janeiro";
+    break;
+  case 2:
+    nomeMes = "Fevereiro";
+    break;
+  case 3:
+    nomeMes = "Março";
+    break;
+  case 4:
+    nomeMes = "Abril";
+    break;
+  case 5:
+    nomeMes = "Maio";
+    break;
+  case 6:
+    nomeMes = "Junho";
+    break;
+  case 7:
+    nomeMes = "Julho";
+    break;
+  case 8:
+    nomeMes = "Agosto";
+    break;
+  case 9:
+    nomeMes = "Setembro";
+    break;
+  case 10:
+    nomeMes = "Outubro";
+    break;
+  case 11:
+    nomeMes = "Novembro";
+    break;
+  case 12:
+    nomeMes = "Dezembro";
+    break;
+  default:
+    nomeMes = "Mês inválido";
+    break;
+}
+System.out.println(nomeMes);
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>No código anterior imprimimos o valor do mês 7, que no caso é julho.</p>
+      </div>
+        
+      <div class="pag4">
+        <h2>Sintaxe do switch, segundo exemplo</h2>
+        <p>Nesse segundo exemplo, vamos imprimir todos os nomes dos meses a partir do mês passado no comando <b>switch</b>.</p>
+        <p>Segue o código do exemplo:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+int mes = 7;
+
+switch (mes) {
+  case 1:  System.out.println("Janeiro");
+  case 2:  System.out.println("Fevereiro");
+  case 3:  System.out.println("Março");
+  case 4:  System.out.println("Abril");
+  case 5:  System.out.println("Maio");
+  case 6:  System.out.println("Junho");
+  case 7:  System.out.println("Julho");
+  case 8:  System.out.println("Agosto");
+  case 9:  System.out.println("Setembro");
+  case 10: System.out.println("Outubro");
+  case 11: System.out.println("Novembro");
+  case 12: System.out.println("Dezembro");
+           break;
+  default: break;
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>Repare no uso do <b>break</b> somente no final do <b>case</b> 12, pois assim as condições serão executadas sequencialmente a partir do mês passado como parâmetro.</p>
+        <p>Caso seja passado um valor diferente de 1 a 12, nada será impresso, pois a condição <b>default</b> não executando nenhum comando.</p>
+        <div class="callout primary">
+          <h5>Uso do "default"</h5>
+            <p>Embora o comando <b>default</b> seja opcional, é sempre recomendado sua utilização, pois assim teremos a certeza de que trataremos todas as possíveis condições do nosso <b>switch</b>.</p>
+        </div>
+      </div>
+        
+      <div class="pag5">
+        <h2>Sintaxe do switch, terceiro exemplo</h2>
+        <p>No terceiro exemplo, vamos imprimir o número de dias de um determinado mês.</p>
+        <p>Usaremos <b>case</b>(s) agrupados para representar os meses com 30 dias, 31 dias, e para o caso particular de fevereiro, que pode conter 28 ou 29 dias.</p>
+        <p>Verifique o código a seguir:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+int mes = 7;
+int ano = 2018;
+int numDias = 0;
+
+switch (mes) {
+  case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+    numDias = 31;
+    break;
+  case 4: case 6: case 9: case 11:
+    numDias = 30;
+    break;
+  case 2:
+    if (((ano % 4 == 0) && !(ano % 100 == 0)) || (ano % 400 == 0)) {
+      numDias = 29;
+    } else {
+      numDias = 28;
+    }
+    break;
+  default:
+    System.out.println("Mês inválido.");
+    break;
+}
+System.out.println("Número de dias = " + numDias);
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>Repare que agrupamos os <b>case</b>(s) simplesmente adicionando a entrada <b>case</b>, uma seguindo a outra, sem nenhuma implementação, até que a última possua o código para tratar todos os casos anteriores, seguido do <b>break</b> para terminar a execução do comando.</p>
+        <p>Esse comportamento apresentado é muito similar ao <b>if</b> utilizando condições compostas com o "ou" (<b>||</b>).</p>
+        <p>O exemplo acima imprimirá "Número de dias = 31", pois é a quantidade de dias do mês 7 (julho).</p>
+      </div>
+        
+      <div class="pag6">
+        <h2>Vamos praticar?</h2>
+        <p>A melhor forma de aprender é praticando, portanto vamos seguir um passo a passo para executar o código estudado nas aulas anteriores.</p>
+        <p>Crie o arquivo <b>Switch.java</b> em um diretório de sua preferência.</p>
+        <p>Adicione o seguinte código nele:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+public class Switch {
+  public static void main(String[] args) {
+    int mes = 7;
+    int ano = 2018;
+    int numDias = 0;
+    String nomeMes;
+
+    switch (mes) {
+      case 1:
+        nomeMes = "Janeiro";
+        break;
+      case 2:
+        nomeMes = "Fevereiro";
+        break;
+      case 3:
+        nomeMes = "Março";
+        break;
+      case 4:
+        nomeMes = "Abril";
+        break;
+      case 5:
+        nomeMes = "Maio";
+        break;
+      case 6:
+        nomeMes = "Junho";
+        break;
+      case 7:
+        nomeMes = "Julho";
+        break;
+      case 8:
+        nomeMes = "Agosto";
+        break;
+      case 9:
+        nomeMes = "Setembro";
+        break;
+      case 10:
+        nomeMes = "Outubro";
+        break;
+      case 11:
+        nomeMes = "Novembro";
+        break;
+      case 12:
+        nomeMes = "Dezembro";
+        break;
+      default:
+        nomeMes = "Mês inválido";
+        break;
+    }
+    System.out.println(nomeMes);
+
+    switch (mes) {
+      case 1:  System.out.println("Janeiro");
+      case 2:  System.out.println("Fevereiro");
+      case 3:  System.out.println("Março");
+      case 4:  System.out.println("Abril");
+      case 5:  System.out.println("Maio");
+      case 6:  System.out.println("Junho");
+      case 7:  System.out.println("Julho");
+      case 8:  System.out.println("Agosto");
+      case 9:  System.out.println("Setembro");
+      case 10: System.out.println("Outubro");
+      case 11: System.out.println("Novembro");
+      case 12: System.out.println("Dezembro");
+               break;
+      default: break;
+    }
+
+    switch (mes) {
+      case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+        numDias = 31;
+        break;
+      case 4: case 6: case 9: case 11:
+        numDias = 30;
+        break;
+      case 2:
+        if (((ano % 4 == 0) && !(ano % 100 == 0)) || (ano % 400 == 0)) {
+          numDias = 29;
+        } else {
+          numDias = 28;
+        }
+        break;
+      default:
+        System.out.println("Mês inválido.");
+        break;
+    }
+    System.out.println("Número de dias = " + numDias);
+  }
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>Compile o código fonte, executando no terminal no diretório onde o arquivo foi criado:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+javac Switch.java        
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>O arquivo <b>Switch.class</b> será gerado no mesmo diretório.</p>
+        <p>Execute o código compilado no terminal com:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+java Switch        
+        </code></pre></div>
+        <!-- CODE:END --> 
+        <br />
+        <p>Você deverá ver o seguinte no terminal:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+Julho
+Julho
+Agosto
+Setembro
+Outubro
+Novembro
+Dezembro
+Número de dias = 31
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>Parabéns!!! Você concluiu com sucesso o seu estudo do comando <b>switch</b>.</p>
+      </div>
+        
+        <!-- PAGINATION:BEGIN -->
+        <br />
+        <div style="text-align: center">
+            <ul class="pagination" role="navigation" aria-label="Pagination">
+              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()">Anterior</li>
+              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()">Próximo</li>
+            </ul>
+        </div>
+        <!-- PAGINATION:END -->
+        
+        <!-- END_CLASS:BEGIN -->
+        <a class="button success expanded concluir" href="../index.html#java-basico" onclick="return Persistencia.completar('.switch-op', '');">Concluir lição</a>
+        <a class="button secondary expanded sair" href="../index.html#java-basico">Sair da lição</a>
+        <!-- END_CLASS:END -->
+        
+    </div>
+    <!-- MAIN:END -->
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/paginacao.js"></script>
+    <script src="../assets/js/localstorage-persistencia.js"></script>
+    <script>
+        $(document).foundation();
+        hljs.initHighlightingOnLoad();
+        Paginacao.init(6);
+        Paginacao.paginar();
+    </script>
+  </body>
+</html>

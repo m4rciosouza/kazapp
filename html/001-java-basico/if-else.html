@@ -71,14 +71,14 @@
         <!-- PROGRESS:END -->
         
       <div class="pag1">
-        <h2>Entendo o If/Else</h2>
+        <h2>If/Else</h2>
         <p>Na criação de qualquer código, necessitamos utilizar a todo tempo condicionais para direcionar as etapas de execução de nosso algoritmo.</p>
-        <p>Para isso existe o If e Else, para nos permitir executar um determinado bloco de código dependendo se uma condição é válida.</p>
-        <p>A condicional a ser executada pode conter diferentes variações, vamos estudar a seguir as principais delas.</p>
+        <p>Por isso existe o comando <b>if/else</b>, para nos permitir executar um determinado bloco de código dependendo se uma condição é válida ou não.</p>
+        <p>A condicional a ser executada pode conter diferentes variações, e a seguir estudaremos as principais delas.</p>
       </div>
         
       <div class="pag2">    
-        <h2>Criando o primero programa - "Olá mundo!"</h2>
+        <h2>O If/Else na prática</h2>
         <p>A mais simples delas é o uso apenas do <b>if</b>, em conjunto com uma única condição, conforme o código a seguir:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
@@ -166,13 +166,101 @@ if (nota < 70) {
         <p>No primeiro e segundo <b>if</b> do código acima, executamos uma ação para quando o resultado for verdadeiro, e outra para quando ele for falso (<b>else</b>).</p>
         <p>No terceiro <b>if</b> do código acima, verificamos não somente duas, mas três condições distintas, combinando o <b>else</b> com o <b>if</b>, onde poderemos verificar quantas condições forem necessárias.</p>
         <div class="callout primary">
-          <h5>Operador "%"</h5>
+          <h5>Operador módulo ("%")</h5>
             <p>O operador "%", ou módulo como é chamado, retorna o restante de uma divisão. Um clássico exemplo é testar se um número é par ou ímpar, conforme o código acima, onde ao dividirmos um número por 2, caso o restante seja 0, significa que ele é par, e para qualquer outro valor ele será ímpar.</p>
         </div>
         <div class="callout primary">
-          <h5>Múltiplos <b>if</b>s e <b>else</b>s</h5>
-            <p>Encadear múltiplas condições nem sempre é uma boa ideia, e muitas vezes é melhor utilizar o operador <b>switch</b> para isso, que estudaremos em breve.</p>
+          <h5>Múltiplos <b>if</b>(s) e <b>else</b>(s)</h5>
+            <p>Encadear múltiplas condições nem sempre é uma boa prática, e muitas vezes o melhor a fazer é utilizar o operador <b>switch</b> para isso, que estudaremos em breve.</p>
         </div>
+      </div>
+            
+      <div class="pag5">
+        <h2>Vamos praticar?</h2>
+        <p>A melhor forma de aprender é praticando, portanto vamos seguir um passo a passo para executar o código estudado nas aulas anteriores.</p>
+        <p>Crie o arquivo <b>IfElse.java</b> em um diretório de sua preferência.</p>
+        <p>Adicione o seguinte código nele:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+public class IfElse {
+
+  public static void main(String[] args) {
+    boolean passouNoTeste = true;
+    int nota = 80;
+
+    if (passouNoTeste) {
+      System.out.println("Passou no teste!");
+    }
+
+    if (!passouNoTeste) {
+      System.out.println("Não passou no teste.");
+    }
+
+    if (nota >= 70) {
+      System.out.println("Passou no teste!");
+    }
+
+    if (nota >= 70 && nota <= 80) {
+      System.out.println("Passou no teste com nota B.");
+    }
+
+    if (passouNoTeste || nota >= 70) {
+      System.out.println("Passou no teste!");
+    }
+
+    if (passouNoTeste) {
+      System.out.println("Passou no teste!");
+    } else {
+      System.out.println("Não passou no teste.");
+    }
+
+    if (nota % 2 == 0) {
+      System.out.println("Nota é um número par.");
+    } else {
+      System.out.println("Nota é um número ímpar.");
+    }
+
+    if (nota < 70) {
+      System.out.println("Não passou no teste.");
+    } else if (nota >= 70 && nota <= 90) {
+      System.out.println("Passou no teste com nota B.");
+    } else {
+      System.out.println("Passou no teste com nota A.");
+    }
+  }   
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>Compile o código fonte, executando no terminal no diretório onde o arquivo foi criado:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+javac IfElse.java        
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>O arquivo <b>IfElse.class</b> será gerado no mesmo diretório.</p>
+        <p>Execute o código compilado no terminal com:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+java IfElse        
+        </code></pre></div>
+        <!-- CODE:END --> 
+        <br />
+        <p>Você deverá ver o seguinte no terminal:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+Passou no teste!
+Passou no teste!
+Passou no teste com nota B.
+Passou no teste!
+Passou no teste!
+Nota é um número par.
+Passou no teste com nota B.      
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>Parabéns!!! Você concluiu com sucesso o seu estudo do comando <b>if/else</b>.</p>
       </div>
         
         <!-- PAGINATION:BEGIN -->
@@ -201,7 +289,7 @@ if (nota < 70) {
     <script>
         $(document).foundation();
         hljs.initHighlightingOnLoad();
-        Paginacao.init(4);
+        Paginacao.init(5);
         Paginacao.paginar();
     </script>
   </body>
