@@ -125,23 +125,85 @@ public class IfElse {
         <div class="callout primary"><label><input type="radio" name="p3" value="3">Não é impresso nada.</label></div>
         <div class="callout primary"><label><input type="radio" name="p3" value="4">A linha do ELSE foi executada.</label></div>
       </div>
-        
-      <div class="pag3">
-        <h2>Entendendo o código do programa - "Olá mundo!"</h2>
-        <p>Vamos começar analisando a linha da declaração da classe:</p>
           
-          <!-- CODE:BEGIN -->
+      <div class="pag4">
+        <h2>O que será impresso no terminal ao executar o código a seguir?</h2>
+        <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
-java -version
+public class For {
+  public static void main(String[] args) {
+    int[] numeros = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    
+    for (int i=0; i<10; i++) {
+      System.out.println(i);
+    }
+  }   
+}
         </code></pre></div>
         <!-- CODE:END -->
         <br />
+        <div class="callout primary"><label><input type="radio" name="p3" value="1" checked>Os números de 1 a 10.</label></div>
+        <div class="callout primary"><label><input type="radio" name="p3" value="2">O código não compila</label></div>
+        <div class="callout primary"><label><input type="radio" name="p3" value="3">Os números de 0 a 10.</label></div>
+        <div class="callout primary"><label><input type="radio" name="p3" value="4">Os números de 0 a 9.</label></div>
+      </div>
           
-          <br />
-        <div class="callout primary">
-          <h5>Utilizando uma IDE</h5>
-            <p>No curso utilizaremos apenas a linha de comando para criar os arquivos, mas você poderá utilizar uma IDE para facilitar o trabalho, para isso você poderá baixa o <a href="https://www.jetbrains.com/idea/download" target="_blank">IntelliJ</a> ou o <a href="https://www.eclipse.org/downloads" target="_blank">Eclipse</a> por exemplo.</p>
-        </div>
+      <div class="pag5">
+        <h2>O que será impresso no terminal ao executar o código a seguir?</h2>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+public class DoWhile {
+  public static void main(String[] args) {
+    int numero = 1;
+
+    do {
+      System.out.println(numero);
+      numero++;
+    } while (numero <= 10);
+  }   
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <div class="callout primary"><label><input type="radio" name="p3" value="1" checked>Os números de 1 a 10.</label></div>
+        <div class="callout primary"><label><input type="radio" name="p3" value="2">O código não compila</label></div>
+        <div class="callout primary"><label><input type="radio" name="p3" value="3">Os números de 1 a 11.</label></div>
+        <div class="callout primary"><label><input type="radio" name="p3" value="4">Os números de 0 a 9.</label></div>
+      </div>
+          
+      <div class="pag6">
+        <h2>Dado o código a seguir, qual o valor da variável <b>mes</b> para que seja impresso no terminal os meses "Outubro", "Novembro" e "Dezembro"?</h2>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+public class Switch {
+  public static void main(String[] args) {
+    int mes = ?; //qual o número a ser utilizado aqui?
+
+    switch (mes) {
+      case 1:  System.out.println("Janeiro");
+      case 2:  System.out.println("Fevereiro");
+      case 3:  System.out.println("Março");
+      case 4:  System.out.println("Abril");
+      case 5:  System.out.println("Maio");
+      case 6:  System.out.println("Junho");
+      case 7:  System.out.println("Julho");
+      case 8:  System.out.println("Agosto");
+      case 9:  System.out.println("Setembro");
+      case 10: System.out.println("Outubro");
+      case 11: System.out.println("Novembro");
+      case 12: System.out.println("Dezembro");
+               break;
+      default: break;
+    }
+  }   
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <div class="callout primary"><label><input type="radio" name="p3" value="1" checked>3</label></div>
+        <div class="callout primary"><label><input type="radio" name="p3" value="2">9</label></div>
+        <div class="callout primary"><label><input type="radio" name="p3" value="3">11</label></div>
+        <div class="callout primary"><label><input type="radio" name="p3" value="4">10</label></div>
       </div>
         
         <!-- PAGINATION:BEGIN -->
@@ -155,7 +217,34 @@ java -version
         <!-- PAGINATION:END -->
         
         <!-- END_CLASS:BEGIN -->
-        <a class="button success expanded concluir" href="../index.html#java-basico" onclick="return Persistencia.completar('.ola-mundo', '.if-else');">Concluir lição</a>
+        <a class="button success expanded concluir" href="../index.html#java-basico" onclick="return Persistencia.completar('.ola-mundo', '.if-else');">Enviar respostas</a>
+          
+        <a data-open="exercicios-java-basico" id="ex-java-basico">
+            <span class="primary badge" style="font-size: 35px;">
+                <i class="fi-list-thumbnails" style="font-size: 35px; color: white"></i>
+            </span>
+            <h6>Enviar respostas</h6>
+        </a>
+        <div class="reveal" id="exercicios-java-basico" data-reveal>
+            <h1>Resultado</h1>
+            <div style="text-align: center">
+                <p class="lead">Você acertou <span id="resultado">80</span>% das questões.</p>
+                <p><span class="success label">Parabéns, você concluiu o módulo com sucesso!</span></p>
+                <p><span class="alert label">A nota mínima para passar é 70%, tente novamente.</span></p>
+            </div>
+            <hr />
+            <a class="button primary expanded tentar_novamente" href="">
+                Avançar para o próximo módulo
+            </a>
+            <a class="button primary expanded tentar_novamente" href="#" onclick="location.reload();">
+                Tentar novamente
+            </a>
+            <a class="button secondary expanded sair" href="../index.html#java-basico">Sair da lição</a>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>  
+          
         <a class="button secondary expanded sair" href="../index.html#java-basico">Sair da lição</a>
         <!-- END_CLASS:END -->
         
@@ -170,7 +259,7 @@ java -version
     <script>
         $(document).foundation();
         hljs.initHighlightingOnLoad();
-        Paginacao.init(15);
+        Paginacao.init(6);
         Paginacao.paginar();
     </script>
   </body>
