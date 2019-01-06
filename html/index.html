@@ -62,10 +62,10 @@
             <h6>Java básico</h6>
         </a>
         <div class="reveal" id="modulo-java-basico" data-reveal>
-            <h1>Seja bem vindo ao módulo Java básico.</h1>
+            <h1>Seja bem vindo ao módulo Java básico!</h1>
             <p class="lead">Aprenda os recursos básicos do Java para acompanhar o curso.</p>
             <p>Este módulo é opcional. Você pode habilitar o próximo módulo simplesmente completando os exercícios com grade de mínima de 70%!</p>
-            <p>Boa sorte e bons estudos!</p>
+            <p>Bons estudos!</p>
             <button class="close-button" data-close aria-label="Close reveal" type="button">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -73,7 +73,7 @@
         <br />
         <div class="grid-x">
             <div class="cell small-4">
-                <a href="001-java-basico/ola-mundo.html">
+                <a href="001-java-basico/ola-mundo.html" onclick="return Persistencia.temAcesso('.ola-mundo');">
                     <span class="ola-mundo badge" style="font-size: 35px;">
                         <i class="ola-mundo-i" style="font-size: 35px;"></i>
                     </span>
@@ -81,7 +81,7 @@
                 </a>
             </div>
             <div class="cell small-4">
-                <a href="001-java-basico/if-else.html">
+                <a href="001-java-basico/if-else.html" onclick="return Persistencia.temAcesso('.if-else');">
                     <span class="if-else badge" style="font-size: 35px;">
                         <i class="if-else-i" style="font-size: 35px;"></i>
                     </span>
@@ -89,7 +89,7 @@
                 </a>
             </div>
             <div class="cell small-4">
-                <a href="001-java-basico/for.html">
+                <a href="001-java-basico/for.html" onclick="return Persistencia.temAcesso('.for');">
                     <span class="for badge" style="font-size: 35px;">
                         <i class="for-i" style="font-size: 35px;"></i>
                     </span>
@@ -100,7 +100,7 @@
         <br />
         <div class="grid-x">
             <div class="cell small-4">
-                <a href="001-java-basico/do-while.html">
+                <a href="001-java-basico/do-while.html" onclick="return Persistencia.temAcesso('.do-while');">
                     <span class="do-while badge" style="font-size: 35px;">
                         <i class="do-while-i" style="font-size: 35px;"></i>
                     </span>
@@ -108,7 +108,7 @@
                 </a>
             </div>
             <div class="cell small-4">
-                <a href="001-java-basico/switch-op.html">
+                <a href="001-java-basico/switch-op.html" onclick="return Persistencia.temAcesso('.switch-op');">
                     <span class="switch-op badge" style="font-size: 35px;">
                         <i class="switch-op-i" style="font-size: 35px;"></i>
                     </span>
@@ -129,12 +129,21 @@
         <div class="callout primary">
             Termine o módulo anterior para habilitar os próximos módulos.
         </div>
-        <a href="" onclick="alert('opa!')" id="big-o">
+        <a data-open="modulo-big-o" id="big-o">
             <span class="primary badge" style="font-size: 35px;">
                 <i class="fi-list-thumbnails" style="font-size: 35px; color: white"></i>
             </span>
             <h6>Notação Big-O</h6>
         </a>
+        <div class="reveal" id="modulo-big-o" data-reveal>
+            <h1>Seja bem vindo ao módulo Notação Big-O!</h1>
+            <p class="lead">Aprenda a medir a performance de seu algoritmo com a notação Big-O.</p>
+            <p>Este módulo é fundamental para o aprendizado de algoritmos, pois com a notação Big-O você será capaz de verificar se o seu algoritmo possui uma boa performance, resultando na criação de algoritmos de alto padrão.</p>
+            <p>Bons estudos!</p>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         <br />
         <div class="grid-x">
             <div class="cell small-4">
@@ -170,6 +179,21 @@
             <h6>Exercícios</h6>
         </a>
         <!-- BIG_O:END -->
+        
+        <!-- MODAL_INDISPONIVEL:BEGIN -->
+        <div class="reveal" id="nao-tem-acesso" data-reveal>
+            <h1>Lição indisponível.</h1>
+            <p style="text-align: center">
+                <span class="alert badge" style="font-size: 35px;">
+                    <i class="fi-prohibited" style="font-size: 35px; color: white"></i>
+                </span>
+            </p>
+            <p>Para habilitá-la você deverá completar as lições anteriores a ela, ou os exercícios do módulo com sucesso, quando disponíveis.</p>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <!-- MODAL_INDISPONIVEL:END -->
     </div>
     <!-- MAIN:END -->
     

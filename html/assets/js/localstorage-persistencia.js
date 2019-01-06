@@ -94,13 +94,29 @@ var Persistencia = {
         for (var i in this.dados) {
             for (var j in listaSpanSelCompletar) {
                 if (this.dados[i]["span-sel"] === listaSpanSelCompletar[j]) {
-                    this.dados[i]["span-class"] = 'success';
-                    this.dados[i]["icon-class"] = 'fi-check';
-                    this.dados[i]["icon-color-style"] = 'darkolivegreen';
+                    if (this.dados[i]["span-class"] === 'secondary') {
+                        this.dados[i]["span-class"] = 'warning';
+                        this.dados[i]["icon-class"] = 'fi-play';
+                        this.dados[i]["icon-color-style"] = 'chocolate';
+                    }
                 }
             }
         }
         localStorage['kazapp-dados'] = JSON.stringify(this.dados);
         return true;
+    },
+    
+    temAcesso: function(spanSel) {
+        if (localStorage['kazapp-dados']) {
+            this.dados = JSON.parse(localStorage['kazapp-dados']);
+        }
+        for (var i in this.dados) {
+            if (this.dados[i]["span-sel"] === spanSel && 
+                this.dados[i]["span-class"] !== "secondary") {
+                return true;
+            }
+        }
+        $('#nao-tem-acesso').foundation('open');
+        return false;
     }
 };
