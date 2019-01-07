@@ -24,3 +24,10 @@ function calcularJavaBasicoExercicios() {
     }
     $("#resultado").text(resultadoFinal);
 }
+
+$("input:radio").click(function() {
+    $("."+this.name).removeClass("success");
+    $("."+this.name).addClass("primary");
+    $("."+this.name+"r"+this.value).removeClass("primary");
+    $("."+this.name+"r"+this.value).addClass("success");
+});
