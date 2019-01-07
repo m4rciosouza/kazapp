@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="node_modules/foundation-sites/dist/css/foundation.min.css" />
     <link rel="stylesheet" href="assets/foundation-icons/foundation-icons.css" />
     <style>
-        body { background-color: #EEE; }
+        body { background-color: #EEE; padding: 5px; }
         a:link { color: black; }
         a:visited { color: black; }
         a:hover { color: black; }
@@ -17,39 +17,7 @@
   </head>
   <body>      
     <!-- Set up Off-canvas -->
-    <div class="off-canvas-wrapper">
-      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-        <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
-          <!-- left off-canvas markup -->
-            <button class="close-button" aria-label="Close menu" type="button" data-close>
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <br />
-            <br />
-            <ul class="vertical menu">
-              <li><a href="#">One</a></li>
-              <li><a href="#">Two</a></li>
-              <li><a href="#">Three</a></li>
-              <li><a href="#">Four</a></li>
-            </ul>
-        </div>
-        <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
-          <!-- right off-canvas markup -->
-        </div>
-        <div class="off-canvas-content" data-off-canvas-content>
-            <div class="title-bar">
-              <div class="title-bar-left">
-                <!-- Fire Off-canvas -->
-                <button class="menu-icon" type="button" data-toggle="offCanvasLeft"></button>
-                <span class="title-bar-title">Kazapp - Java e Algoritmos</span>
-              </div>
-              <div class="title-bar-right" style="display: none">
-                <button class="menu-icon" type="button"></button>
-              </div>
-            </div>
-        </div>
-      </div>
-    </div>
+    <div class="off-canvas-wrapper"></div>
       
     <!-- MAIN:BEGIN -->
     <div style="text-align: center">
@@ -59,13 +27,13 @@
             <span class="primary badge" style="font-size: 35px;">
                 <i class="fi-list-thumbnails" style="font-size: 35px; color: white"></i>
             </span>
-            <h6>Java básico</h6>
+            <h6><span class="i18n" data-i18n="index-t1">Java básico</span></h6>
         </a>
         <div class="reveal" id="modulo-java-basico" data-reveal>
-            <h1>Seja bem vindo ao módulo Java básico!</h1>
-            <p class="lead">Aprenda os recursos básicos do Java para acompanhar o curso.</p>
-            <p>Este módulo é opcional. Você pode habilitar o próximo módulo simplesmente completando os exercícios com grade de mínima de 70%!</p>
-            <p>Bons estudos!</p>
+            <h1><span class="i18n" data-i18n="index-t2">Seja bem vindo ao módulo Java básico!</span></h1>
+            <p class="lead"><span class="i18n" data-i18n="index-t3">Aprenda os recursos básicos do Java para acompanhar o curso.</span></p>
+            <p><span class="i18n" data-i18n="index-t4">Este módulo é opcional. Você pode habilitar o próximo módulo simplesmente completando os exercícios com grade de mínima de 70%!</span></p>
+            <p><span class="i18n" data-i18n="index-t5">Bons estudos!</span></p>
             <button class="close-button" data-close aria-label="Close reveal" type="button">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -77,7 +45,7 @@
                     <span class="ola-mundo badge" style="font-size: 35px;">
                         <i class="ola-mundo-i" style="font-size: 35px;"></i>
                     </span>
-                    <h6>"Olá mundo!"</h6>
+                    <h6><span class="i18n" data-i18n="index-t6">"Olá mundo!"</span></h6>
                 </a>
             </div>
             <div class="cell small-4">
@@ -85,7 +53,7 @@
                     <span class="if-else badge" style="font-size: 35px;">
                         <i class="if-else-i" style="font-size: 35px;"></i>
                     </span>
-                    <h6>If/Else</h6>
+                    <h6><span class="i18n" data-i18n="index-t7">If/Else</span></h6>
                 </a>
             </div>
             <div class="cell small-4">
@@ -93,7 +61,7 @@
                     <span class="for badge" style="font-size: 35px;">
                         <i class="for-i" style="font-size: 35px;"></i>
                     </span>
-                    <h6>For</h6>
+                    <h6><span class="i18n" data-i18n="index-t8">For</span></h6>
                 </a>
             </div>
         </div>
@@ -104,7 +72,7 @@
                     <span class="do-while badge" style="font-size: 35px;">
                         <i class="do-while-i" style="font-size: 35px;"></i>
                     </span>
-                    <h6>While/Do While</h6>
+                    <h6><span class="i18n" data-i18n="index-t9">While/Do While</span></h6>
                 </a>
             </div>
             <div class="cell small-4">
@@ -112,7 +80,7 @@
                     <span class="switch-op badge" style="font-size: 35px;">
                         <i class="switch-op-i" style="font-size: 35px;"></i>
                     </span>
-                    <h6>Switch</h6>
+                    <h6><span class="i18n" data-i18n="index-t10">Switch</span></h6>
                 </a>
             </div>
         </div>
@@ -121,25 +89,25 @@
             <span class="java-basico-exercicios badge" style="font-size: 35px;">
                 <i class="java-basico-exercicios-i" style="font-size: 35px;"></i>
             </span>
-            <h6>Exercícios</h6>
+            <h6><span class="i18n" data-i18n="index-t11">Exercícios</span></h6>
         </a>
         <!-- JAVA_BASICO:END -->
         <!-- BIG_O:BEGIN -->
         <br />
         <div class="callout primary">
-            Termine o módulo anterior para habilitar os próximos módulos.
+            <span class="i18n" data-i18n="index-t12">Termine o módulo anterior para habilitar os próximos módulos.</span>
         </div>
         <a data-open="modulo-big-o" id="big-o">
             <span class="primary badge" style="font-size: 35px;">
                 <i class="fi-list-thumbnails" style="font-size: 35px; color: white"></i>
             </span>
-            <h6>Notação Big-O</h6>
+            <h6><span class="i18n" data-i18n="index-t13">Notação Big-O</span></h6>
         </a>
         <div class="reveal" id="modulo-big-o" data-reveal>
-            <h1>Seja bem vindo ao módulo Notação Big-O!</h1>
-            <p class="lead">Aprenda a medir a performance de seu algoritmo com a notação Big-O.</p>
-            <p>Este módulo é fundamental para o aprendizado de algoritmos, pois com a notação Big-O você será capaz de verificar se o seu algoritmo possui uma boa performance, resultando na criação de algoritmos de alto padrão.</p>
-            <p>Bons estudos!</p>
+            <h1><span class="i18n" data-i18n="index-t14">Seja bem vindo ao módulo Notação Big-O!</span></h1>
+            <p class="lead"><span class="i18n" data-i18n="index-t15">Aprenda a medir a performance de seu algoritmo com a notação Big-O.</span></p>
+            <p><span class="i18n" data-i18n="index-t16">Este módulo é fundamental para o aprendizado de algoritmos, pois com a notação Big-O você será capaz de verificar se o seu algoritmo possui uma boa performance, resultando na criação de algoritmos de alto padrão.</span></p>
+            <p><span class="i18n" data-i18n="index-t17">Bons estudos!</span></p>
             <button class="close-button" data-close aria-label="Close reveal" type="button">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -151,7 +119,7 @@
                     <span class="secondary badge" style="font-size: 35px;">
                         <i class="fi-lock" style="font-size: 35px; color: #EEE"></i>
                     </span>
-                    <h6>Definição</h6>
+                    <h6><span class="i18n" data-i18n="index-t18">Definição</span></h6>
                 </a>
             </div>
             <div class="cell small-4">
@@ -159,7 +127,7 @@
                     <span class="secondary badge" style="font-size: 35px;">
                         <i class="fi-lock" style="font-size: 35px; color: #EEE"></i>
                     </span>
-                    <h6>O(n<sup>2</sup>)</h6>
+                    <h6><span class="i18n" data-i18n="index-t19">O(n<sup>2</sup>)</span></h6>
                 </a>
             </div>
             <div class="cell small-4">
@@ -167,7 +135,7 @@
                     <span class="secondary badge" style="font-size: 35px;">
                         <i class="fi-lock" style="font-size: 35px; color: #EEE"></i>
                     </span>
-                    <h6>O(log n)</h6>
+                    <h6><span class="i18n" data-i18n="index-t20">O(log n)</span></h6>
                 </a>
             </div>
         </div>
@@ -176,19 +144,19 @@
             <span class="secondary badge" style="font-size: 35px;">
                 <i class="fi-lock" style="font-size: 35px; color: #EEE"></i>
             </span>
-            <h6>Exercícios</h6>
+            <h6><span class="i18n" data-i18n="index-t21">Exercícios</span></h6>
         </a>
         <!-- BIG_O:END -->
         
         <!-- MODAL_INDISPONIVEL:BEGIN -->
         <div class="reveal" id="nao-tem-acesso" data-reveal>
-            <h1>Lição indisponível.</h1>
+            <h1><span class="i18n" data-i18n="index-t22">Lição indisponível.</span></h1>
             <p style="text-align: center">
                 <span class="alert badge" style="font-size: 35px;">
                     <i class="fi-prohibited" style="font-size: 35px; color: white"></i>
                 </span>
             </p>
-            <p>Para habilitá-la você deverá completar as lições anteriores a ela, ou os exercícios do módulo com sucesso, quando disponíveis.</p>
+            <p><span class="i18n" data-i18n="index-t23">Para habilitá-la você deverá completar as lições anteriores a ela, ou os exercícios do módulo com sucesso, quando disponíveis.</span></p>
             <button class="close-button" data-close aria-label="Close reveal" type="button">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -200,6 +168,8 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="assets/js/localstorage-persistencia.js"></script>
     <script src="node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="assets/js/menu-off-canvas.js"></script>  
+    <script src="assets/js/i18n-en_GB.js"></script>  
     <script>
       $(document).foundation();
       Persistencia.init();
