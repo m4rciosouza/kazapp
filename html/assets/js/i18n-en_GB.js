@@ -1,7 +1,19 @@
 var i18nTraducao = {
     "en_GB": {
-        "off-canvas": {
-            "i18n-off-canvas-1": "Kazapp - Java and Algorithms"
+        "off-canvas": [
+            { "i18n-off-canvas-1": "Language" },
+            { "i18n-off-canvas-2": "English" },
+            { "i18n-off-canvas-3": "Portuguese" },
+            { "i18n-off-canvas-4": "About :)" },
+            { "i18n-off-canvas-5": "Kazapp - Java and Algorithms" }
+        ],
+        "paginacao": {
+            "proximo": "Next",
+            "anterior": "Previous"
+        },
+        "botoes": {
+            "concluir-licao": "Complete lesson",
+            "sair-licao": "Leave lesson"
         },
         "index": { 
             "title": "Learn Java and Algorithms | Kazapp",
@@ -28,30 +40,33 @@ var i18nTraducao = {
             "t21": "Exercises",
             "t22": "Lesson unavailable.",
             "t23": "To enable it, you must complete the lessons before it, or the exercises of the module successfully, when available."
+        },
+        "ola-mundo": { 
+            "title": "Learn Java and Algorithms | Kazapp"
         }
     }
 };
 
-function getUrlVars() {
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-    for(var i = 0; i < hashes.length; i++) {
-        hash = hashes[i].split('=');
-        vars.push(hash[0]);
-        vars[hash[0]] = hash[1];
-    }
-    return vars;
-}
-
 function inicializar() {
-    var lingua = getUrlVars()["lang"];
+    var lingua = localStorage["lingua"];
     if (!lingua || !i18nTraducao[lingua]) {
         return;
     }
     var pathCompleto = location.pathname.split("/");
     var pathPagina = pathCompleto[pathCompleto.length-1].split(".")[0];
     document.title = i18nTraducao[lingua][pathPagina].title;
-    $(".i18n-off-canvas-1").text(i18nTraducao[lingua]["off-canvas"]["i18n-off-canvas-1"]);
+    // menu off-canvas
+    for (var i in i18nTraducao[lingua]["off-canvas"]) {
+        var pos = parseInt(i, 10) + 1;
+        $(".i18n-off-canvas-" + pos).text(i18nTraducao[lingua]["off-canvas"][i]["i18n-off-canvas-" + pos]);
+    }
+    // paginação
+    $(".i18n-pag-anterior").text(i18nTraducao[lingua].paginacao.anterior);
+    $(".i18n-pag-proximo").text(i18nTraducao[lingua].paginacao.proximo);
+    // botões de ação
+    $(".i18n-concluir-licao").text(i18nTraducao[lingua].botoes["concluir-licao"]);
+    $(".i18n-sair-licao").text(i18nTraducao[lingua].botoes["sair-licao"]);
+    // outros
     $(".i18n").each(function() {
         var dataI18n = $(this).attr("data-i18n").split("-");
         if (dataI18n && dataI18n.length === 2) {
@@ -61,3 +76,12 @@ function inicializar() {
 }
 
 inicializar();
+
+I18nTraducao = {
+    definirLingua: function(lingua) {
+        if (lingua === "en_GB" || lingua === "pt_BR") {
+            localStorage['lingua'] = lingua;
+            location.reload();
+        }
+    }
+};

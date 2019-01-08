@@ -150,15 +150,15 @@ System.out.println("Olá mundo!!!");
         <br />
         <div style="text-align: center">
             <ul class="pagination" role="navigation" aria-label="Pagination">
-              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()">Anterior</li>
-              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()">Próximo</li>
+                <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()"><span class="i18n-pag-anterior">Anterior</span></li>
+                <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()"><span class="i18n-pag-proximo">Próximo</span></li>
             </ul>
         </div>
         <!-- PAGINATION:END -->
         
         <!-- END_CLASS:BEGIN -->
-        <a class="button success expanded concluir" href="../index.html#java-basico" onclick="return Persistencia.completar('.ola-mundo', '.if-else');">Concluir lição</a>
-        <a class="button secondary expanded sair" href="../index.html#java-basico">Sair da lição</a>
+        <a class="button success expanded concluir" href="../index.html#java-basico" onclick="return Persistencia.completar('.ola-mundo', '.if-else');"><span class="i18n-concluir-licao">Concluir lição</span></a>
+        <a class="button secondary expanded sair" href="../index.html#java-basico"><span class="i18n-sair-licao">Sair da lição</span></a>
         <!-- END_CLASS:END -->
         
     </div>
@@ -170,6 +170,7 @@ System.out.println("Olá mundo!!!");
     <script src="../assets/js/menu-off-canvas.js"></script>
     <script src="../assets/js/paginacao.js"></script>
     <script src="../assets/js/localstorage-persistencia.js"></script>
+    <script src="../assets/js/i18n-en_GB.js"></script>
     <script>
         $(document).foundation();
         hljs.initHighlightingOnLoad();
