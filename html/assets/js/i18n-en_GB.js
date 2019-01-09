@@ -43,12 +43,57 @@ var i18nTraducao = {
         },
         "ola-mundo": { 
             "title": "Learn Java and Algorithms | Kazapp"
+        },
+        "olaMundo": { 
+            "t1": "Home",
+            "t2": "Basic Java",
+            "t3": "\"Hello World!!!\"",
+            "t4": "Installing Java",
+            "t5": "Java needs to be run on a virtual machine, the Java Virtual Machine (JVM)",
+            "t6": "For the development of Java applications, we need to install the Java Development Kit (JDK), which allows us to compile and execute Java code.",
+            "t7": "To install JDK, we must download it",
+            "t8": "here",
+            "t9": "Accessing the URL above, download the operating system and run the installer.",
+            "t10": "To verify your installation, run the following command on the terminal:",
+            "t11": "You should see something similar to:",
+            "t12": "Creating the first program - \"Hello World!\"",
+            "t13": "First, create in a directory a file called <b>HelloWorld.java</b>, with the following content:",
+            "t14": "After the file creation, we must compile the same with the following command (executed by the terminal in the root of the directory where you created the file):",
+            "t15": "After compilation, the <b>HelloWorld.class</b> file will be generated in the same directory.",
+            "t16": "To run the code, run the following command in the root of the directory where you created the Java file:",
+            "t17": "You should see the following:",
+            "t18": "Using an IDE",
+            "t19": "In the course we will use only the command line to create the files, but you can use an IDE to make it easier, so you can download the <a href=\"https://www.jetbrains.com/idea/download\" target=\"_ blank\">IntelliJ</a> or the <a href=\"https://www.eclipse.org/downloads\" target=\"_blank\">Eclipse</a> for example.",
+            "t20": "Understanding the code - \"Hello world!\"",
+            "t21": "Let's start by looking at the class declaration line:",
+            "t22": "<b>public</b> means that the class can be accessed from anywhere, it is public.",
+            "t23": "Classes scope",
+            "t24": "There are other class scopes, such as <b>protected</b>, <b>private</b> and <b>default</b>, which will be displayed in the future, for now we will use only <b>public</b>.",
+            "t25": "<b>class</b> means that this file is a class, which will be used to create objects (instances) in Java, and every class must have a name, in our case <b>HelloWorld</b>.",
+            "t26": "Classes names",
+            "t27": "There is a convention in class nomenclature, which is basically the first letter always capital, and for each new word we always use the first capital letter as well. We must not use spaces or special characters in your name.",
+            "t28": "File names",
+            "t29": "All files must be named with the same name defined in the class, plus the <b>.java</b> extension.",
+            "t30": "Next we have the main method <b>main</b>, which is the default method in Java classes to run whenever we execute it, as follows:",
+            "t31": "In this method the <b>public</b> statement means that the method is public, which means it can be accessed from any location, visible by any other class that has access to an instance of the class.",
+            "t32": "<b>static</b> means that the method is static, that is, that it can be accessed without an instance of the class, is an operator that we will study in more detail later.",
+            "t33": "<b>void</b> means that the method returns no value.",
+            "t34": "The <b>String [] args</b> means that the <b>main</b> method when executed, if values are passed through the command line, information is available in this list of Strings.",
+            "t35": "Finally, we use the standard command to print a line in the terminal, according to the following code:"
         }
     }
 };
 
 function inicializar() {
     var lingua = localStorage["lingua"];
+    // código fonte
+    $(".source-code").each(function() {
+        if ($(this).hasClass("code-" + lingua)) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+    });
     if (!lingua || !i18nTraducao[lingua]) {
         return;
     }

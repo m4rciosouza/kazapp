@@ -22,9 +22,9 @@
         <br />
         <nav role="navigation">
           <ul class="breadcrumbs">
-            <li><a href="../index.html">Início</a></li>
-            <li><a href="../index.html#java-basico">Java Básico</a></li>
-            <li>"Olá mundo!"</li>
+              <li><a href="../index.html"><span class="i18n" data-i18n="olaMundo-t1">Início</span></a></li>
+              <li><a href="../index.html#java-basico"><span class="i18n" data-i18n="olaMundo-t2">Java Básico</span></a></li>
+              <li><span class="i18n" data-i18n="olaMundo-t3">"Olá mundo!"</span></li>
           </ul>
         </nav>
         <!-- BREADCRUMBS:END -->
@@ -39,19 +39,19 @@
         <!-- PROGRESS:END -->
         
       <div class="pag1">
-        <h2>Instalando o Java</h2>
-        <p>O Java necessita ser executado em uma máquina virtual, a JVM (Java Virtual Machine).</p>
-        <p>Para o desenvolvimento de aplicações Java, precisamos instalar a JDK (Java Development Kit), que nos permite compilar e executar códigos Java.</p>
-        <p>Para instalar a JDK, devemos realizar o download <a href="https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">aqui</a>.</p>
-        <p>Acessando a URL acima, faça o download referênte ao sistema operacional e execute o instalador.</p>
-        <p>Para verificar a sua instação, execute o seguinte comando no terminal:</p>
+          <h2><span class="i18n" data-i18n="olaMundo-t4">Instalando o Java</span></h2>
+          <p><span class="i18n" data-i18n="olaMundo-t5">O Java necessita ser executado em uma máquina virtual, a JVM (Java Virtual Machine).</span></p>
+          <p><span class="i18n" data-i18n="olaMundo-t6">Para o desenvolvimento de aplicações Java, precisamos instalar a JDK (Java Development Kit), que nos permite compilar e executar códigos Java.</span></p>
+          <p><span class="i18n" data-i18n="olaMundo-t7">Para instalar a JDK, devemos realizar o download</span> <a href="https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank"><span class="i18n" data-i18n="olaMundo-t8">aqui</span></a>.</p>
+          <p><span class="i18n" data-i18n="olaMundo-t9">Acessando a URL acima, faça o download referênte ao sistema operacional e execute o instalador.</span></p>
+          <p><span class="i18n" data-i18n="olaMundo-t10">Para verificar a sua instalação, execute o seguinte comando no terminal:</span></p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 java -version
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-        <p>Você deverá ver algo semelhante a:</p>
+          <p><span class="i18n" data-i18n="olaMundo-t11">Você deverá ver algo semelhante a:</span></p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 java version "1.8.0_45"
@@ -62,10 +62,10 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
       </div>
         
       <div class="pag2">    
-        <h2>Criando o primero programa - "Olá mundo!"</h2>
-        <p>Primeiramente, crie em algum diretório um arquivo chamado <b>OlaMundo.java</b>, com o seguinte conteúdo:</p>
+          <h2><span class="i18n" data-i18n="olaMundo-t12">Criando o primeiro programa - "Olá mundo!"</span></h2>
+          <p><span class="i18n" data-i18n="olaMundo-t13">Primeiramente, crie em algum diretório um arquivo chamado <b>OlaMundo.java</b>, com o seguinte conteúdo:</span></p>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
 public class OlaMundo {
   public static void main(String[] args) {
     System.out.println("Olá mundo!!!");
@@ -73,60 +73,90 @@ public class OlaMundo {
 }
         </code></pre></div>
         <!-- CODE:END -->
-        <br />
-        <p>Após a criação do arquivo, devemos compilar o mesmo com o seguinte comando (executado pelo terminal na raiz do diretório onde você criou o arquivo):</p>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
-javac OlaMundo.java
-        </code></pre></div>
-        <!-- CODE:END -->
-        <br />
-        <p>Após a compilação, o arquivo <b>OlaMundo.class</b> será gerado no mesmo diretório.</p>
-        <p>Para executar o código, execute o seguinte comando na raiz do diretório onde você criou o arquivo Java:</p>
-        <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
-java OlaMundo
-        </code></pre></div>
-        <!-- CODE:END -->
-        <br />
-        <p>Você deverá vizualizar o seguinte:</p>
-        <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
-Olá mundo!!!
-        </code></pre></div>
-        <!-- CODE:END -->
-        <br />
-        <div class="callout primary">
-          <h5>Utilizando uma IDE</h5>
-            <p>No curso utilizaremos apenas a linha de comando para criar os arquivos, mas você poderá utilizar uma IDE para facilitar o trabalho, para isso você poderá baixa o <a href="https://www.jetbrains.com/idea/download" target="_blank">IntelliJ</a> ou o <a href="https://www.eclipse.org/downloads" target="_blank">Eclipse</a> por exemplo.</p>
-        </div>
-      </div>
-        
-      <div class="pag3">
-        <h2>Entendendo o código do programa - "Olá mundo!"</h2>
-        <p>Vamos começar analisando a linha da declaração da classe:</p>
-        <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
-public class OlaMundo {
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello World!!!");
+  }
 }
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-        <p>O <b>public</b> significa que a classe pode ser acessada de qualquer local, ela é pública.</p>
+          <p><span class="i18n" data-i18n="olaMundo-t14">Após a criação do arquivo, devemos compilar o mesmo com o seguinte comando (executado pelo terminal na raiz do diretório onde você criou o arquivo):</span></p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+javac OlaMundo.java
+        </code></pre></div>
+        <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+javac HelloWorld.java
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          <p><span class="i18n" data-i18n="olaMundo-t15">Após a compilação, o arquivo <b>OlaMundo.class</b> será gerado no mesmo diretório.</span></p>
+          <p><span class="i18n" data-i18n="olaMundo-t16">Para executar o código, execute o seguinte comando na raiz do diretório onde você criou o arquivo Java:</span></p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+java OlaMundo
+        </code></pre></div>
+        <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+java HelloWorld
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          <p><span class="i18n" data-i18n="olaMundo-t17">Você deverá visualizar o seguinte:</span></p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+Olá mundo!!!
+        </code></pre></div>
+        <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+Hello World!!!
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
         <div class="callout primary">
-          <h5>Escopo das classes</h5>
-            <p>Existem outros escopos de classe, como o <b>protected</b>, <b>private</b> e <b>default</b>, que serão apresentados futuramente, por hora vamos utilizar somente o <b>public</b>.</p>
+            <h5><span class="i18n" data-i18n="olaMundo-t18">Utilizando uma IDE</span></h5>
+            <p><span class="i18n" data-i18n="olaMundo-t19">No curso utilizaremos apenas a linha de comando para criar os arquivos, mas você poderá utilizar uma IDE para facilitar o trabalho, para isso você poderá baixa o <a href="https://www.jetbrains.com/idea/download" target="_blank">IntelliJ</a> ou o <a href="https://www.eclipse.org/downloads" target="_blank">Eclipse</a> por exemplo.</span></p>
         </div>
-        <p>O <b>class</b> significa que esse arquivo é uma classe, que será utilizado para criar objetos (instâncias) em Java, e toda classe deve possuir um nome, no nosso caso <b>OlaMundo</b>.</p>
+      </div>
+        
+      <div class="pag3">
+          <h2><span class="i18n" data-i18n="olaMundo-t20">Entendendo o código do programa - "Olá mundo!"</span></h2>
+          <p><span class="i18n" data-i18n="olaMundo-t21">Vamos começar analisando a linha da declaração da classe:</span></p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+public class OlaMundo {
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+public class HelloWorld {
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          <p><span class="i18n" data-i18n="olaMundo-t22">O <b>public</b> significa que a classe pode ser acessada de qualquer local, ela é pública.</span></p>
         <div class="callout primary">
-          <h5>Nomes das classes</h5>
-            <p>Existe uma convenção na nomenclatura de classes, que basicamente é a primeira letra sempre maiúscula, e para cada nova palavra usamos sempre a primeira letra maiúscula também. Não devemos utilizar espaços nem caracteres especiais em seu nome.</p>
+            <h5><span class="i18n" data-i18n="olaMundo-t23">Escopo das classes</span></h5>
+            <p><span class="i18n" data-i18n="olaMundo-t24">Existem outros escopos de classe, como o <b>protected</b>, <b>private</b> e <b>default</b>, que serão apresentados futuramente, por hora vamos utilizar somente o <b>public</b>.</span></p>
+        </div>
+          <p><span class="i18n" data-i18n="olaMundo-t25">O <b>class</b> significa que esse arquivo é uma classe, que será utilizado para criar objetos (instâncias) em Java, e toda classe deve possuir um nome, no nosso caso <b>OlaMundo</b>.</span></p>
+        <div class="callout primary">
+            <h5><span class="i18n" data-i18n="olaMundo-t26">Nomes das classes</span></h5>
+            <p><span class="i18n" data-i18n="olaMundo-t27">Existe uma convenção na nomenclatura de classes, que basicamente é a primeira letra sempre maiúscula, e para cada nova palavra usamos sempre a primeira letra maiúscula também. Não devemos utilizar espaços nem caracteres especiais em seu nome.</span></p>
         </div>
         <div class="callout primary">
-          <h5>Nomes dos arquivos</h5>
-            <p>Todos os arquivos deverão ser nomeados com o mesmo nome definido na classe, mais a extensão <b>.java</b>.</p>
+            <h5><span class="i18n" data-i18n="olaMundo-t28">Nomes dos arquivos</span></h5>
+            <p><span class="i18n" data-i18n="olaMundo-t29">Todos os arquivos deverão ser nomeados com o mesmo nome definido na classe, mais a extensão <b>.java</b>.</span></p>
         </div>
-        <p>Logo na sequência temos o método principal, <b>main</b>, que é o método padrão em classes Java a ser executado sempre que a executamos, conforme o código a seguir:</p>
+          <p><span class="i18n" data-i18n="olaMundo-t30">Logo na sequência temos o método principal, <b>main</b>, que é o método padrão em classes Java a ser executado sempre que a executamos, conforme o código a seguir:</span></p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 public static void main(String[] args) {
@@ -134,14 +164,19 @@ public static void main(String[] args) {
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-        <p>Nesse método a declaração <b>public</b> significa que o método é público, ou seja, pode acessado de qualquer local, visível por qualquer outra classe que tenha acesso a uma instância da classe.</p>
-        <p>O <b>static</b> significa que o método é estático, ou seja, que ele pode acessado sem que tenhamos uma instância da classe, é um operador que estudaremos em maiores detalhes mais adiante.</p>
-        <p>O <b>void</b> significa que o método não retorna nenhum valor.</p>
-        <p>O <b>String[] args</b> significa que o método <b>main</b> ao ser executado, caso sejam passados valores pela linha de comando, as informações estarão disponíveis nessa lista de Strings.</p>
-        <p>Para finalizar utilizamos o comando padrão para imprimir uma linha no terminal, conforme o código a seguir:</p>
+          <p><span class="i18n" data-i18n="olaMundo-t31">Nesse método a declaração <b>public</b> significa que o método é público, ou seja, pode acessado de qualquer local, visível por qualquer outra classe que tenha acesso a uma instância da classe.</span></p>
+          <p><span class="i18n" data-i18n="olaMundo-t32">O <b>static</b> significa que o método é estático, ou seja, que ele pode acessado sem que tenhamos uma instância da classe, é um operador que estudaremos em maiores detalhes mais adiante.</span></p>
+          <p><span class="i18n" data-i18n="olaMundo-t33">O <b>void</b> significa que o método não retorna nenhum valor.</span></p>
+          <p><span class="i18n" data-i18n="olaMundo-t34">O <b>String[] args</b> significa que o método <b>main</b> ao ser executado, caso sejam passados valores pela linha de comando, as informações estarão disponíveis nessa lista de Strings.</span></p>
+          <p><span class="i18n" data-i18n="olaMundo-t35">Para finalizar utilizamos o comando padrão para imprimir uma linha no terminal, conforme o código a seguir:</span></p>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
 System.out.println("Olá mundo!!!");
+        </code></pre></div>
+        <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+System.out.println("Hello World!!!");
         </code></pre></div>
         <!-- CODE:END -->
       </div>
