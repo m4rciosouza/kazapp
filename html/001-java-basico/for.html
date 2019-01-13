@@ -22,8 +22,8 @@
         <br />
         <nav role="navigation">
           <ul class="breadcrumbs">
-            <li><a href="../index.html">Início</a></li>
-            <li><a href="../index.html#java-basico">Java Básico</a></li>
+              <li><a href="../index.html"><span class="i18n" data-i18n="for-t1">Início</span></a></li>
+              <li><a href="../index.html#java-basico"><span class="i18n" data-i18n="for-t2">Java Básico</span></a></li>
             <li>For</li>
           </ul>
         </nav>
@@ -40,17 +40,17 @@
         
       <div class="pag1">
         <h2>For</h2>
-        <p>O laço <b>for</b> é utilizado quando queremos realizar uma operação por múltiplas vezes.</p>
-        <p>Exemplos de sua utilização seriam iterar sob listas de dados, executar uma operação por "n" vezes, entre outros.</p>
-        <p>O laço <b>for</b> trabalha com três parâmetros, separados por ";", sendo o primeiro deles a inicialização de valores, o segundo a condição de fim de execução, similar a condição utilizada no <b>if</b>, e o terceiro é o critério de incremento para a satisfazer a condição de parada, definida na condição anterior.</p>
-        <p>O laço <b>for</b> é mais utilizado para iterações com um início e fim definidos, e embora possam ser feitos laços infinitos com ele, o recomendado para tal operação seria o laço <b>while</b>, que estudaremos na sequência.</p>
+          <p><span class="i18n" data-i18n="for-t3">O laço <b>for</b> é utilizado quando queremos realizar uma operação por múltiplas vezes.</span></p>
+          <p><span class="i18n" data-i18n="for-t4">Exemplos de sua utilização seriam iterar sob listas de dados, executar uma operação por "n" vezes, entre outros.</span></p>
+          <p><span class="i18n" data-i18n="for-t5">O laço <b>for</b> trabalha com três parâmetros, separados por ";", sendo o primeiro deles a inicialização de valores, o segundo a condição de fim de execução, similar a condição utilizada no <b>if</b>, e o terceiro é o critério de incremento para a satisfazer a condição de parada, definida na condição anterior.</span></p>
+          <p><span class="i18n" data-i18n="for-t6">O laço <b>for</b> é mais utilizado para iterações com um início e fim definidos, e embora possam ser feitos laços infinitos com ele, o recomendado para tal operação seria o laço <b>while</b>, que estudaremos na sequência.</span></p>
     </div>
         
     <div class="pag2">
-        <h2>O laço For na prática</h2>
-        <p>Verifique o código a seguir para visualizar o uso do laço <b>for</b>:</p>
+        <h2><span class="i18n" data-i18n="for-t7">O laço For na prática</span></h2>
+        <p><span class="i18n" data-i18n="for-t8">Verifique o código a seguir para visualizar o uso do laço <b>for</b>:</span></p>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
 int[] numeros = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     
 for (int i=0; i<=10; i++) {
@@ -62,28 +62,41 @@ for (int i=10; i>=0; i--) {
 }
         </code></pre></div>
         <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+int[] numbers = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    
+for (int i=0; i<=10; i++) {
+  System.out.println(i);
+}
+
+for (int i=10; i>=0; i--) {
+  System.out.println(i);
+}
+        </code></pre></div>
+        <!-- CODE:END -->
         <br />
-        <p>No código acima, na primeira linha, criamos uma lista com os números de 0 a 10, o qual usaremos na iteração no laço <b>for</b>.</p>
-        <p>Repare que em ambos laços <b>for</b> do código acima, primeiramente inicializamos a variável de controle de nossas iterações, que no caso é a variável chamada "i".</p>
-        <p>Iniciamos a primeira com o valor 0 e a segunda com o valor 10, porque no primeiro laço <b>for</b> queremos imprimir os números de 0 a 10, e no segundo de 10 a 0.</p>
-        <p>No segundo parâmetro temos a condição de término da execução do laço <b>for</b>, que indica que queremos prosseguir com a execução do laço enquanto o valor de "i" for menor ou igual a 10, ou no segundo caso, enquanto "i" for maior ou igual a 0. A condição é muito parecida com a que vimos anteriormente no <b>if</b>.</p>
-        <p>O terceiro parâmetro indica como chegaremos da inicialização até a condição de parada, que no nosso caso, consiste em incrementar o "i" em 1 a cada laço no primeiro caso, e decrementar "i" em 1 no segundo caso.</p>
+            <p><span class="i18n" data-i18n="for-t9">No código acima, na primeira linha, criamos uma lista com os números de 0 a 10, o qual usaremos na iteração no laço <b>for</b>.</span></p>
+            <p><span class="i18n" data-i18n="for-t10">Repare que em ambos laços <b>for</b> do código acima, primeiramente inicializamos a variável de controle de nossas iterações, que no caso é a variável chamada "i".</span></p>
+            <p><span class="i18n" data-i18n="for-t11">Iniciamos a primeira com o valor 0 e a segunda com o valor 10, porque no primeiro laço <b>for</b> queremos imprimir os números de 0 a 10, e no segundo de 10 a 0.</span></p>
+            <p><span class="i18n" data-i18n="for-t12">No segundo parâmetro temos a condição de término da execução do laço <b>for</b>, que indica que queremos prosseguir com a execução do laço enquanto o valor de "i" for menor ou igual a 10, ou no segundo caso, enquanto "i" for maior ou igual a 0. A condição é muito parecida com a que vimos anteriormente no <b>if</b>.</span></p>
+            <p><span class="i18n" data-i18n="for-t13">O terceiro parâmetro indica como chegaremos da inicialização até a condição de parada, que no nosso caso, consiste em incrementar o "i" em 1 a cada laço no primeiro caso, e decrementar "i" em 1 no segundo caso.</span></p>
         <div class="callout primary">
-          <h5>Simulando o primeiro laço <b>for</b></h5>
-            <p>No caso do primeiro laço <b>for</b>, inicializamos o valor de "i" com o valor 0, e para cada iteração imprimimos no terminal o valor corrente de "i", e logo em seguida o incrementamos em 1. Esse processo se repetirá até que a condição seja atingida, que nesse caso é quando o valor de "i" for incrementado a 11, informando que é hora de parar, uma vez que 11 é maior do que 10, conforme definimos nossa condição.</p>
-            <p>Já no terminal, deverão ser impressos os valores conforme segue:</p>
+            <h5><span class="i18n" data-i18n="for-t14">Simulando o primeiro laço <b>for</b></span></h5>
+            <p><span class="i18n" data-i18n="for-t15">No caso do primeiro laço <b>for</b>, inicializamos o valor de "i" com o valor 0, e para cada iteração imprimimos no terminal o valor corrente de "i", e logo em seguida o incrementamos em 1. Esse processo se repetirá até que a condição seja atingida, que nesse caso é quando o valor de "i" for incrementado a 11, informando que é hora de parar, uma vez que 11 é maior do que 10, conforme definimos nossa condição.</span></p>
+            <p><span class="i18n" data-i18n="for-t16">Já no terminal, deverão ser impressos os valores conforme segue:</span></p>
             <p>0 1 2 3 4 5 6 7 8 9 10</p>
         </div>
       </div>
         
       <div class="pag3">
-        <h2>Break e Continue</h2>
-        <p>O <b>break</b> e <b>continue</b> são dois elementos que nos ajudam a executar determinadas tarefas dentro de um laço <b>for</b>.</p>
-        <p>O <b>continue</b> serve para avançar para a próxima iteração do laço <b>for</b> assim que chamado, ignorando o código contido no laço após sua chamada.</p> 
-        <p>O <b>break</b> serve para sair do laço <b>for</b>, terminando sua execução assim que chamado.</p>
-        <p>Verifique o exemplo do código a seguir:</p>
+          <h2><span class="i18n" data-i18n="for-t17">Break e Continue</span></h2>
+          <p><span class="i18n" data-i18n="for-t18">O <b>break</b> e <b>continue</b> são dois elementos que nos ajudam a executar determinadas tarefas dentro de um laço <b>for</b>.</span></p>
+          <p><span class="i18n" data-i18n="for-t19">O <b>continue</b> serve para avançar para a próxima iteração do laço <b>for</b> assim que chamado, ignorando o código contido no laço após sua chamada.</span></p> 
+          <p><span class="i18n" data-i18n="for-t20">O <b>break</b> serve para sair do laço <b>for</b>, terminando sua execução assim que chamado.</span></p>
+          <p><span class="i18n" data-i18n="for-t21">Verifique o exemplo do código a seguir:</span></p>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
 int[] numeros = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 for (int i=0; i<=10; i++) {
@@ -101,18 +114,37 @@ for (int i=0; i<=10; i++) {
 }
         </code></pre></div>
         <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+int[] numbers = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+for (int i=0; i<=10; i++) {
+  if (i % 2 == 0) {
+    continue;
+  }
+  System.out.println(i);
+}
+
+for (int i=0; i<=10; i++) {
+  System.out.println(i);
+  if (i == 5) {
+    break;
+  }
+}
+        </code></pre></div>
+        <!-- CODE:END -->
         <br />
-        <p>Na primeira linha do código acima, criamos uma lista de números, contendo os valores de 0 a 10, que usaremos para a iteração dos dados.</p>
-        <p>No primeiro laço <b>for</b> fazemos o uso do <b>continue</b>, onde queremos que o número seja impresso somente se ele for ímpar (dado a condição existente no <b>if</b>), pois se ele for um número par, o <b>continue</b> será executado, ignorando o comando de impressão do número.</p>
-        <p>No segundo laço <b>for</b> fazemos o uso do <b>break</b>, onde imprimiremos somente os números de 0 a 5, pois o <b>break</b> será executado assim que "i" for igual a 5, fazendo com que a execução do laço <b>for</b> seja interrompida.</p>
+          <p><span class="i18n" data-i18n="for-t22">Na primeira linha do código acima, criamos uma lista de números, contendo os valores de 0 a 10, que usaremos para a iteração dos dados.</span></p>
+          <p><span class="i18n" data-i18n="for-t23">No primeiro laço <b>for</b> fazemos o uso do <b>continue</b>, onde queremos que o número seja impresso somente se ele for ímpar (dado a condição existente no <b>if</b>), pois se ele for um número par, o <b>continue</b> será executado, ignorando o comando de impressão do número.</span></p>
+          <p><span class="i18n" data-i18n="for-t24">No segundo laço <b>for</b> fazemos o uso do <b>break</b>, onde imprimiremos somente os números de 0 a 5, pois o <b>break</b> será executado assim que "i" for igual a 5, fazendo com que a execução do laço <b>for</b> seja interrompida.</span></p>
       </div>
           
       <div class="pag4">
-        <h2>Forma alternativa do laço For</h2>
-        <p>O Java possui uma forma alternativa do laço <b>for</b>, normalmente utilizado para iterar sob listas de objetos, uma vez que não indicaremos critérios de parada, nem mesmo inicializações.</p>
-          <p>Repare no código a seguir como o laço <b>for</b> é criado, utilizando apenas dois atributos separados por ":":</p>
+          <h2><span class="i18n" data-i18n="for-t25">Forma alternativa do laço For</span></h2>
+          <p><span class="i18n" data-i18n="for-t26">O Java possui uma forma alternativa do laço <b>for</b>, normalmente utilizado para iterar sob listas de objetos, uma vez que não indicaremos critérios de parada, nem mesmo inicializações.</span></p>
+          <p><span class="i18n" data-i18n="for-t27">Repare no código a seguir como o laço <b>for</b> é criado, utilizando apenas dois atributos separados por ":":</span></p>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
 int[] numeros = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 for (int numero: numeros) {
@@ -120,26 +152,35 @@ for (int numero: numeros) {
 }
         </code></pre></div>
         <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+int[] numbers = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+for (int number: numbers) {
+  System.out.println(number);
+}
+        </code></pre></div>
+        <!-- CODE:END -->
         <br />
-        <p>Na primeira linha do código acima, criamos uma lista de números, contendo os valores de 0 a 10, que usaremos para a iteração dos dados.</p>
-        <p>No laço <b>for</b> temos dois atributos, "numero" e "numeros", onde o primeiro será o valor corrente da lista a ser iterada, e o segundo será a lista com os dados a serem iterados.</p>
-        <p>A cada iteração do laço <b>for</b>, para cada valor contido em "numeros", ele será atribuido ao atributo "numero", que deverá ser do mesmo tipo dos valores da nossa lista (no nosso caso <b>int</b>).</p>
-        <p>Por fim, ainda em nosso laço <b>for</b>, apenas imprimimos o número corrente, que serão os números de 0 a 10 contidos em nossa lista.</p>  
+          <p><span class="i18n" data-i18n="for-t28">Na primeira linha do código acima, criamos uma lista de números, contendo os valores de 0 a 10, que usaremos para a iteração dos dados.</span></p>
+          <p><span class="i18n" data-i18n="for-t29">No laço <b>for</b> temos dois atributos, "numero" e "numeros", onde o primeiro será o valor corrente da lista a ser iterada, e o segundo será a lista com os dados a serem iterados.</span></p>
+          <p><span class="i18n" data-i18n="for-t30">A cada iteração do laço <b>for</b>, para cada valor contido em "numeros", ele será atribuido ao atributo "numero", que deverá ser do mesmo tipo dos valores da nossa lista (no nosso caso <b>int</b>).</span></p>
+          <p><span class="i18n" data-i18n="for-t31">Por fim, ainda em nosso laço <b>for</b>, apenas imprimimos o número corrente, que serão os números de 0 a 10 contidos em nossa lista.</span></p>  
         <div class="callout primary">
-          <h5>Java 8, Streams e Lambdas</h5>
-            <p>O Java 8 introduziu um novo recurso chamado <b>Streams</b> e <b>Lambdas</b>, que nos permite iterar sobre listas de um modo diferente dos citados anteriormente.</p>
-            <p>Além de iterar sob listas, ele permite aplicar diversas outras transformações como filtro de dados, mapeamentos, entre outros.</p>
-            <p>Devido a sua grande quantidade de recursos, estudaremos <b>Streams</b> e <b>Lambdas</b> separadamente, em um módulo apenas dedicado a eles.</p>
+            <h5><span class="i18n" data-i18n="for-t32">Java 8, Streams e Lambdas</span></h5>
+            <p><span class="i18n" data-i18n="for-t33">O Java 8 introduziu um novo recurso chamado <b>Streams</b> e <b>Lambdas</b>, que nos permite iterar sobre listas de um modo diferente dos citados anteriormente.</span></p>
+            <p><span class="i18n" data-i18n="for-t34">Além de iterar sob listas, ele permite aplicar diversas outras transformações como filtro de dados, mapeamentos, entre outros.</span></p>
+            <p><span class="i18n" data-i18n="for-t35">Devido a sua grande quantidade de recursos, estudaremos <b>Streams</b> e <b>Lambdas</b> separadamente, em um módulo apenas dedicado a eles.</span></p>
         </div>
       </div>
         
       <div class="pag5">
-        <h2>Vamos praticar?</h2>
-        <p>A melhor forma de aprender é praticando, portanto vamos seguir um passo a passo para executar o código estudado nas aulas anteriores.</p>
-        <p>Crie o arquivo <b>For.java</b> em um diretório de sua preferência.</p>
-        <p>Adicione o seguinte código nele:</p>
+          <h2><span class="i18n" data-i18n="for-t36">Vamos praticar?</span></h2>
+          <p><span class="i18n" data-i18n="for-t37">A melhor forma de aprender é praticando, portanto vamos seguir um passo a passo para executar o código estudado nas aulas anteriores.</span></p>
+          <p><span class="i18n" data-i18n="for-t38">Crie o arquivo <b>For.java</b> em um diretório de sua preferência.</span></p>
+          <p><span class="i18n" data-i18n="for-t39">Adicione o seguinte código nele:</span></p>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
 public class For {
 
   public static void main(String[] args) {
@@ -174,23 +215,59 @@ public class For {
 }
         </code></pre></div>
         <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+public class For {
+
+  public static void main(String[] args) {
+    int[] numbers = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    
+    for (int i=0; i<=10; i++) {
+      System.out.println(i);
+    }
+
+    for (int i=10; i>=0; i--) {
+      System.out.println(i);
+    }
+
+    for (int i=0; i<=10; i++) {
+      if (i % 2 == 0) {
+        continue;
+      }
+      System.out.println(i);
+    }
+
+    for (int i=0; i<=10; i++) {
+      System.out.println(i);
+      if (i == 5) {
+        break;
+      }
+    }
+
+    for (int number: numbers) {
+      System.out.println(number);
+    }
+  }
+}
+        </code></pre></div>
+        <!-- CODE:END -->
         <br />
-        <p>Compile o código fonte, executando no terminal no diretório onde o arquivo foi criado:</p>
+            <p><span class="i18n" data-i18n="for-t40">Compile o código fonte, executando no terminal no diretório onde o arquivo foi criado:</span></p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 javac For.java        
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-        <p>O arquivo <b>For.class</b> será gerado no mesmo diretório.</p>
-        <p>Execute o código compilado no terminal com:</p>
+            <p><span class="i18n" data-i18n="for-t41">O arquivo <b>For.class</b> será gerado no mesmo diretório.</span></p>
+            <p><span class="i18n" data-i18n="for-t42">Execute o código compilado no terminal com:</span></p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 java For        
         </code></pre></div>
         <!-- CODE:END --> 
         <br />
-        <p>Você deverá ver o seguinte no terminal:</p>
+            <p><span class="i18n" data-i18n="for-t43">Você deverá ver o seguinte no terminal:</span></p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 0
@@ -240,22 +317,22 @@ java For
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-        <p>Parabéns!!! Você concluiu com sucesso o seu estudo do comando <b>for</b>.</p>
+            <p><span class="i18n" data-i18n="for-t44">Parabéns!!! Você concluiu com sucesso o seu estudo do comando <b>for</b>.</span></p>
       </div>
         
         <!-- PAGINATION:BEGIN -->
         <br />
         <div style="text-align: center">
             <ul class="pagination" role="navigation" aria-label="Pagination">
-              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()">Anterior</li>
-              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()">Próximo</li>
+              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()"><span class="i18n-pag-anterior">Anterior</span></li>
+              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()"><span class="i18n-pag-proximo">Próximo</span></li>
             </ul>
         </div>
         <!-- PAGINATION:END -->
         
         <!-- END_CLASS:BEGIN -->
-        <a class="button success expanded concluir" href="../index.html#java-basico" onclick="return Persistencia.completar('.for', '.do-while');">Concluir lição</a>
-        <a class="button secondary expanded sair" href="../index.html#java-basico">Sair da lição</a>
+        <a class="button success expanded concluir" href="../index.html#java-basico" onclick="return Persistencia.completar('.for', '.do-while');"><span class="i18n-concluir-licao">Concluir lição</span></a>
+        <a class="button secondary expanded sair" href="../index.html#java-basico"><span class="i18n-sair-licao">Sair da lição</span></a>
         <!-- END_CLASS:END -->
         
     </div>
@@ -267,6 +344,7 @@ java For
     <script src="../assets/js/highlight.min.js"></script>
     <script src="../assets/js/paginacao.js"></script>
     <script src="../assets/js/localstorage-persistencia.js"></script>
+    <script src="../assets/js/i18n-en_GB.js"></script>
     <script>
         $(document).foundation();
         hljs.initHighlightingOnLoad();

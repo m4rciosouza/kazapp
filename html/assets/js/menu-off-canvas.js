@@ -26,10 +26,12 @@ var menuOffCavas = '' +
               '<div class="title-bar-left">' +
                 '<!-- Fire Off-canvas -->' +
                 '<button class="menu-icon" type="button" data-toggle="offCanvasLeft"></button>' +
-                '<span class="title-bar-title i18n-off-canvas-5">Kazapp - Java e Algoritmos</span>' +
+                '<span class="title-bar-title i18n-off-canvas-5">Kazapp</span>' +
               '</div>' +
-              '<div class="title-bar-right" style="display: none">' +
-                '<button class="menu-icon" type="button"></button>' +
+              '<div class="title-bar-right" style="display: block">' +
+                '<button class="menu-icon" type="button" style="display: none"></button>' +
+                '<a href="#" data-toggle="offCanvasLeft" class="menu-flag-pt_BR"><img src="/html/assets/img/pt_BR.png" style="width: 20px; height: 20px">' +
+                '<a href="#" data-toggle="offCanvasLeft" class="menu-flag-en_GB" style="display: none"><img src="/html/assets/img/en_GB.png" style="width: 20px; height: 20px">' +
               '</div>' +
             '</div>' +
         '</div>' +

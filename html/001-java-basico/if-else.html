@@ -22,8 +22,8 @@
         <br />
         <nav role="navigation">
           <ul class="breadcrumbs">
-            <li><a href="../index.html">Início</a></li>
-            <li><a href="../index.html#java-basico">Java Básico</a></li>
+              <li><a href="../index.html"><span class="i18n" data-i18n="ifElse-t1">Início</span></a></li>
+              <li><a href="../index.html#java-basico"><span class="i18n" data-i18n="ifElse-t2">Java Básico</span></a></li>
             <li>If/Else</li>
           </ul>
         </nav>
@@ -40,16 +40,16 @@
         
       <div class="pag1">
         <h2>If/Else</h2>
-        <p>Na criação de qualquer código, necessitamos utilizar a todo tempo condicionais para direcionar as etapas de execução de nosso algoritmo.</p>
-        <p>Por isso existe o comando <b>if/else</b>, para nos permitir executar um determinado bloco de código dependendo se uma condição é válida ou não.</p>
-        <p>A condicional a ser executada pode conter diferentes variações, e a seguir estudaremos as principais delas.</p>
+          <p><span class="i18n" data-i18n="ifElse-t3">Na criação de qualquer código, necessitamos utilizar a todo tempo condicionais para direcionar as etapas de execução de nosso algoritmo.</span></p>
+          <p><span class="i18n" data-i18n="ifElse-t4">Por isso existe o comando <b>if/else</b>, para nos permitir executar um determinado bloco de código dependendo se uma condição é válida ou não.</span></p>
+          <p><span class="i18n" data-i18n="ifElse-t5">A condicional a ser executada pode conter diferentes variações, e a seguir estudaremos as principais delas.</span></p>
       </div>
         
       <div class="pag2">    
-        <h2>O If/Else na prática</h2>
-        <p>A mais simples delas é o uso apenas do <b>if</b>, em conjunto com uma única condição, conforme o código a seguir:</p>
+          <h2><span class="i18n" data-i18n="ifElse-t6">O If/Else na prática</span></h2>
+          <p><span class="i18n" data-i18n="ifElse-t7">A mais simples delas é o uso apenas do <b>if</b>, em conjunto com uma única condição, conforme o código a seguir:</span></p>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
 boolean passouNoTeste = true;
 int nota = 80;
 
@@ -65,22 +65,39 @@ if (nota >= 70)
   System.out.println("Passou no teste!");
         </code></pre></div>
         <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+boolean win = true;
+int score = 80;
+
+if (win) {
+  System.out.println("You win!");
+}
+
+if (!win) {
+  System.out.println("You lose.");
+}
+
+if (score >= 70)
+  System.out.println("You win!");
+        </code></pre></div>
+        <!-- CODE:END -->
         <br />
-        <p>Repare que usamos a palavra chave <b>if</b> seguida da condição, que estará entre parênteses.</p>
-        <p>A condição deverá sempre retornar um valor booleano, para que o código contido entre chaves seja ou não executado.</p>
-        <p>O operador "!" significa negação, ou seja, caso o resultado da condição seja verdadeira, ele será convertido para falso, e vice versa.</p>
-        <p>Podemos também utilizar operadores de comparação, que são os "==", "&lt;", "&gt;", "&ge;" e "&le;", onde comparamos se os valores são iguais, menores, maiores, maiores ou igual, e menores ou igual, respectivamente.</p>
+          <p><span class="i18n" data-i18n="ifElse-t8">Repare que usamos a palavra chave <b>if</b> seguida da condição, que estará entre parênteses.</span></p>
+          <p><span class="i18n" data-i18n="ifElse-t9">A condição deverá sempre retornar um valor booleano, para que o código contido entre chaves seja ou não executado.</span></p>
+          <p><span class="i18n" data-i18n="ifElse-t10">O operador "!" significa negação, ou seja, caso o resultado da condição seja verdadeira, ele será convertido para falso, e vice versa.</span></p>
+          <p><span class="i18n" data-i18n="ifElse-t11">Podemos também utilizar operadores de comparação, que são os "==", "&lt;", "&gt;", "&ge;" e "&le;", onde comparamos se os valores são iguais, menores, maiores, maiores ou igual, e menores ou igual, respectivamente.</span></p>
         <div class="callout primary">
-          <h5>Uso das chaves</h5>
-            <p>Quando temos uma única linha de código em nosso bloco <b>if</b>, podemos simplesmente omitir as chaves.</p>
+            <h5><span class="i18n" data-i18n="ifElse-t12">Uso das chaves</span></h5>
+            <p><span class="i18n" data-i18n="ifElse-t13">Quando temos uma única linha de código em nosso bloco <b>if</b>, podemos simplesmente omitir as chaves.</span></p>
         </div>
       </div>
         
       <div class="pag3">
-        <h2>Condicionais compostas</h2>
-        <p>Com o uso dos operadores "e", representado por <b>&amp;&amp;</b>, e do operador "ou", representado por <b>||</b>, podemos encadear múltiplas condições em um mesmo <b>if</b>, conforme o código a seguir:</p>
+          <h2><span class="i18n" data-i18n="ifElse-t14">Condicionais compostas</span></h2>
+          <p><span class="i18n" data-i18n="ifElse-t15">Com o uso dos operadores "e", representado por <b>&amp;&amp;</b>, e do operador "ou", representado por <b>||</b>, podemos encadear múltiplas condições em um mesmo <b>if</b>, conforme o código a seguir:</span></p>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
 boolean passouNoTeste = true;
 int nota = 80;
 
@@ -93,19 +110,33 @@ if (passouNoTeste || nota >= 70) {
 }
         </code></pre></div>
         <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+boolean win = true;
+int score = 80;
+
+if (score >= 70 && score <= 80) {
+  System.out.println("You've got raking B.");
+}
+
+if (win || score >= 70) {
+  System.out.println("You win!");
+}
+        </code></pre></div>
+        <!-- CODE:END -->
         <br />
-        <p>Basicamente o operador "e" fará com que o bloco de código seja executado, somente se ambas condições forem verdadeiras, enquanto que o operador "ou" será executado se ao menos uma das condições for verdadeira.</p>
+            <p><span class="i18n" data-i18n="ifElse-t16">Basicamente o operador "e" fará com que o bloco de código seja executado, somente se ambas condições forem verdadeiras, enquanto que o operador "ou" será executado se ao menos uma das condições for verdadeira.</span></p>
         <div class="callout primary">
-          <h5>Múltiplas condicionais</h5>
-            <p>Embora não exista um limite de condições, adicionar muitas delas em um mesmo <b>if</b> tornará o código de difícil legibilidade, portanto o recomendado é limitar ao máximo o número de condições em sequência.</p>
+            <h5><span class="i18n" data-i18n="ifElse-t17">Múltiplas condicionais</span></h5>
+            <p><span class="i18n" data-i18n="ifElse-t18">Embora não exista um limite de condições, adicionar muitas delas em um mesmo <b>if</b> tornará o código de difícil legibilidade, portanto o recomendado é limitar ao máximo o número de condições em sequência.</span></p>
         </div>
       </div>
           
       <div class="pag4">
-        <h2>If e Else em conjunto</h2>
-        <p>Muitas vezes queremos não somente executar o código para o resultado verdadeiro de uma condição, mas sim também para quando o resultado for falso, e para isso utilizamos o <b>else</b>, conforme o código abaixo:</p>
+          <h2><span class="i18n" data-i18n="ifElse-t19">If e Else em conjunto</span></h2>
+          <p><span class="i18n" data-i18n="ifElse-t20">Muitas vezes queremos não somente executar o código para o resultado verdadeiro de uma condição, mas sim também para quando o resultado for falso, e para isso utilizamos o <b>else</b>, conforme o código abaixo:</span></p>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
 boolean passouNoTeste = true;
 int nota = 80;
 
@@ -130,26 +161,52 @@ if (nota < 70) {
 }
         </code></pre></div>
         <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en-GB"><pre><code>
+boolean win = true;
+int score = 80;
+
+if (win) {
+  System.out.println("You win!");
+} else {
+  System.out.println("You lose.");
+}
+
+if (score % 2 == 0) {
+  System.out.println("Score is even.");
+} else {
+  System.out.println("Score is odd.");
+}
+
+if (score < 70) {
+  System.out.println("You lose.");
+} else if (score >= 70 && score <= 90) {
+  System.out.println("You've got ranking B.");
+} else {
+  System.out.println("You've got ranking A.");
+}
+        </code></pre></div>
+        <!-- CODE:END -->
         <br />
-        <p>No primeiro e segundo <b>if</b> do código acima, executamos uma ação para quando o resultado for verdadeiro, e outra para quando ele for falso (<b>else</b>).</p>
-        <p>No terceiro <b>if</b> do código acima, verificamos não somente duas, mas três condições distintas, combinando o <b>else</b> com o <b>if</b>, onde poderemos verificar quantas condições forem necessárias.</p>
+        <p><span class="i18n" data-i18n="ifElse-t21">No primeiro e segundo <b>if</b> do código acima, executamos uma ação para quando o resultado for verdadeiro, e outra para quando ele for falso (<b>else</b>).</span></p>
+        <p><span class="i18n" data-i18n="ifElse-t22">No terceiro <b>if</b> do código acima, verificamos não somente duas, mas três condições distintas, combinando o <b>else</b> com o <b>if</b>, onde poderemos verificar quantas condições forem necessárias.</span></p>
         <div class="callout primary">
-          <h5>Operador módulo ("%")</h5>
-            <p>O operador "%", ou módulo como é chamado, retorna o restante de uma divisão. Um clássico exemplo é testar se um número é par ou ímpar, conforme o código acima, onde ao dividirmos um número por 2, caso o restante seja 0, significa que ele é par, e para qualquer outro valor ele será ímpar.</p>
+          <h5><span class="i18n" data-i18n="ifElse-t23">Operador módulo ("%")</span></h5>
+            <p><span class="i18n" data-i18n="ifElse-t24">O operador "%", ou módulo como é chamado, retorna o restante de uma divisão. Um clássico exemplo é testar se um número é par ou ímpar, conforme o código acima, onde ao dividirmos um número por 2, caso o restante seja 0, significa que ele é par, e para qualquer outro valor ele será ímpar.</span></p>
         </div>
         <div class="callout primary">
-          <h5>Múltiplos <b>if</b>(s) e <b>else</b>(s)</h5>
-            <p>Encadear múltiplas condições nem sempre é uma boa prática, e muitas vezes o melhor a fazer é utilizar o operador <b>switch</b> para isso, que estudaremos em breve.</p>
+          <h5><span class="i18n" data-i18n="ifElse-t25">Múltiplos <b>if</b>(s) e <b>else</b>(s)</span></h5>
+            <p><span class="i18n" data-i18n="ifElse-t26">Encadear múltiplas condições nem sempre é uma boa prática, e muitas vezes o melhor a fazer é utilizar o operador <b>switch</b> para isso, que estudaremos em breve.</span></p>
         </div>
       </div>
             
       <div class="pag5">
-        <h2>Vamos praticar?</h2>
-        <p>A melhor forma de aprender é praticando, portanto vamos seguir um passo a passo para executar o código estudado nas aulas anteriores.</p>
-        <p>Crie o arquivo <b>IfElse.java</b> em um diretório de sua preferência.</p>
-        <p>Adicione o seguinte código nele:</p>
+          <h2><span class="i18n" data-i18n="ifElse-t27">Vamos praticar?</span></h2>
+          <p><span class="i18n" data-i18n="ifElse-t28">A melhor forma de aprender é praticando, portanto vamos seguir um passo a passo para executar o código estudado nas aulas anteriores.</span></p>
+          <p><span class="i18n" data-i18n="ifElse-t29">Crie o arquivo <b>IfElse.java</b> em um diretório de sua preferência.</span></p>
+          <p><span class="i18n" data-i18n="ifElse-t30">Adicione o seguinte código nele:</span></p>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
 public class IfElse {
 
   public static void main(String[] args) {
@@ -199,25 +256,76 @@ public class IfElse {
 }
         </code></pre></div>
         <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+public class IfElse {
+
+  public static void main(String[] args) {
+    boolean win = true;
+    int score = 80;
+
+    if (win) {
+      System.out.println("You win!");
+    }
+
+    if (!win) {
+      System.out.println("You lose");
+    }
+
+    if (score >= 70) {
+      System.out.println("You win!");
+    }
+
+    if (score >= 70 && score <= 80) {
+      System.out.println("You've got ranking B.");
+    }
+
+    if (win || score >= 70) {
+      System.out.println("You win!");
+    }
+
+    if (win) {
+      System.out.println("You win!");
+    } else {
+      System.out.println("You lose.");
+    }
+
+    if (score % 2 == 0) {
+      System.out.println("Score is even.");
+    } else {
+      System.out.println("Score is odd.");
+    }
+
+    if (score < 70) {
+      System.out.println("You lose.");
+    } else if (score >= 70 && score <= 90) {
+      System.out.println("You've got ranking B.");
+    } else {
+      System.out.println("You've got ranking A.");
+    }
+  }   
+}
+        </code></pre></div>
+        <!-- CODE:END -->
         <br />
-        <p>Compile o código fonte, executando no terminal no diretório onde o arquivo foi criado:</p>
+        <p><span class="i18n" data-i18n="ifElse-t31">Compile o código fonte, executando no terminal no diretório onde o arquivo foi criado:</span></p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 javac IfElse.java        
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-        <p>O arquivo <b>IfElse.class</b> será gerado no mesmo diretório.</p>
-        <p>Execute o código compilado no terminal com:</p>
+        <p><span class="i18n" data-i18n="ifElse-t32">O arquivo <b>IfElse.class</b> será gerado no mesmo diretório.</span></p>
+        <p><span class="i18n" data-i18n="ifElse-t33">Execute o código compilado no terminal com:</span></p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 java IfElse        
         </code></pre></div>
         <!-- CODE:END --> 
         <br />
-        <p>Você deverá ver o seguinte no terminal:</p>
+        <p><span class="i18n" data-i18n="ifElse-t34">Você deverá ver o seguinte no terminal:</span></p>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
 Passou no teste!
 Passou no teste!
 Passou no teste com nota B.
@@ -227,23 +335,34 @@ Nota é um número par.
 Passou no teste com nota B.      
         </code></pre></div>
         <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+You win!
+You win!
+You've got ranking B.
+You win!
+You win!
+Score is even.
+You've got ranking B.    
+        </code></pre></div>
+        <!-- CODE:END -->
         <br />
-        <p>Parabéns!!! Você concluiu com sucesso o seu estudo do comando <b>if/else</b>.</p>
+        <p><span class="i18n" data-i18n="ifElse-t35">Parabéns!!! Você concluiu com sucesso o seu estudo do comando <b>if/else</b>.</span></p>
       </div>
         
         <!-- PAGINATION:BEGIN -->
         <br />
         <div style="text-align: center">
             <ul class="pagination" role="navigation" aria-label="Pagination">
-              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()">Anterior</li>
-              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()">Próximo</li>
+              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()"><span class="i18n-pag-anterior">Anterior</span></li>
+              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()"><span class="i18n-pag-proximo">Próximo</span></li>
             </ul>
         </div>
         <!-- PAGINATION:END -->
         
         <!-- END_CLASS:BEGIN -->
-        <a class="button success expanded concluir" href="../index.html#java-basico" onclick="return Persistencia.completar('.if-else', '.for');">Concluir lição</a>
-        <a class="button secondary expanded sair" href="../index.html#java-basico">Sair da lição</a>
+        <a class="button success expanded concluir" href="../index.html#java-basico" onclick="return Persistencia.completar('.if-else', '.for');"><span class="i18n-concluir-licao">Concluir lição</span></a>
+        <a class="button secondary expanded sair" href="../index.html#java-basico"><span class="i18n-sair-licao">Sair da lição</span></a>
         <!-- END_CLASS:END -->
         
     </div>
@@ -255,6 +374,7 @@ Passou no teste com nota B.
     <script src="../assets/js/menu-off-canvas.js"></script>
     <script src="../assets/js/paginacao.js"></script>
     <script src="../assets/js/localstorage-persistencia.js"></script>
+    <script src="../assets/js/i18n-en_GB.js"></script>
     <script>
         $(document).foundation();
         hljs.initHighlightingOnLoad();
