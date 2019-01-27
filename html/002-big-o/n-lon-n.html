@@ -1,0 +1,286 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprenda Java e Algoritmos | Kazapp</title>
+    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
+    <style>
+        body { background-color: #FFF; padding: 5px; } 
+    </style>
+  </head>
+  <body>      
+    <!-- Set up Off-canvas -->
+    <div class="off-canvas-wrapper"></div>
+      
+    <!-- MAIN:BEGIN -->
+    <div>
+        <!-- BREADCRUMBS:BEGIN -->
+        <br />
+        <nav role="navigation">
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#big-o">Big-O</a></li>
+            <li>O(n log n)</li>
+          </ul>
+        </nav>
+        <!-- BREADCRUMBS:END -->
+        
+        <!-- PROGRESS:BEGIN -->
+        <div class="primary progress" role="progressbar" tabindex="0" aria-valuenow="50" 
+             aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+          <div class="progress-meter" style="width: 50%">
+            <p class="progress-meter-text">50%</p>
+          </div>
+        </div>
+        <!-- PROGRESS:END -->
+        
+      <div class="pag1">
+        <h2>Complexidade O(n log n)</h2>
+        <p>A complexidade O(n log n) é a terceira notação que estudaremos.</p>
+        <p>Talvez conceitualmente essa seja a complexidade mais difícil de entender, mas como a notação Big-O trabalha com conceitos em alto nível, você não precisará ser um especialista em matemática nem em logaritmos para compreender como ela funciona.</p>
+        <p>Na matemática, o logaritmo de um número é o expoente a que outro valor fixo, a base, deve ser elevado para produzir este número. Por exemplo, o logaritmo de 1000 na base 10 é 3 porque 10 ao cubo é 1000 (1000 = 10 * 10 * 10 = 103).</p>  
+          <p>Além do logaritmo de "n", ainda temos em adição "n" multiplicando o valor do logaritmo, o que resultaria em "n" * o logaritmo de "n".</p>
+          <p>Para ficar mais claro, entenda que essa complexidade pode ser divida em duas partes, o cálculo de "n", e o logaritmo do mesmo "n".</p>
+          <p>Nesse caso, entenda "n" como sendo o tamanho da lista de entrada de dados.</p>
+      </div>
+        
+      <div class="pag2">    
+        <h2>Complexidade O(n log n)</h2>
+          <p>A performance desse algoritmo é boa, pois seu crescimento se baseará na quantidade de dados de entrada, mais uma diferença adicionada pelo logaritmo de "n", que não é um valor muito elevado.</p>
+          <p>O valor de "n" é bastante óbvio, pois é simplesmente o valor do tamanho da lista de entrada. Por exemplo, se temos uma lista com 100 elementos, teremos "n" como sendo 100, e nossa complexidade seria 100 * log 100.</p>
+          <p>Para facilitar o entendimento, vamos olhar e comparar alguns casos para entender seu comportamento:</p>
+          <ul>
+            <li>Para n=1 -> (1 * log 1) = (1 * 0) = 0</li>
+            <li>Para n=2 -> (2 * log 2) = (2 * 0.3) = 0.6</li>
+            <li>Para n=3 -> (3 * log 3) = (3 * 0.47) = 1.41</li>
+            <li>Para n=4 -> (4 * log 4) = (4 * 0.6) = 2.4</li>
+            <li>Para n=5 -> (5 * log 5) = (5 * 0.69) = 3.45</li>
+            <li>Para n=6 -> (6 * log 6) = (6 * 0.77) = 4.62</li>
+            <li>Para n=7 -> (7 * log 7) = (7 * 0.84) = 5.88</li>
+            <li>Para n=8 -> (8 * log 8) = (8 * 0.9) = 7.2</li>
+            <li>Para n=9 -> (9 * log 9) = (9 * 0.95 = 8.55</li>
+            <li>Para n=10 -> (10 * log 10) = (10 * 1) = 10</li>
+          </ul>
+          <p>Conforme você pode reparar, os números incrementam em intervalos muito pequenos entre eles.</p>  
+          <p>Isso significa que algoritmos com essa complexidade são bons, e que são capazes de processar grandes quantidades de dados, uma vez que eles seguem uma linha de incremento baixa.</p>  
+          <p>Na prática, esses algoritmos normalmente são compostos de um laço de iteração(for ou while), seguido de algum processamento extra que será referenciado pela complexidade logaritmica.</p>
+          <p>Portanto, um algoritmo de complexidade O(n log n) é um algortimo bom, com uma performance bastante aceitável, inclusive para o processamento de grandes quantidades de dados.</p> 
+      </div>
+        
+      <div class="pag3">
+        <h2>Complexidade O(n log n)</h2>    
+        <p>Se colocarmos a complexidade O(n log n) em um gráfico, teremos a seguinte representação:</p> 
+          <p><img src="../assets/img/n-log-n.png" alt="O(n log n)" /></p>
+          <p>Repare que pela primeira vez não temos uma curva na reta do gráfico, ele tem um crescimento linear dessa vez, o que indica exatamente que ele cresce em um intervalo que não afetará a sua performance a medida que incrementamos a quantidade de dados de entrada.</p>  
+      </div>
+        
+      <div class="pag4">
+        <h2>Complexidade O(n log n)</h2>
+        <p>Agora que você já sabe o que é um algoritmo de complexidade O(n log n), vamos ver como seria uma implementação do mesmo na prática.</p>
+          <p>Como demonstração usaremos um popular algoritmo de ordenação chamado Merge Sort, que é o melhor exemplo de representação de um algoritmo O(n log n).</p>
+          <p>Não se preocupe em entender como esse algoritmo funciona nesse momento, pois ele será estudado em detalhes em uma lição futura desse curso.</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+private void mergeSort(int[] numeros, int qtdNumeros) {
+    if (qtdNumeros < 2) {
+        return;
+    }
+    int meio = qtdNumeros / 2;
+    int[] metadeEsquerda = new int[meio];
+    int[] metadeDireita = new int[qtdNumeros - meio];
+
+    for (int i = 0; i < meio; i++) {
+        metadeEsquerda[i] = numeros[i];
+    }
+    for (int i = meio; i < qtdNumeros; i++) {
+        metadeDireita[i - meio] = numeros[i];
+    }
+    mergeSort(metadeEsquerda, meio);
+    mergeSort(metadeDireita, qtdNumeros - meio);
+
+    merge(numeros, metadeEsquerda, metadeDireita, meio, qtdNumeros - meio);
+}
+
+private void merge(int[] numeros, int[] metadeEsquerda, int[] metadeDireita,
+                   int qtdNumEsquerda, int qtdNumDireita) {
+
+    int i = 0, j = 0, k = 0;
+    while (i < qtdNumEsquerda && j < qtdNumDireita) {
+        if (metadeEsquerda[i] <= metadeDireita[j]) {
+            numeros[k++] = metadeEsquerda[i++];
+        }
+        else {
+            numeros[k++] = metadeDireita[j++];
+        }
+    }
+    while (i < qtdNumEsquerda) {
+        numeros[k++] = metadeEsquerda[i++];
+    }
+    while (j < qtdNumDireita) {
+        numeros[k++] = metadeDireita[j++];
+    }
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          <p>O Merge Sort consiste na estratégia de dividir para conquistar, então ele basicamente ordena um lista através da lista em lista menores.</p>  
+          <p>Ele é considerado um algoritmo O(n log n) porque a quantidade de divisões na lista para ordenação, será relativa a quantidade de elementos na lista (n), e a parte do log n se dará em sua segunda parte, onde ele ordena os dados retornados pelas sub listas divididas durante o processamento anterior.</p>  
+          <p>Como citei anteriormente, o estudo desse algoritmo se dará mais adiante, portanto não se preocupe em entendê-lo por completo nesse momento.</p>  
+      </div>
+          
+      <div class="pag5">
+        <h2>Vamos praticar?</h2>
+        <p>Para você testar na prática e verificar a performance de um algoritmo O(n log n), vamos criar uma classe contendo um experimento que demonstrará a performance do algoritmo Merge Sort.</p>
+        <p>Para isso crie um arquivo chamado <b>OrdemNLogN.java</b> com o seguinte código:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+import java.util.Random;
+
+public class OrdemNLogN {
+
+    private static final Random random = new Random();
+
+    private void mergeSort(int[] numeros, int qtdNumeros) {
+        if (qtdNumeros < 2) {
+            return;
+        }
+        int meio = qtdNumeros / 2;
+        int[] metadeEsquerda = new int[meio];
+        int[] metadeDireita = new int[qtdNumeros - meio];
+
+        for (int i = 0; i < meio; i++) {
+            metadeEsquerda[i] = numeros[i];
+        }
+        for (int i = meio; i < qtdNumeros; i++) {
+            metadeDireita[i - meio] = numeros[i];
+        }
+        mergeSort(metadeEsquerda, meio);
+        mergeSort(metadeDireita, qtdNumeros - meio);
+
+        merge(numeros, metadeEsquerda, metadeDireita, meio, qtdNumeros - meio);
+    }
+
+    private void merge(int[] numeros, int[] metadeEsquerda, int[] metadeDireita,
+                       int qtdNumEsquerda, int qtdNumDireita) {
+
+        int i = 0, j = 0, k = 0;
+        while (i < qtdNumEsquerda && j < qtdNumDireita) {
+            if (metadeEsquerda[i] <= metadeDireita[j]) {
+                numeros[k++] = metadeEsquerda[i++];
+            }
+            else {
+                numeros[k++] = metadeDireita[j++];
+            }
+        }
+        while (i < qtdNumEsquerda) {
+            numeros[k++] = metadeEsquerda[i++];
+        }
+        while (j < qtdNumDireita) {
+            numeros[k++] = metadeDireita[j++];
+        }
+    }
+
+    private static void executarExperimento(OrdemNLogN ordemLogN, int qtdNumeros, int numero) {
+        int[] numeros = new int[qtdNumeros];
+        for (int i=0; i < qtdNumeros; i++) {
+            numeros[i] = random.nextInt(1000);
+        }
+        long inicio = System.currentTimeMillis();
+        System.out.println("\nExecutando experimento para lista de " + qtdNumeros + " números.");
+        ordemLogN.mergeSort(numeros, qtdNumeros);
+        long fim = System.currentTimeMillis();
+        System.out.println("\nExperimento executado em " + (fim - inicio) + "ms\n");
+    }
+
+    public static void main(String[] args) {
+        OrdemNLogN ordemNLogN = new OrdemNLogN();
+        executarExperimento(ordemNLogN, 1, 1);
+        executarExperimento(ordemNLogN, 10, 10);
+        executarExperimento(ordemNLogN, 100, 100);
+        executarExperimento(ordemNLogN, 1000, 1000);
+        executarExperimento(ordemNLogN, 100000, 100000);
+        executarExperimento(ordemNLogN, 1000000, 1000000);
+        executarExperimento(ordemNLogN, 10000000, 10000000);
+        executarExperimento(ordemNLogN, 100000000, 100000000);
+    }
+
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>O código acima chama o mesmo método estudado anteriormente, porém com diferentes valores de entrada, e registra o tempo de execução para cada chamada.</p>    
+      </div>
+          
+      <div class="pag6">
+        <h2>Vamos praticar?</h2> 
+        <p>Usando os conceitos aprendidos no primeiro mólulo do curso, compile e execute a classe Java, você deverá ver no terminal algo similar a:</p> 
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+Executando experimento para lista de 1 números.
+Experimento executado em 0ms
+
+Executando experimento para lista de 10 números.
+Experimento executado em 0ms
+
+Executando experimento para lista de 100 números.
+Experimento executado em 1ms
+
+Executando experimento para lista de 1000 números.
+Experimento executado em 2ms
+
+Executando experimento para lista de 100000 números.
+Experimento executado em 33ms
+
+Executando experimento para lista de 1000000 números.
+Experimento executado em 224ms
+
+Executando experimento para lista de 10000000 números.
+Experimento executado em 2356ms
+
+Executando experimento para lista de 100000000 números.
+Experimento executado em 19571ms   
+        </code></pre></div>
+        <!-- CODE:END -->
+          <br />
+          <p>Verifique o tempo de execução para ver como a performance é bastante satisfatória a medida que adicionamos valores maiores de entrada.</p>  
+          <p>Dentre os resultados acima, temos 19 segundos de processamento para uma lista com 100 milhões de números, o que prova a eficiência desse algoritmo.</p>
+          <p>Aproveite também para testar a execução com outros valores, até estar confortável com o entendimento de execução desse algoritmo.</p>    
+      </div>
+        
+        <!-- PAGINATION:BEGIN -->
+        <br />
+        <div style="text-align: center">
+            <ul class="pagination" role="navigation" aria-label="Pagination">
+              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()">Anterior</li>
+              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()">Próximo</li>
+            </ul>
+        </div>
+        <!-- PAGINATION:END -->
+        
+        <!-- END_CLASS:BEGIN -->
+        <a class="button success expanded concluir" href="../index.html#java-basico" onclick="return Persistencia.completar('.ola-mundo', '.if-else');">Concluir lição</a>
+        <a class="button secondary expanded sair" href="../index.html#java-basico">Sair da lição</a>
+        <!-- END_CLASS:END -->
+        
+    </div>
+    <!-- MAIN:END -->
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/menu-off-canvas.js"></script>
+    <script src="../assets/js/paginacao.js"></script>
+    <script src="../assets/js/localstorage-persistencia.js"></script>
+    <script src="../assets/js/i18n-en_GB.js"></script>
+    <script>
+        $(document).foundation();
+        hljs.initHighlightingOnLoad();
+        Paginacao.init(6);
+        Paginacao.paginar();
+    </script>
+  </body>
+</html>

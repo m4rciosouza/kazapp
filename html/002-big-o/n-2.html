@@ -1,0 +1,221 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprenda Java e Algoritmos | Kazapp</title>
+    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
+    <style>
+        body { background-color: #FFF; padding: 5px; } 
+    </style>
+  </head>
+  <body>      
+    <!-- Set up Off-canvas -->
+    <div class="off-canvas-wrapper"></div>
+      
+    <!-- MAIN:BEGIN -->
+    <div>
+        <!-- BREADCRUMBS:BEGIN -->
+        <br />
+        <nav role="navigation">
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#big-o">Big-O</a></li>
+            <li>O(n<sup>2</sup>)</li>
+          </ul>
+        </nav>
+        <!-- BREADCRUMBS:END -->
+        
+        <!-- PROGRESS:BEGIN -->
+        <div class="primary progress" role="progressbar" tabindex="0" aria-valuenow="50" 
+             aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+          <div class="progress-meter" style="width: 50%">
+            <p class="progress-meter-text">50%</p>
+          </div>
+        </div>
+        <!-- PROGRESS:END -->
+        
+      <div class="pag1">
+        <h2>Complexidade quadrática O(n<sup>2</sup>)</h2>
+        <p>A complexidade quadrática O(n<sup>2</sup>) é a segunda notação que estudaremos.</p>  
+        <p>Na matemática dizemos que um número quando elevado a potência 2, será multiplicado por ele mesmo uma vez, resultando em valor que tem um crescimento substancial a medida que o valor de entrada aumenta.</p>  
+          <p>Ele é representado pelo potência de "2", por isso dizemos O(n<sup>2</sup>), que significa notação Big-O com complexidade quadrática.</p>
+          <p>Embora os algoritmos dessa categoria sejam bem melhores dos que os de complexidade fatorial estudados anteriormente, ele ainda assim deixa muito a desejar ao manipularmos grandes quantidades de dados.</p>
+          <p>Vamos olhar e comparar alguns casos para entender seu comportamento:</p>
+          <ul>
+            <li>0<sup>2</sup> -> 0 * 0 = 0</li>
+            <li>1<sup>2</sup> -> 1 * 1 = 1</li>
+            <li>2<sup>2</sup> -> 2 * 2 = 4</li>
+            <li>3<sup>2</sup> -> 3 * 3 = 9</li>
+            <li>4<sup>2</sup> -> 4 * 4 = 16</li>
+            <li>5<sup>2</sup> -> 5 * 5 = 25</li>
+            <li>6<sup>2</sup> -> 6 * 6 = 36</li>
+            <li>7<sup>2</sup> -> 7 * 7 = 49</li>
+            <li>8<sup>2</sup> -> 8 * 8 = 64</li>
+            <li>9<sup>2</sup> -> 9 * 9 = 81</li>
+            <li>10<sup>2</sup> -> 10 * 10 = 100</li>
+          </ul>
+          <p>Conforme você reparou, os números crescem de modo significativo entre eles.</p>  
+          <p>Repare que para 1 seu valor é também 1, enquanto que de 10 é 100, ou seja, 100 vezes maior para uma diferença de 10 números apenas.</p>  
+          <p>O que eu quero mostrar com isso é justamente a velocidade com que os resultados crescem a medida que adicionamos um único número.</p>  
+          <p>Uma carecterística para identificar um algoritmo quadrático, é reparar se ele possui dois laços <b>for</b> encadeados, pois assim sua execução crescerá exponencialmente, conforme veremos ainda nesta lição.</p>
+          <p>Portanto, um algoritmo de complexidade quadrática é um algortimo que em seu pocessamento cresce de modo significativo entre pequenos valores, o que significa que ele se tornará inviável ao tentarmos executá-lo com valores muito grandes.</p> 
+      </div>
+        
+      <div class="pag2">    
+        <h2>Complexidade quadrática O(n<sup>2</sup>)</h2>
+        <p>Se colocarmos a complexidade quadrática em um gráfico, teremos a seguinte representação:</p> 
+          <p><img src="../assets/img/n-2.png" alt="O(n2)" /></p>
+          <p>Olhando para o gráfico acima você consegue reparar como ele tem um crescimento rápido, embora não tão rápido quanto o fatorial?</p>  
+          <p>Isso signifca que o algoritmo de complexidade quadrática certamente terá problemas ao lidar com grandes quantidades de dados.</p>  
+          <p>E o que concluímos com isso?</p>  
+          <p>Concluímos que esse tipo de algoritmo é limitado a resolver problemas com poucos dados de entrada, pois ele terá uma performance muito ruim para grandes quantidades de dados.</p> 
+      </div>
+        
+      <div class="pag3">
+        <h2>Complexidade quadrática O(n<sup>2</sup>)</h2>
+        <p>Agora que você já sabe o que é um algoritmo de complexidade quadrática, vamos ver como seria uma implementação do mesmo na prática:</p>  
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+private void algoritmoComplexidadeQuadratica(int numero) {
+    for (int i=0; i < numero; i++) {
+        for (int j=0; j < numero; j++) {
+            System.out.println(i + ", " + j);
+        }
+    }
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          <p>Repare que o método acima é bastante simples, porém tem uma performance ruim a medida que incrementamos nosso valor de entrada.</p>  
+          <p>Isso ocorre porque o método encadeia dois laços <b>for</b>, o que faz com que seu processamento cresça de modo exponencial, o que deverá ser evitado para soluções que contenham grandes quantidades de dados a serem processadas.</p>  
+          <p>Por outro lado, é completamente aceitável utilizar soluções como essa quando apenas precisamos processar pequenos valores, pois são simples de implementar e terão uma performance aceitável.</p>  
+      </div>
+          
+      <div class="pag4">
+        <h2>Vamos praticar?</h2>
+        <p>Para você testar na prática e verificar a performance de um algoritmo quadrático, vamos criar uma classe contendo um experimento que demonstrará a performance do algoritmo estudado anteriormente.</p>
+        <p>Para isso crie um arquivo chamado <b>OrdemQuadratica.java</b> com o seguinte código:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+public class OrdemQuadratica {
+
+    private static long numIteracoes;
+
+    private void executar(int numero) {
+        for (int i=0; i < numero; i++) {
+            for (int j=0; j < numero; j++) {
+                OrdemQuadratica.numIteracoes++;
+            }
+        }
+    }
+
+    private static void executarExperimento(OrdemQuadratica ordemQuadratica, int numero) {
+        ordemQuadratica.numIteracoes = 0;
+        long inicio = System.currentTimeMillis();
+        System.out.println("Executando experimento para número = " + numero);
+        ordemQuadratica.executar(numero);
+        long fim = System.currentTimeMillis();
+        System.out.println("Experimento iterado " + OrdemQuadratica.numIteracoes + " vezes.");
+        System.out.println("Experimento executado em " + (fim - inicio) + "ms\n");
+    }
+
+    public static void main(String[] args) {
+        OrdemQuadratica ordemQuadratica = new OrdemQuadratica();
+        executarExperimento(ordemQuadratica, 1);
+        executarExperimento(ordemQuadratica, 50);
+        executarExperimento(ordemQuadratica, 100);
+        executarExperimento(ordemQuadratica, 1000);
+        executarExperimento(ordemQuadratica, 5000);
+        executarExperimento(ordemQuadratica, 10000);
+        executarExperimento(ordemQuadratica, 100000);
+        executarExperimento(ordemQuadratica, 1000000);
+    }
+
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>O código acima chama o mesmo método estudado anteriormente, porém com diferentes valores de entrada, e registra o tempo de execução para cada chamada, assim como a quantidade de iterações por execução.</p>    
+      </div>
+          
+      <div class="pag5">
+        <h2>Vamos praticar?</h2> 
+        <p>Usando os conceitos aprendidos no primeiro mólulo do curso, compile e execute a classe Java, você deverá ver no terminal algo similar a:</p> 
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+Executando experimento para número = 1
+Experimento iterado 1 vezes.
+Experimento executado em 1ms
+
+Executando experimento para número = 50
+Experimento iterado 2500 vezes.
+Experimento executado em 0ms
+
+Executando experimento para número = 100
+Experimento iterado 10000 vezes.
+Experimento executado em 1ms
+
+Executando experimento para número = 1000
+Experimento iterado 1000000 vezes.
+Experimento executado em 4ms
+
+Executando experimento para número = 5000
+Experimento iterado 25000000 vezes.
+Experimento executado em 4ms
+
+Executando experimento para número = 10000
+Experimento iterado 100000000 vezes.
+Experimento executado em 5ms
+
+Executando experimento para número = 100000
+Experimento iterado 10000000000 vezes.
+Experimento executado em 862ms
+
+Executando experimento para número = 1000000
+Experimento iterado 1000000000000 vezes.
+Experimento executado em 45073ms     
+        </code></pre></div>
+        <!-- CODE:END -->
+          <br />
+          <p>Verifique o tempo de execução e número de iterações para ver como a performance diminui a medida que adicionamos valores maiores de entrada.</p>  
+          <p>Nos resultados acima temos que para o número 1.000.000, nosso algoritmo levou 45 segundos para ser executado, o que seria inaceitável na maioria dos casos.</p>
+          <p>Aproveite também para testar a execução com outros valores, até estar confortável com o entendimento de execução desse algoritmo.</p>    
+      </div>
+        
+        <!-- PAGINATION:BEGIN -->
+        <br />
+        <div style="text-align: center">
+            <ul class="pagination" role="navigation" aria-label="Pagination">
+              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()">Anterior</li>
+              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()">Próximo</li>
+            </ul>
+        </div>
+        <!-- PAGINATION:END -->
+        
+        <!-- END_CLASS:BEGIN -->
+        <a class="button success expanded concluir" href="../index.html#java-basico" onclick="return Persistencia.completar('.ola-mundo', '.if-else');">Concluir lição</a>
+        <a class="button secondary expanded sair" href="../index.html#java-basico">Sair da lição</a>
+        <!-- END_CLASS:END -->
+        
+    </div>
+    <!-- MAIN:END -->
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/menu-off-canvas.js"></script>
+    <script src="../assets/js/paginacao.js"></script>
+    <script src="../assets/js/localstorage-persistencia.js"></script>
+    <script src="../assets/js/i18n-en_GB.js"></script>
+    <script>
+        $(document).foundation();
+        hljs.initHighlightingOnLoad();
+        Paginacao.init(5);
+        Paginacao.paginar();
+    </script>
+  </body>
+</html>
