@@ -64,16 +64,18 @@
         
       <div class="pag2">
         <h2>Complexidade O(log n)</h2>    
-        <p>Se colocarmos a complexidade O(n log n) em um gráfico, teremos a seguinte representação:</p> 
+        <p>Se colocarmos a complexidade O(log n) em um gráfico, teremos a seguinte representação:</p> 
           <p><img src="../assets/img/log-n.png" alt="O(log n)" /></p>
-          <p>Repare que pela primeira vez não temos uma curva na reta do gráfico, ele tem um crescimento linear dessa vez, o que indica exatamente que ele cresce em um intervalo que não afetará a sua performance a medida que incrementamos a quantidade de dados de entrada.</p>  
+          <p>Repare que a curva formada é no sentido de "x", o que significa que seu desempenho vai se estabilizando e se mantendo abaixo a medida em que adicionamos mais dados de entrada.</p>  
       </div>
         
       <div class="pag3">
         <h2>Complexidade O(log n)</h2>
-        <p>Agora que você já sabe o que é um algoritmo de complexidade O(n log n), vamos ver como seria uma implementação do mesmo na prática.</p>
-          <p>Como demonstração usaremos um popular algoritmo de ordenação chamado Merge Sort, que é o melhor exemplo de representação de um algoritmo O(n log n).</p>
-          <p>Não se preocupe em entender como esse algoritmo funciona nesse momento, pois ele será estudado em detalhes em uma lição futura desse curso.</p>
+        <p>Vamos agora ver como seria uma implementação do mesmo na prática.</p>
+          <p>Como demonstração usaremos um popular algoritmo de busca chamado busca binária, que através do conceito de dividir para conquistar, vai separando a lista na metade, e verificando para qual dos lados da lista devemos seguir a busca.</p>
+          <p>Com isso, a cada verificação vamos eleminando metade dos dados a serem verificados, encontrando o valor desejado em apenas algumas operações.</p>
+          <p>Este algoritmo necessita de uma lista de dados previamente ordenada para funcionar.</p>
+          <p>Não se preocupe em entender todos os detalhes desse algoritmo, pois ele será estudado em detalhes em uma lição futura desse curso.</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 private int buscaBinaria(int[] numeros, int inicio, int fim, int numero) {
@@ -95,14 +97,14 @@ private int buscaBinaria(int[] numeros, int inicio, int fim, int numero) {
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-          <p>O Merge Sort consiste na estratégia de dividir para conquistar, então ele basicamente ordena um lista através da lista em lista menores.</p>  
-          <p>Ele é considerado um algoritmo O(n log n) porque a quantidade de divisões na lista para ordenação, será relativa a quantidade de elementos na lista (n), e a parte do log n se dará em sua segunda parte, onde ele ordena os dados retornados pelas sub listas divididas durante o processamento anterior.</p>  
-          <p>Como citei anteriormente, o estudo desse algoritmo se dará mais adiante, portanto não se preocupe em entendê-lo por completo nesse momento.</p>  
+          <p>A busca binária itera sob uma lista ordenada de dados através de um laço <b>while</b>, e para cada iteração ele elimina metade da lista, até encontrar o elemento desejado.</p>
+          <p>Caso o elemento não seja encontrado, ele retona "-1", assim como será retornado o índice do elemento na lista para quando ele estiver presente.</p>
+          <p>Somente para relelmbrar, esse algoritmo será estudo em detalhes em uma lição futura.</p>
       </div>
           
       <div class="pag4">
         <h2>Vamos praticar?</h2>
-        <p>Para você testar na prática e verificar a performance de um algoritmo O(n log n), vamos criar uma classe contendo um experimento que demonstrará a performance do algoritmo Merge Sort.</p>
+        <p>Para você testar na prática e verificar a performance de um algoritmo O(log n), vamos criar uma classe contendo um experimento que demonstrará a performance do algoritmo busca binária.</p>
         <p>Para isso crie um arquivo chamado <b>OrdemLogN.java</b> com o seguinte código:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
@@ -161,7 +163,7 @@ public class OrdemLogN {
           
       <div class="pag5">
         <h2>Vamos praticar?</h2> 
-        <p>Usando os conceitos aprendidos no primeiro mólulo do curso, compile e execute a classe Java, você deverá ver no terminal algo similar a:</p> 
+        <p>Usando os conceitos aprendidos no primeiro módulo do curso, compile e execute a classe Java, você deverá ver no terminal algo similar a:</p> 
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 Executando experimento para lista de 1 números.
@@ -206,8 +208,8 @@ Experimento executado em 0ms
         </code></pre></div>
         <!-- CODE:END -->
           <br />
-          <p>Verifique o tempo de execução para ver como a performance é bastante satisfatória a medida que adicionamos valores maiores de entrada.</p>  
-          <p>Dentre os resultados acima, temos 19 segundos de processamento para uma lista com 100 milhões de números, o que prova a eficiência desse algoritmo.</p>
+          <p>Repare que interessante os tempos de execução, onde mesmo para uma lista contendo 35 milhões de números, seu tempo de execução foi praticamente nulo!</p>
+          <p>Portanto concluímos que algoritmos do tipo O(log n) são muito bons em termos de performance.</p>
           <p>Aproveite também para testar a execução com outros valores, até estar confortável com o entendimento de execução desse algoritmo.</p>    
       </div>
         

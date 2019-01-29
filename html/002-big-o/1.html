@@ -24,7 +24,7 @@
           <ul class="breadcrumbs">
             <li><a href="../index.html">Início</a></li>
             <li><a href="../index.html#big-o">Big-O</a></li>
-            <li>O(n)</li>
+            <li>O(1)</li>
           </ul>
         </nav>
         <!-- BREADCRUMBS:END -->
@@ -39,33 +39,21 @@
         <!-- PROGRESS:END -->
         
       <div class="pag1">
-        <h2>Complexidade O(n)</h2>
-        <p>A complexidade O(n) é uma das mais fáceis de entender, e será a quarta notação que estudaremos.</p>
+        <h2>Complexidade O(1)</h2>
+        <p>A complexidade O(1) é uma das mais fáceis de entender, e será a quarta notação que estudaremos.</p>
         <p>Como sabemos, "n" significa quantidade de dados de entrada, assim dizemos que a complexidade O(n) é aquela que apresentará em seu pior caso, o valor de iterações referente ao tamanho dos dados de entrada.</p>
         <p>Um bom exemplo para essa complexidade seria um algoritmo de busca sequencial, onde iteramos sob uma lista de dados, elemento a elemento, e verificamos se o valor atual é o que estamos procurando. O pior caso seria quando o elemento procurado fosse o último valor da lista, que seria correspondente ao valor "n" da quantidade de dados de entrada.</p>
         <p>A performance desse algoritmo é boa, pois seu crescimento se baseará na quantidade de dados de entrada para o pior caso, sendo um algoritmo interessante mesmo para o processamento de grandes quantidades de dados.</p>
       </div>
         
       <div class="pag2">
-        <h2>Complexidade O(n)</h2>    
-        <p>Se colocarmos a complexidade O(n) em um gráfico, teremos a seguinte representação:</p> 
-          <p><img src="../assets/img/n.png" alt="O(n)" /></p>
-          <p>Repare que ele apresenta um crescimento linear, o que indica exatamente que ele cresce em um intervalo que não afetará a sua performance a medida que incrementamos a quantidade de dados de entrada.</p>  
-      </div>
-        
-      <div class="pag3">
-        <h2>Complexidade O(n)</h2>
+        <h2>Complexidade O(1)</h2>    
         <p>Vamos ver como seria uma implementação de um exemplo na prática.</p>
           <p>No algoritmo a seguir, implementamos uma busca sequencial, que basicamente itera sob um lista de dados, e verifica item a item se ele é igual ao que estamos buscando.</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
-private int executar(int[] numeros, int numero) {
-    for (int i=0; i < numeros.length; i++) {
-        if (numeros[i] == numero) {
-            return i;
-        }
-    }
-    return -1;
+private int executar(int[] numeros, int pos) {
+    return numeros[pos];
 }
         </code></pre></div>
         <!-- CODE:END -->
@@ -73,47 +61,41 @@ private int executar(int[] numeros, int numero) {
           <p>Repare que o método acima retorna o índice com a posição do elemento na lista de entrada, ou "-1" caso o elemento não esteja presente.</p>  
       </div>
           
-      <div class="pag4">
+      <div class="pag3">
         <h2>Vamos praticar?</h2>
         <p>Para você testar na prática e verificar a performance de um algoritmo O(n), vamos criar uma classe contendo um experimento que demonstrará a performance do algoritmo de busca sequencial.</p>
         <p>Para isso crie um arquivo chamado <b>OrdemN.java</b> com o seguinte código:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
-public class OrdemN {
+public class OrdemConstante {
 
-    private int executar(int[] numeros, int numero) {
-        for (int i=0; i < numeros.length; i++) {
-            if (numeros[i] == numero) {
-                return i;
-            }
-        }
-        return -1;
+    private int executar(int[] numeros, int pos) {
+        return numeros[pos];
     }
 
-    private static void executarExperimento(OrdemN ordemN, int qtdNumeros, int numero) {
+    private static void executarExperimento(OrdemConstante ordemConstante, int qtdNumeros, int posicao) {
         int[] numeros = new int[qtdNumeros];
         for (int i=0; i < qtdNumeros; i++) {
-            numeros[i] = i + 1;
+            numeros[i] = i;
         }
         long inicio = System.currentTimeMillis();
         System.out.println("Executando experimento para lista de " + qtdNumeros + " números.");
-        ordemN.executar(numeros, numero);
+        ordemConstante.executar(numeros, posicao);
         long fim = System.currentTimeMillis();
         System.out.println("Experimento executado em " + (fim - inicio) + "ms\n");
     }
 
     public static void main(String[] args) {
-        OrdemN ordemN = new OrdemN();
-        executarExperimento(ordemN, 1, 1);
-        executarExperimento(ordemN, 100, 100);
-        executarExperimento(ordemN, 1000, 1000);
-        executarExperimento(ordemN, 100000, 100000);
-        executarExperimento(ordemN, 1000000, 1000000);
-        executarExperimento(ordemN, 10000000, 10000000);
-        executarExperimento(ordemN, 100000000, 100000000);
-        executarExperimento(ordemN, 200000000, 200000000);
-        executarExperimento(ordemN, 300000000, 300000000);
-        executarExperimento(ordemN, 350000000, 350000000);
+        OrdemConstante ordemConstante = new OrdemConstante();
+        executarExperimento(ordemConstante, 1, 0);
+        executarExperimento(ordemConstante, 10, 5);
+        executarExperimento(ordemConstante, 100, 50);
+        executarExperimento(ordemConstante, 1000, 500);
+        executarExperimento(ordemConstante, 10000, 5000);
+        executarExperimento(ordemConstante, 100000, 50000);
+        executarExperimento(ordemConstante, 1000000, 500000);
+        executarExperimento(ordemConstante, 10000000, 5000000);
+        executarExperimento(ordemConstante, 100000000, 50000000);
     }
 
 }
@@ -123,13 +105,16 @@ public class OrdemN {
         <p>O código acima chama o mesmo método estudado anteriormente, porém com diferentes valores de entrada, e sempre buscando pelo último elemento da lista, pois assim medimos sua performance no pior caso, além de registrar o tempo de execução para cada chamada.</p>
       </div>
           
-      <div class="pag5">
+      <div class="pag4">
         <h2>Vamos praticar?</h2> 
         <p>Usando os conceitos aprendidos no primeiro módulo do curso, compile e execute a classe Java, você deverá ver no terminal algo similar a:</p> 
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 Executando experimento para lista de 1 números.
-Experimento executado em 1ms
+Experimento executado em 0ms
+
+Executando experimento para lista de 10 números.
+Experimento executado em 0ms
 
 Executando experimento para lista de 100 números.
 Experimento executado em 0ms
@@ -137,26 +122,20 @@ Experimento executado em 0ms
 Executando experimento para lista de 1000 números.
 Experimento executado em 0ms
 
+Executando experimento para lista de 10000 números.
+Experimento executado em 0ms
+
 Executando experimento para lista de 100000 números.
-Experimento executado em 2ms
+Experimento executado em 0ms
 
 Executando experimento para lista de 1000000 números.
-Experimento executado em 1ms
+Experimento executado em 2ms
 
 Executando experimento para lista de 10000000 números.
-Experimento executado em 7ms
+Experimento executado em 0ms
 
 Executando experimento para lista de 100000000 números.
-Experimento executado em 52ms
-
-Executando experimento para lista de 200000000 números.
-Experimento executado em 101ms
-
-Executando experimento para lista de 300000000 números.
-Experimento executado em 185ms
-
-Executando experimento para lista de 350000000 números.
-Experimento executado em 465ms 
+Experimento executado em 0ms
         </code></pre></div>
         <!-- CODE:END -->
           <br />
@@ -193,7 +172,7 @@ Experimento executado em 465ms
     <script>
         $(document).foundation();
         hljs.initHighlightingOnLoad();
-        Paginacao.init(5);
+        Paginacao.init(4);
         Paginacao.paginar();
     </script>
   </body>
