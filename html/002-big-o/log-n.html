@@ -40,15 +40,11 @@
         
       <div class="pag1">
         <h2>Complexidade O(log n)</h2>
-        <p>A complexidade O(n log n) é a terceira notação que estudaremos.</p>
-        <p>Talvez conceitualmente essa seja a complexidade mais difícil de entender, mas como a notação Big-O trabalha com conceitos em alto nível, você não precisará ser um especialista em matemática nem em logaritmos para compreender como ela funciona.</p>
-        <p>Na matemática, o logaritmo de um número é o expoente a que outro valor fixo, a base, deve ser elevado para produzir este número. Por exemplo, o logaritmo de 1000 na base 10 é 3 porque 10 ao cubo é 1000 (1000 = 10 * 10 * 10 = 103).</p>  
-          <p>Além do logaritmo de "n", ainda temos em adição "n" multiplicando o valor do logaritmo, o que resultaria em "n" * o logaritmo de "n".</p>
-          <p>Para ficar mais claro, entenda que essa complexidade pode ser divida em duas partes, o cálculo de "n", e o logaritmo do mesmo "n".</p>
-          <p>Nesse caso, entenda "n" como sendo o tamanho da lista de entrada de dados.</p>
-          <p>A performance desse algoritmo é boa, pois seu crescimento se baseará na quantidade de dados de entrada, mais uma diferença adicionada pelo logaritmo de "n", que não é um valor muito elevado.</p>
-          <p>O valor de "n" é bastante óbvio, pois é simplesmente o valor do tamanho da lista de entrada. Por exemplo, se temos uma lista com 100 elementos, teremos "n" como sendo 100, e nossa complexidade seria 100 * log 100.</p>
-          <p>Para facilitar o entendimento, vamos olhar e comparar alguns casos para entender seu comportamento:</p>
+        <p>A complexidade O(log n) é a quinta notação que estudaremos.</p>
+        <p>Agora que você já possui conhecimento na notação O(n log n), entender a O(log n) será fácil, uma vez que a diferença entre elas é que somente temos a referência ao log de "n".</p>
+        <p>Somente para revisar e reforçar o conceito estudado anteriormente, vamos definir novamente o que é um logaritmo.</p>
+          <p>Na matemática, o logaritmo de um número é o expoente a que outro valor fixo, a base, deve ser elevado para produzir este número. Por exemplo, o logaritmo de 1000 na base 10 é 3 porque 10 ao cubo é 1000 (1000 = 10 * 10 * 10 = 103).</p>  
+          <p>Agora que já reforçamos o conceito de logaritmo, vamos olhar e comparar alguns casos para entender seu comportamento:</p>
           <ul>
             <li>Para n=1 -> (log 1) = 0</li>
             <li>Para n=2 -> (log 2) = 0.3</li>
@@ -59,12 +55,11 @@
             <li>Para n=7 -> (log 7) = 0.84</li>
             <li>Para n=8 -> (log 8) = 0.9</li>
             <li>Para n=9 -> (log 9) = 0.95</li>
-            <li>Para n=10 -> (log 10) = 10</li>
+            <li>Para n=10 -> (log 10) = 1</li>
           </ul>
-          <p>Conforme você pode reparar, os números incrementam em intervalos muito pequenos entre eles.</p>  
-          <p>Isso significa que algoritmos com essa complexidade são bons, e que são capazes de processar grandes quantidades de dados, uma vez que eles seguem uma linha de incremento baixa.</p>  
-          <p>Na prática, esses algoritmos normalmente são compostos de um laço de iteração(for ou while), seguido de algum processamento extra que será referenciado pela complexidade logaritmica.</p>
-          <p>Portanto, um algoritmo de complexidade O(n log n) é um algortimo bom, com uma performance bastante aceitável, inclusive para o processamento de grandes quantidades de dados.</p> 
+          <p>Conforme você pode reparar, os números incrementam em intervalos muito pequenos entre eles, além de se manterem bem abaixo do valor de "n", que seria o tamanho da entrada de dados.</p>  
+          <p>Isso é ótimo, pois significa que um algoritmo O(log n) terá um processamento abaixo de quantidade de dados de entrada, o que resultará em uma excelente performance.</p>  
+          <p>Na prática, esses algoritmos são otimizados para iterar parcialmente nos dados de entrada, como é o caso da busca binária que será apresentado na sequencia.</p> 
       </div>
         
       <div class="pag2">
