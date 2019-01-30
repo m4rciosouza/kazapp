@@ -40,16 +40,15 @@
         
       <div class="pag1">
         <h2>Complexidade O(1)</h2>
-        <p>A complexidade O(1) é uma das mais fáceis de entender, e será a quarta notação que estudaremos.</p>
-        <p>Como sabemos, "n" significa quantidade de dados de entrada, assim dizemos que a complexidade O(n) é aquela que apresentará em seu pior caso, o valor de iterações referente ao tamanho dos dados de entrada.</p>
-        <p>Um bom exemplo para essa complexidade seria um algoritmo de busca sequencial, onde iteramos sob uma lista de dados, elemento a elemento, e verificamos se o valor atual é o que estamos procurando. O pior caso seria quando o elemento procurado fosse o último valor da lista, que seria correspondente ao valor "n" da quantidade de dados de entrada.</p>
-        <p>A performance desse algoritmo é boa, pois seu crescimento se baseará na quantidade de dados de entrada para o pior caso, sendo um algoritmo interessante mesmo para o processamento de grandes quantidades de dados.</p>
+        <p>A complexidade O(1) é a mais simples de entender, e será a sexta e última notação que estudaremos.</p>
+        <p>Essa complexidade diz que para qualquer entrada de dados, seu processamento <b>sempre</b> será o mesmo, por isso ela também é conhecida como complexidade constante.</p>
+        <p>Vamos a um exemplo, imagine que temos uma lista e queremos retornar um elemento dado seu índice. No Java por exemplo, essa operação sempre será o mesmo, pois listas nativas em Java conseguem obter um elemento diretamente dado o seu índice (sem a necessidade de percorrer pelos elementos).</p>
       </div>
         
       <div class="pag2">
         <h2>Complexidade O(1)</h2>    
         <p>Vamos ver como seria uma implementação de um exemplo na prática.</p>
-          <p>No algoritmo a seguir, implementamos uma busca sequencial, que basicamente itera sob um lista de dados, e verifica item a item se ele é igual ao que estamos buscando.</p>
+          <p>No algoritmo a seguir, recebemos uma lista e um índice, e retornamos, e retornamos o elemento da lista para a posição solicitada.</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 private int executar(int[] numeros, int pos) {
@@ -57,14 +56,12 @@ private int executar(int[] numeros, int pos) {
 }
         </code></pre></div>
         <!-- CODE:END -->
-        <br />
-          <p>Repare que o método acima retorna o índice com a posição do elemento na lista de entrada, ou "-1" caso o elemento não esteja presente.</p>  
       </div>
           
       <div class="pag3">
         <h2>Vamos praticar?</h2>
-        <p>Para você testar na prática e verificar a performance de um algoritmo O(n), vamos criar uma classe contendo um experimento que demonstrará a performance do algoritmo de busca sequencial.</p>
-        <p>Para isso crie um arquivo chamado <b>OrdemN.java</b> com o seguinte código:</p>
+        <p>Para você testar na prática e verificar a performance de um algoritmo O(1), vamos criar uma classe contendo um experimento que demonstrará a performance do algoritmo de busca por um elemento dado seu índice.</p>
+        <p>Para isso crie um arquivo chamado <b>OrdemConstante.java</b> com o seguinte código:</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 public class OrdemConstante {
@@ -102,7 +99,7 @@ public class OrdemConstante {
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-        <p>O código acima chama o mesmo método estudado anteriormente, porém com diferentes valores de entrada, e sempre buscando pelo último elemento da lista, pois assim medimos sua performance no pior caso, além de registrar o tempo de execução para cada chamada.</p>
+        <p>O código acima chama o mesmo método estudado anteriormente, porém com diferentes valores de entrada, além de registrar o tempo de execução para cada chamada.</p>
       </div>
           
       <div class="pag4">
@@ -139,8 +136,8 @@ Experimento executado em 0ms
         </code></pre></div>
         <!-- CODE:END -->
           <br />
-          <p>Verifique o tempo de execução para ver como a performance é bastante satisfatória a medida que adicionamos valores maiores de entrada.</p>  
-          <p>Dentre os resultados acima, temos 465 milisegundos de processamento para uma lista com 350 milhões de números, o que prova a eficiência desse algoritmo.</p>
+          <p>Verifique o tempo de execução para ver como a performance é constante.</p>  
+          <p>Independente da quantidade de elementos na lista, o tempo de execução será praticamente o mesmo, pois o esforço para o processamento é o mesmo para qualquer valores de entrada.</p>
           <p>Aproveite também para testar a execução com outros valores, até estar confortável com o entendimento de execução desse algoritmo.</p>    
       </div>
         
