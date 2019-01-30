@@ -1,7 +1,7 @@
 var Persistencia = {
     
     dados: [
-        { 
+        { // 001-java-basico
             "span-sel": ".ola-mundo", 
             "span-class": "warning", 
             "icon-sel": ".ola-mundo-i",
@@ -43,6 +43,62 @@ var Persistencia = {
             "icon-class": "fi-clipboard-pencil",
             "icon-color-style": "white"
         },
+        { // 002-big-o
+            "span-sel": ".big-o-introducao", 
+            "span-class": "secondary", 
+            "icon-sel": ".big-o-introducao-i",
+            "icon-class": "fi-lock",
+            "icon-color-style": "#EEE"
+        },
+        { 
+            "span-sel": ".big-o-n-fatorial", 
+            "span-class": "secondary", 
+            "icon-sel": ".big-o-n-fatorial-i",
+            "icon-class": "fi-lock",
+            "icon-color-style": "#EEE"
+        },
+        { 
+            "span-sel": ".big-o-n-2", 
+            "span-class": "secondary", 
+            "icon-sel": ".big-o-n-2-i",
+            "icon-class": "fi-lock",
+            "icon-color-style": "#EEE"
+        },
+        { 
+            "span-sel": ".big-o-n-log-n", 
+            "span-class": "secondary", 
+            "icon-sel": ".big-o-n-log-n-i",
+            "icon-class": "fi-lock",
+            "icon-color-style": "#EEE"
+        },
+        { 
+            "span-sel": ".big-o-n", 
+            "span-class": "secondary", 
+            "icon-sel": ".big-o-n-i",
+            "icon-class": "fi-lock",
+            "icon-color-style": "#EEE"
+        },
+        { 
+            "span-sel": ".big-o-log-n", 
+            "span-class": "secondary", 
+            "icon-sel": ".big-o-log-n-i",
+            "icon-class": "fi-lock",
+            "icon-color-style": "#EEE"
+        },
+        { 
+            "span-sel": ".big-o-1", 
+            "span-class": "secondary", 
+            "icon-sel": ".big-o-1-i",
+            "icon-class": "fi-lock",
+            "icon-color-style": "#EEE"
+        },
+        { 
+            "span-sel": ".big-o-exercicios", 
+            "span-class": "alert", 
+            "icon-sel": ".big-o-exercicios-i",
+            "icon-class": "fi-clipboard-pencil",
+            "icon-color-style": "white"
+        }
     ],
     
     init: function() {
