@@ -299,7 +299,7 @@ var i18nTraducao = {
 };
 
 function inicializar() {
-    var lingua = localStorage["lingua"];
+    var lingua = localStorage["lingua"] || "pt_BR";
     // código fonte
     $(".source-code").each(function() {
         if ($(this).hasClass("code-" + lingua)) {

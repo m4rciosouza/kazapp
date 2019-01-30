@@ -27,9 +27,9 @@
         <br />
         <nav role="navigation">
           <ul class="breadcrumbs">
-              <li><a href="../index.html"><span class="i18n" data-i18n="javaBasicoExercicios-t1">Início</span></a></li>
-              <li><a href="../index.html#java-basico"><span class="i18n" data-i18n="javaBasicoExercicios-t2">Java Básico</span></a></li>
-              <li><span class="i18n" data-i18n="javaBasicoExercicios-t37">Exercícios</span></li>
+              <li><a href="../index.html">Início</a></li>
+              <li><a href="../index.html#big-o">Big-O</a></li>
+              <li>Exercícios</li>
           </ul>
         </nav>
         <!-- BREADCRUMBS:END -->
@@ -54,7 +54,7 @@
       <div class="pag2">
           <h2><span class="i18n" data-i18n="javaBasicoExercicios-t8">O que será impresso no terminal ao executar o código a seguir?</span></h2>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+        <div style="text-align: left"><pre><code>
 public class IfElse {
   public static void main(String[] args) {
     int nota = 80;
@@ -63,21 +63,6 @@ public class IfElse {
       System.out.println("Passou no teste com nota B.");
     } else {
       System.out.println("Passou no teste com nota diferente de B.");
-    }
-  }   
-}
-        </code></pre></div>
-        <!-- CODE:END -->
-        <!-- CODE:BEGIN -->
-        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
-public class IfElse {
-  public static void main(String[] args) {
-    int grade = 80;
-
-    if (grade >= 70 && grade <= 80) {
-      System.out.println("Passed the test with grade B.");
-    } else {
-      System.out.println("Passed the test with a grade other than B.");
     }
   }   
 }
@@ -93,7 +78,7 @@ public class IfElse {
       <div class="pag3">
           <h2><span class="i18n" data-i18n="javaBasicoExercicios-t13">O que será impresso no terminal ao executar o código a seguir?</span></h2>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+        <div style="text-align: left"><pre><code>
 public class IfElse {
   public static void main(String[] args) {
     int nota = 79;
@@ -102,21 +87,6 @@ public class IfElse {
       System.out.println("A linha do IF foi executada.");
     } else {
       System.out.println("A linha do ELSE foi executada.");
-    }
-  }   
-}
-        </code></pre></div>
-        <!-- CODE:END -->
-        <!-- CODE:BEGIN -->
-        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
-public class IfElse {
-  public static void main(String[] args) {
-    int grade = 79;
-
-    if (grade % 2 == 0) {
-      System.out.println("The 'IF' line was executed.");
-    } else {
-      System.out.println("The 'ELSE' line was executed.");
     }
   }   
 }
@@ -132,23 +102,10 @@ public class IfElse {
       <div class="pag4">
           <h2><span class="i18n" data-i18n="javaBasicoExercicios-t18">O que será impresso no terminal ao executar o código a seguir?</span></h2>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+        <div style="text-align: left"><pre><code>
 public class For {
   public static void main(String[] args) {
     int[] numeros = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    
-    for (int i=0; i<10; i++) {
-      System.out.println(i);
-    }
-  }   
-}
-        </code></pre></div>
-        <!-- CODE:END -->
-        <!-- CODE:BEGIN -->
-        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
-public class For {
-  public static void main(String[] args) {
-    int[] numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     
     for (int i=0; i<10; i++) {
       System.out.println(i);
@@ -167,7 +124,7 @@ public class For {
       <div class="pag5">
           <h2><span class="i18n" data-i18n="javaBasicoExercicios-t23">O que será impresso no terminal ao executar o código a seguir?</span></h2>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+        <div style="text-align: left"><pre><code>
 public class DoWhile {
   public static void main(String[] args) {
     int numero = 1;
@@ -176,20 +133,6 @@ public class DoWhile {
       System.out.println(numero);
       numero++;
     } while (numero <= 10);
-  }   
-}
-        </code></pre></div>
-        <!-- CODE:END -->
-        <!-- CODE:BEGIN -->
-        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
-public class DoWhile {
-  public static void main(String[] args) {
-    int number = 1;
-
-    do {
-      System.out.println(number);
-      number++;
-    } while (number <= 10);
   }   
 }
         </code></pre></div>
@@ -204,7 +147,7 @@ public class DoWhile {
       <div class="pag6">
           <h2><span class="i18n" data-i18n="javaBasicoExercicios-t28">Dado o código a seguir, qual o valor da variável "<b>mes</b>" para que sejam impressos no terminal os meses "Outubro", "Novembro" e "Dezembro"?</span></h2>
         <!-- CODE:BEGIN -->
-        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+        <div style="text-align: left"><pre><code>
 public class Switch {
   public static void main(String[] args) {
     int mes = ?; //qual o número a ser utilizado aqui?
@@ -222,32 +165,6 @@ public class Switch {
       case 10: System.out.println("Outubro");
       case 11: System.out.println("Novembro");
       case 12: System.out.println("Dezembro");
-               break;
-      default: break;
-    }
-  }   
-}
-        </code></pre></div>
-        <!-- CODE:END -->
-          <!-- CODE:BEGIN -->
-        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
-public class Switch {
-  public static void main(String[] args) {
-    int month = ?; //what's the number to be replaced here?
-
-    switch (month) {
-      case 1:  System.out.println("January");
-      case 2:  System.out.println("February");
-      case 3:  System.out.println("March");
-      case 4:  System.out.println("April");
-      case 5:  System.out.println("May");
-      case 6:  System.out.println("June");
-      case 7:  System.out.println("July");
-      case 8:  System.out.println("August");
-      case 9:  System.out.println("September");
-      case 10: System.out.println("October");
-      case 11: System.out.println("November");
-      case 12: System.out.println("December");
                break;
       default: break;
     }
@@ -274,13 +191,13 @@ public class Switch {
         
         <!-- END_CLASS:BEGIN -->
         <a class="button success expanded concluir" 
-           data-open="exercicios-java-basico" 
-           id="ex-java-basico" 
-           onclick="calcularJavaBasicoExercicios();">
-            <span class="i18n" data-i18n="javaBasicoExercicios-t29">Enviar respostas</span>
+           data-open="exercicios-big-o" 
+           id="ex-big-o" 
+           onclick="calcularBigOExercicios();">
+            Enviar respostas
         </a>
-        <div class="reveal" id="exercicios-java-basico" data-reveal>
-            <h1><span class="i18n" data-i18n="javaBasicoExercicios-t30">Resultado</span></h1>
+        <div class="reveal" id="exercicios-big-o" data-reveal>
+            <h1>Resultado</h1>
             <div style="text-align: center">
                 <div class="passou">
                     <p>
@@ -288,7 +205,7 @@ public class Switch {
                             <i class="fi-like" style="font-size: 35px; color: white"></i>
                         </span>
                     </p>
-                    <p class="lead"><span class="i18n" data-i18n="javaBasicoExercicios-t31">Parabéns, você concluiu o módulo com sucesso!</span></p>
+                    <p class="lead">Parabéns, você concluiu o módulo com sucesso!</p>
                 </div>
                 <div class="naoPassou">
                     <p>
@@ -296,24 +213,24 @@ public class Switch {
                             <i class="fi-dislike" style="font-size: 35px; color: white"></i>
                         </span>
                     </p>
-                    <p class="lead"><span class="i18n" data-i18n="javaBasicoExercicios-t32">A nota mínima para passar é 70%, tente novamente.</span></p>
+                    <p class="lead">A nota mínima para passar é 70%, tente novamente.</p>
                 </div>
-                <p class="lead"><span class="i18n" data-i18n="javaBasicoExercicios-t33">Você acertou</span> <strong><span id="resultado">80</span>%</strong> <span class="i18n" data-i18n="javaBasicoExercicios-t34">das questões.</span></p>
+                <p class="lead">Você acertou <strong><span id="resultado">80</span>%</strong> das questões.</p>
             </div>
             <hr />
             <a class="button primary expanded tentar_novamente passou" href="../index.html#big-o" onclick="return Persistencia.completarMultiplos(['.ola-mundo', '.if-else', '.for', '.do-while', '.switch-op', '.big-o-introducao']);">
-                <span class="i18n" data-i18n="javaBasicoExercicios-t35">Avançar para o próximo módulo</span>
+                Avançar para o próximo módulo
             </a>
             <a class="button primary expanded tentar_novamente naoPassou" href="#" onclick="location.reload();">
-                <span class="i18n" data-i18n="javaBasicoExercicios-t36">Tentar novamente</span>
+                Tentar novamente
             </a>
-            <a class="button secondary expanded sair" href="../index.html#java-basico"><span class="i18n-sair-licao">Sair da lição</span></a>
+            <a class="button secondary expanded sair" href="../index.html#big-o">Sair da lição</a>
             <button class="close-button" data-close aria-label="Close reveal" type="button">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>  
           
-          <a class="button secondary expanded sair" href="../index.html#java-basico"><span class="i18n-sair-licao">Sair da lição</span></a>
+          <a class="button secondary expanded sair" href="../index.html#big-o">Sair da lição</a>
         <!-- END_CLASS:END -->
         
     </div>
