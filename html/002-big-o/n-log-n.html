@@ -42,7 +42,7 @@
         <h2>Complexidade O(n log n)</h2>
         <p>A complexidade O(n log n) é a terceira notação que estudaremos.</p>
         <p>Talvez conceitualmente essa seja a complexidade mais difícil de entender, mas como a notação Big-O trabalha com conceitos em alto nível, você não precisará ser um especialista em matemática nem em logaritmos para compreender como ela funciona.</p>
-        <p>Na matemática, o logaritmo de um número é o expoente a que outro valor fixo, a base, deve ser elevado para produzir este número. Por exemplo, o logaritmo de 1000 na base 10 é 3 porque 10 ao cubo é 1000 (1000 = 10 * 10 * 10 = 103).</p>  
+        <p>Na matemática, o logaritmo de um número é o expoente a que outro valor fixo, a base, deve ser elevado para produzir este número. Por exemplo, o logaritmo de 1000 na base 10 é 3 porque 10 ao cubo é 1000 (1000 = 10 * 10 * 10 = 10<sup>3</sup>).</p>  
           <p>Além do logaritmo de "n", ainda temos em adição "n" multiplicando o valor do logaritmo, o que resultaria em "n" * o logaritmo de "n".</p>
           <p>Para ficar mais claro, entenda que essa complexidade pode ser divida em duas partes, o cálculo de "n", e o logaritmo do mesmo "n".</p>
           <p>Nesse caso, entenda "n" como sendo o tamanho da lista de entrada de dados.</p>
@@ -67,7 +67,7 @@
           </ul>
           <p>Conforme você pode reparar, os números incrementam em intervalos muito pequenos entre eles.</p>  
           <p>Isso significa que algoritmos com essa complexidade são bons, e que são capazes de processar grandes quantidades de dados, uma vez que eles seguem uma linha de incremento baixa.</p>  
-          <p>Na prática, esses algoritmos normalmente são compostos de um laço de iteração(for ou while), seguido de algum processamento extra que será referenciado pela complexidade logaritmica.</p>
+          <p>Na prática, esses algoritmos normalmente são compostos de um laço de iteração(<b>for</b> ou <b>while</b>), seguido de algum processamento extra que será referenciado pela complexidade logaritmica.</p>
           <p>Portanto, um algoritmo de complexidade O(n log n) é um algortimo bom, com uma performance bastante aceitável, inclusive para o processamento de grandes quantidades de dados.</p> 
       </div>
         
@@ -82,7 +82,7 @@
         <h2>Complexidade O(n log n)</h2>
         <p>Agora que você já sabe o que é um algoritmo de complexidade O(n log n), vamos ver como seria uma implementação do mesmo na prática.</p>
           <p>Como demonstração usaremos um popular algoritmo de ordenação chamado Merge Sort, que é o melhor exemplo de representação de um algoritmo O(n log n).</p>
-          <p>Não se preocupe em entender como esse algoritmo funciona nesse momento, pois ele será estudado em detalhes em uma lição futura desse curso.</p>
+          <p>Não se preocupe em entender como esse algoritmo funciona nesse momento, pois ele será estudado em detalhes em uma lição futura deste curso.</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
 private void mergeSort(int[] numeros, int qtdNumeros) {
@@ -127,7 +127,7 @@ private void merge(int[] numeros, int[] metadeEsquerda, int[] metadeDireita,
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-          <p>O Merge Sort consiste na estratégia de dividir para conquistar, então ele basicamente ordena um lista através da lista em lista menores.</p>  
+          <p>O Merge Sort consiste na estratégia de dividir para conquistar, então ele basicamente ordena um lista através da divisão da mesma em lista menores.</p>  
           <p>Ele é considerado um algoritmo O(n log n) porque a quantidade de divisões na lista para ordenação, será relativa a quantidade de elementos na lista (n), e a parte do log n se dará em sua segunda parte, onde ele ordena os dados retornados pelas sub listas divididas durante o processamento anterior.</p>  
           <p>Como citei anteriormente, o estudo desse algoritmo se dará mais adiante, portanto não se preocupe em entendê-lo por completo nesse momento.</p>  
       </div>

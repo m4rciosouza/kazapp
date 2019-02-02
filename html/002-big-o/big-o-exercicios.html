@@ -44,139 +44,88 @@
         <!-- PROGRESS:END -->
         
       <div class="pag1">
-          <h2><span class="i18n" data-i18n="javaBasicoExercicios-t3">Qual o comando utilizado para compilar o códigos fonte em Java pela linha de comando?</span></h2>
-          <div class="callout primary rounded p1 p1r1"><label><input type="radio" name="p1" value="1"><span class="primary label p1 p1r1 rounded">A</span> <span class="i18n" data-i18n="javaBasicoExercicios-t4">java NOME_CLASSE.java</span></label></div>
-          <div class="callout primary rounded p1 p1r2"><label><input type="radio" name="p1" value="2"><span class="primary label p1 p1r2 rounded">B</span> <span class="i18n" data-i18n="javaBasicoExercicios-t5">javac NOME_CLASSE.java</span></label></div>
-          <div class="callout primary rounded p1 p1r3"><label><input type="radio" name="p1" value="3"><span class="primary label p1 p1r3 rounded">C</span> <span class="i18n" data-i18n="javaBasicoExercicios-t6">java -jar NOME_CLASSE.java</span></label></div>
-          <div class="callout primary rounded p1 p1r4"><label><input type="radio" name="p1" value="4"><span class="primary label p1 p1r4 rounded">D</span> <span class="i18n" data-i18n="javaBasicoExercicios-t7">javaw NOME_CLASSE.java</span></label></div>
+          <h2>Dado o gráfico a seguir, qual a complexidade de PIOR performance contida nele?</h2>
+          <p><img src="../assets/img/big-o-comparacao.png" alt="Big-O" /></p>
+          <div class="callout primary rounded p1 p1r1"><label><input type="radio" name="p1" value="1"><span class="primary label p1 p1r1 rounded">A</span> O(n log n)</label></div>
+          <div class="callout primary rounded p1 p1r2"><label><input type="radio" name="p1" value="2"><span class="primary label p1 p1r2 rounded">B</span> O(n!)</label></div>
+          <div class="callout primary rounded p1 p1r3"><label><input type="radio" name="p1" value="3"><span class="primary label p1 p1r3 rounded">C</span> O(1)</label></div>
+          <div class="callout primary rounded p1 p1r4"><label><input type="radio" name="p1" value="4"><span class="primary label p1 p1r4 rounded">D</span> O(log n)</label></div>
       </div>
         
       <div class="pag2">
-          <h2><span class="i18n" data-i18n="javaBasicoExercicios-t8">O que será impresso no terminal ao executar o código a seguir?</span></h2>
-        <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
-public class IfElse {
-  public static void main(String[] args) {
-    int nota = 80;
-
-    if (nota >= 70 && nota <= 80) {
-      System.out.println("Passou no teste com nota B.");
-    } else {
-      System.out.println("Passou no teste com nota diferente de B.");
-    }
-  }   
-}
-        </code></pre></div>
-        <!-- CODE:END -->
-        <br />
-            <div class="callout primary rounded p2 p2r1"><label><input type="radio" name="p2" value="1"><span class="primary label p2 p2r1 rounded">A</span> <span class="i18n" data-i18n="javaBasicoExercicios-t9">O código não compila.</span></label></div>
-            <div class="callout primary rounded p2 p2r2"><label><input type="radio" name="p2" value="2"><span class="primary label p2 p2r2 rounded">B</span> <span class="i18n" data-i18n="javaBasicoExercicios-t10">Passou no teste com nota B.</span></label></div>
-            <div class="callout primary rounded p2 p2r3"><label><input type="radio" name="p2" value="3"><span class="primary label p2 p2r3 rounded">C</span> <span class="i18n" data-i18n="javaBasicoExercicios-t11">Passou no teste com nota diferente de B.</span></label></div>
-            <div class="callout primary rounded p2 p2r4"><label><input type="radio" name="p2" value="4"><span class="primary label p2 p2r4 rounded">D</span> <span class="i18n" data-i18n="javaBasicoExercicios-t12">Não é impresso nada.</span></label></div>
+          <h2>Dado o gráfico a seguir, qual a complexidade de MELHOR performance contida nele?</h2>
+          <p><img src="../assets/img/big-o-comparacao.png" alt="Big-O" /></p>
+          <div class="callout primary rounded p2 p2r1"><label><input type="radio" name="p2" value="1"><span class="primary label p2 p2r1 rounded">A</span> O(n)</label></div>
+          <div class="callout primary rounded p2 p2r2"><label><input type="radio" name="p2" value="2"><span class="primary label p2 p2r2 rounded">B</span> O(1)</label></div>
+          <div class="callout primary rounded p2 p2r3"><label><input type="radio" name="p2" value="3"><span class="primary label p2 p2r3 rounded">C</span> O(n log n)</label></div>
+          <div class="callout primary rounded p2 p2r4"><label><input type="radio" name="p2" value="4"><span class="primary label p2 p2r4 rounded">D</span> O(log n)</label></div>
       </div>
           
       <div class="pag3">
-          <h2><span class="i18n" data-i18n="javaBasicoExercicios-t13">O que será impresso no terminal ao executar o código a seguir?</span></h2>
+          <h2>Dado o método a seguir, qual é a complexidade do mesmo?</span></h2>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
-public class IfElse {
-  public static void main(String[] args) {
-    int nota = 79;
-
-    if (nota % 2 == 0) {
-      System.out.println("A linha do IF foi executada.");
-    } else {
-      System.out.println("A linha do ELSE foi executada.");
+private void imprimirNumeros(int numero) {
+    for (int i=0; i < numero; i++) {
+        for (int j=0; j < numero; j++) {
+            System.out.println(i + ", " + j);
+        }
     }
-  }   
 }
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-          <div class="callout primary rounded p3 p3r1"><label><input type="radio" name="p3" value="1"><span class="primary label p3 p3r1 rounded">A</span> <span class="i18n" data-i18n="javaBasicoExercicios-t14">A linha do IF foi executada.</span></label></div>
-          <div class="callout primary rounded p3 p3r2"><label><input type="radio" name="p3" value="2"><span class="primary label p3 p3r2 rounded">B</span> <span class="i18n" data-i18n="javaBasicoExercicios-t15">O código não compila.</span></label></div>
-          <div class="callout primary rounded p3 p3r3"><label><input type="radio" name="p3" value="3"><span class="primary label p3 p3r3 rounded">C</span> <span class="i18n" data-i18n="javaBasicoExercicios-t16">Não é impresso nada.</span></label></div>
-          <div class="callout primary rounded p3 p3r4"><label><input type="radio" name="p3" value="4"><span class="primary label p3 p3r4 rounded">D</span> <span class="i18n" data-i18n="javaBasicoExercicios-t17">A linha do ELSE foi executada.</span></label></div>
+          <div class="callout primary rounded p3 p3r1"><label><input type="radio" name="p3" value="1"><span class="primary label p3 p3r1 rounded">A</span> O(log n)</label></div>
+          <div class="callout primary rounded p3 p3r2"><label><input type="radio" name="p3" value="2"><span class="primary label p3 p3r2 rounded">B</span> O(1)</label></div>
+          <div class="callout primary rounded p3 p3r3"><label><input type="radio" name="p3" value="3"><span class="primary label p3 p3r3 rounded">C</span> O(n)</label></div>
+          <div class="callout primary rounded p3 p3r4"><label><input type="radio" name="p3" value="4"><span class="primary label p3 p3r4 rounded">D</span> O(n<sup>2</sup>)</label></div>
       </div>
           
       <div class="pag4">
-          <h2><span class="i18n" data-i18n="javaBasicoExercicios-t18">O que será impresso no terminal ao executar o código a seguir?</span></h2>
-        <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
-public class For {
-  public static void main(String[] args) {
-    int[] numeros = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    
-    for (int i=0; i<10; i++) {
-      System.out.println(i);
-    }
-  }   
-}
-        </code></pre></div>
-        <!-- CODE:END -->
+        <h2>Selecione a alternativa CORRETA sobre a complexidade O(n<sup>2</sup>):</h2>
         <br />
-            <div class="callout primary rounded p4 p4r1"><label><input type="radio" name="p4" value="1"><span class="primary label p4 p4r1 rounded">A</span> <span class="i18n" data-i18n="javaBasicoExercicios-t19">Os números de 1 a 10.</span></label></div>
-            <div class="callout primary rounded p4 p4r2"><label><input type="radio" name="p4" value="2"><span class="primary label p4 p4r2 rounded">B</span> <span class="i18n" data-i18n="javaBasicoExercicios-t20">O código não compila.</span></label></div>
-            <div class="callout primary rounded p4 p4r3"><label><input type="radio" name="p4" value="3"><span class="primary label p4 p4r3 rounded">C</span> <span class="i18n" data-i18n="javaBasicoExercicios-t21">Os números de 0 a 10.</span></label></div>
-            <div class="callout primary rounded p4 p4r4"><label><input type="radio" name="p4" value="4"><span class="primary label p4 p4r4 rounded">D</span> <span class="i18n" data-i18n="javaBasicoExercicios-t22">Os números de 0 a 9.</span></label></div>
+        <div class="callout primary rounded p4 p4r1"><label><input type="radio" name="p4" value="1"><span class="primary label p4 p4r1 rounded">A</span> Possui uma das melhores performances dentre os demais tipos.</label></div>
+        <div class="callout primary rounded p4 p4r2"><label><input type="radio" name="p4" value="2"><span class="primary label p4 p4r2 rounded">B</span> Possui uma performance melhor do que a complexidade (n log n).</label></div>
+        <div class="callout primary rounded p4 p4r3"><label><input type="radio" name="p4" value="3"><span class="primary label p4 p4r3 rounded">C</span> Um exemplo clássico é quando temos dois laços <b>for</b> encadeados.</label></div>
+        <div class="callout primary rounded p4 p4r4"><label><input type="radio" name="p4" value="4"><span class="primary label p4 p4r4 rounded">D</span> Um exemplo clássico é quando temos um único laço <b>for</b> em nosso algoritmo.</label></div>
       </div>
           
       <div class="pag5">
-          <h2><span class="i18n" data-i18n="javaBasicoExercicios-t23">O que será impresso no terminal ao executar o código a seguir?</span></h2>
+          <h2>Dado o método a seguir, qual é a complexidade do mesmo?</h2>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
-public class DoWhile {
-  public static void main(String[] args) {
-    int numero = 1;
+private int buscaBinaria(int[] numeros, int inicio, int fim, int numero) {
+    int indice = -1;
 
-    do {
-      System.out.println(numero);
-      numero++;
-    } while (numero <= 10);
-  }   
+    while (inicio <= fim) {
+        int meio = (inicio + fim) / 2;
+        if (numeros[meio] < numero) {
+            inicio = meio + 1;
+        } else if (numeros[meio] > numero) {
+            fim = meio - 1;
+        } else if (numeros[meio] == numero) {
+            indice = meio;
+            break;
+        }
+    }
+    return indice;
 }
         </code></pre></div>
         <!-- CODE:END -->
         <br />
-            <div class="callout primary rounded p5 p5r1"><label><input type="radio" name="p5" value="1"><span class="primary label p5 p5r1 rounded">A</span> <span class="i18n" data-i18n="javaBasicoExercicios-t24">Os números de 1 a 10.</span></label></div>
-            <div class="callout primary rounded p5 p5r2"><label><input type="radio" name="p5" value="2"><span class="primary label p5 p5r2 rounded">B</span> <span class="i18n" data-i18n="javaBasicoExercicios-t25">O código não compila.</span></label></div>
-            <div class="callout primary rounded p5 p5r3"><label><input type="radio" name="p5" value="3"><span class="primary label p5 p5r3 rounded">C</span> <span class="i18n" data-i18n="javaBasicoExercicios-t26">Os números de 1 a 11.</span></label></div>
-            <div class="callout primary rounded p5 p5r4"><label><input type="radio" name="p5" value="4"><span class="primary label p5 p5r4 rounded">D</span> <span class="i18n" data-i18n="javaBasicoExercicios-t27">Os números de 0 a 9.</span></label></div>
+            <div class="callout primary rounded p5 p5r1"><label><input type="radio" name="p5" value="1"><span class="primary label p5 p5r1 rounded">A</span> O(n log n)</label></div>
+            <div class="callout primary rounded p5 p5r2"><label><input type="radio" name="p5" value="2"><span class="primary label p5 p5r2 rounded">B</span> O(n)</label></div>
+            <div class="callout primary rounded p5 p5r3"><label><input type="radio" name="p5" value="3"><span class="primary label p5 p5r3 rounded">C</span> O(log n)</label></div>
+            <div class="callout primary rounded p5 p5r4"><label><input type="radio" name="p5" value="4"><span class="primary label p5 p5r4 rounded">D</span> O(n<sup>2</sup>)</label></div>
       </div>
           
       <div class="pag6">
-          <h2><span class="i18n" data-i18n="javaBasicoExercicios-t28">Dado o código a seguir, qual o valor da variável "<b>mes</b>" para que sejam impressos no terminal os meses "Outubro", "Novembro" e "Dezembro"?</span></h2>
-        <!-- CODE:BEGIN -->
-        <div style="text-align: left"><pre><code>
-public class Switch {
-  public static void main(String[] args) {
-    int mes = ?; //qual o número a ser utilizado aqui?
-
-    switch (mes) {
-      case 1:  System.out.println("Janeiro");
-      case 2:  System.out.println("Fevereiro");
-      case 3:  System.out.println("Março");
-      case 4:  System.out.println("Abril");
-      case 5:  System.out.println("Maio");
-      case 6:  System.out.println("Junho");
-      case 7:  System.out.println("Julho");
-      case 8:  System.out.println("Agosto");
-      case 9:  System.out.println("Setembro");
-      case 10: System.out.println("Outubro");
-      case 11: System.out.println("Novembro");
-      case 12: System.out.println("Dezembro");
-               break;
-      default: break;
-    }
-  }   
-}
-        </code></pre></div>
-        <!-- CODE:END -->
+        <h2>Selecione a alternativa CORRETA sobre a complexidade O(log n):</h2>
         <br />
-        <div class="callout primary rounded p6 p6r1"><label><input type="radio" name="p6" value="1"><span class="primary label p6 p6r1 rounded">A</span> 3</label></div>
-        <div class="callout primary rounded p6 p6r2"><label><input type="radio" name="p6" value="2"><span class="primary label p6 p6r2 rounded">B</span> 9</label></div>
-        <div class="callout primary rounded p6 p6r3"><label><input type="radio" name="p6" value="3"><span class="primary label p6 p6r3 rounded">C</span> 10</label></div>
-        <div class="callout primary rounded p6 p6r4"><label><input type="radio" name="p6" value="4"><span class="primary label p6 p6r4 rounded">D</span> 11</label></div>
+        <div class="callout primary rounded p6 p6r1"><label><input type="radio" name="p6" value="1"><span class="primary label p6 p6r1 rounded">A</span> Algoritmos de complexidade O(log n) possuem uma boa performance.</label></div>
+        <div class="callout primary rounded p6 p6r2"><label><input type="radio" name="p6" value="2"><span class="primary label p6 p6r2 rounded">B</span> Algoritmos de complexidade O(log n) são mais eficientes dos que de complexidade O(n log n).</label></div>
+        <div class="callout primary rounded p6 p6r3"><label><input type="radio" name="p6" value="3"><span class="primary label p6 p6r3 rounded">C</span> O algoritmos de busca binária é um bom exemplo de algortmo de complexidade o(log n).</label></div>
+        <div class="callout primary rounded p6 p6r4"><label><input type="radio" name="p6" value="4"><span class="primary label p6 p6r4 rounded">D</span> Todas as alternativas estão corretas.</label></div>
       </div>
         
         <!-- PAGINATION:BEGIN -->
@@ -218,7 +167,7 @@ public class Switch {
                 <p class="lead">Você acertou <strong><span id="resultado">80</span>%</strong> das questões.</p>
             </div>
             <hr />
-            <a class="button primary expanded tentar_novamente passou" href="../index.html#big-o" onclick="return Persistencia.completarMultiplos(['.ola-mundo', '.if-else', '.for', '.do-while', '.switch-op', '.big-o-introducao']);">
+            <a class="button primary expanded tentar_novamente passou" href="../index.html#big-o" onclick="return Persistencia.completarMultiplos(['.big-o-introducao', '.big-o-n-fatorial', '.big-o-n-2', '.big-o-n-log-n', '.big-o-n', '.big-o-log-n', '.big-o-1']);">
                 Avançar para o próximo módulo
             </a>
             <a class="button primary expanded tentar_novamente naoPassou" href="#" onclick="location.reload();">
