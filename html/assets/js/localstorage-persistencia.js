@@ -98,6 +98,34 @@ var Persistencia = {
             "icon-sel": ".big-o-exercicios-i",
             "icon-class": "fi-clipboard-pencil",
             "icon-color-style": "white"
+        },
+        { // 003-algoritmos-busca-1
+            "span-sel": ".algoritmos-busca-1-introducao", 
+            "span-class": "secondary", 
+            "icon-sel": ".algoritmos-busca-1-introducao-i",
+            "icon-class": "fi-lock",
+            "icon-color-style": "#EEE"
+        },
+        { 
+            "span-sel": ".algoritmos-busca-1-busca-linear", 
+            "span-class": "secondary", 
+            "icon-sel": ".algoritmos-busca-1-busca-linear-i",
+            "icon-class": "fi-lock",
+            "icon-color-style": "#EEE"
+        },
+        { 
+            "span-sel": ".algoritmos-busca-1-busca-binaria", 
+            "span-class": "secondary", 
+            "icon-sel": ".algoritmos-busca-1-busca-binaria-i",
+            "icon-class": "fi-lock",
+            "icon-color-style": "#EEE"
+        },
+        { 
+            "span-sel": ".algoritmos-busca-1-exercicios", 
+            "span-class": "alert", 
+            "icon-sel": ".algoritmos-busca-1-exercicios-i",
+            "icon-class": "fi-clipboard-pencil",
+            "icon-color-style": "white"
         }
     ],
     
