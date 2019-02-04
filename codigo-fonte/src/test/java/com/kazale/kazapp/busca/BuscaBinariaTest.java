@@ -58,4 +58,5 @@ public class BuscaBinariaTest {
 
         assertEquals(INDICE_NAO_ENCONTRADO, indice);
     }
+    
 }

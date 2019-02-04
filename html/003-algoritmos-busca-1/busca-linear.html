@@ -1,0 +1,222 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprenda Java e Algoritmos | Kazapp</title>
+    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
+    <style>
+        body { background-color: #FFF; padding: 5px; } 
+    </style>
+  </head>
+  <body>      
+    <!-- Set up Off-canvas -->
+    <div class="off-canvas-wrapper"></div>
+      
+    <!-- MAIN:BEGIN -->
+    <div>
+        <!-- BREADCRUMBS:BEGIN -->
+        <br />
+        <nav role="navigation">
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#algoritmos-busca-1">Algoritmos de busca 1</a></li>
+            <li>Busca linear</li>
+          </ul>
+        </nav>
+        <!-- BREADCRUMBS:END -->
+        
+        <!-- PROGRESS:BEGIN -->
+        <div class="primary progress" role="progressbar" tabindex="0" aria-valuenow="50" 
+             aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+          <div class="progress-meter" style="width: 50%">
+            <p class="progress-meter-text">50%</p>
+          </div>
+        </div>
+        <!-- PROGRESS:END -->
+        
+      <div class="pag1">
+        <h2>Busca linear</h2>
+        <p>A busca linear é um algoritmo bastante simples, que apenas percorre uma lista item a item buscando pelo valor procurado.</p>
+        <p>Em sua implementação usamos um único laço <b>for</b> para iterar sob os items da lista, verificando item a item se ele é igual ao item procurado.</p>
+        <p>Seu retorno será o índice da posição do elemento procurado na lista, ou "-1" caso ele não seja encontrado.</p>
+      </div>
+        
+      <div class="pag2">
+        <h2>Busca linear</h2>
+        <p>Como você deve estar imaginando, a performance desse algoritmo em seu pior caso estará diretamente associada a quantidade de elementos da lista de entrada (n).</p>
+        <p>Isso é uma característica de algoritmos que tem a performance baseada na quantidade de elementos na lista, ou seja, ordem de O(n).</p>
+        <p>Por ele apresentar ordem O(n), podemos dizer que ele é bom para busca em listas de pequeno e médio porte, mas poderá ficar lento caso seja utilizado para listas com muitos elementos.</p>
+        <div class="callout primary">
+            A busca linear é um algoritmo de ordem O(n), é de fácil implementação, e pode ser utilizado para busca em listas de pequeno e médio porte.
+        </div>
+      </div>
+        
+      <div class="pag3">
+        <h2>Busca linear</h2>
+        <p>Vamos ver através da animação a seguir como esse algoritmo se comporta:</p>
+ 
+            
+      </div>
+          
+      <div class="pag4">
+        <h2>Vamos praticar?</h2>
+        <p>Para você aprender a implementar um algoritmo de busca linear, vamos criar uma classe contendo sua implementação, e na sequência vamos entender o código fonte do mesmo.</p>
+        <p>Para isso crie um arquivo chamado <b>BuscaLinear.java</b> com o seguinte código:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+public class BuscaLinear {
+
+    /**
+     * Implementação do algoritmo de busca linear.
+     * A busca linear possui performance de ordem O(n).
+     *
+     * @param numeros - lista contendo os números utilizados para a busca.
+     * @param numero - número a ser encontrado na lista.
+     *
+     * @return int - índice do número na lista, ou -1 caso não encontrado.
+     */
+    public int buscar(int[] numeros, int numero) {
+        if (numeros == null) {
+            return -1;
+        }
+        for (int i=0; i < numeros.length; i++) {
+            if (numeros[i] == numero) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+      </div>
+          
+      <div class="pag5">
+        <h2>Entendo o código da busca linear</h2> 
+        <p>O código acima é bastante simples de entender, mas vamos a uma explicação do mesmo:</p>
+        <ul>
+          <li>O método <b>buscar</b> recebe dois parâmetros, a lista com o dados e o valor do elemento a ser procurado.</li>
+          <li>Então verificamos se a lista possui elementos, e caso ela seja nula retornamos o valor "-1", que significa elemento não encontrado.</li>
+          <li>Depois iteramos sob todos os elementos da lista através do uso de um laço <b>for</b>.</li>
+          <li>Para cada elemento da lista, verificamos se ele possui o mesmo valor que estamos procurando.</li>
+          <li>Caso os valores sejam iguais, retornamos o índice do elemento referente a sua posição na lista de dados.</li>
+          <li>Se ao término da iteração não encontrarmos o valor procurado, simplemesmente retornamos o valor "-1", significando que o valor não está presente na lista de dados.</li>
+        </ul>    
+      </div>
+          
+      <div class="pag6">
+        <h2>Validando nosso código</h2> 
+        <p>Agora que você já entendeu como o algoritmo de busca linear funciona e é implementado, vamos criar uma classe de testes para validar sua implementação.</p>
+        <p>Essa classe de teste utiliza como base o framework JUnit para sua execução.</p>
+        <p>Para implementá-la, crie o arquivo <b>BuscaLinearTest.java</b> com o seguinte código (que será explicado na sequência):</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class BuscaBinariaTest {
+
+    private static final int[] LISTA_NUMEROS = { 1, 2, 3, 5, 6, 9, 10, 20, 40, 100 };
+    private static final int NUMERO_PRESENTE_LISTA = 10;
+    private static final int NUMERO_NAO_PRESENTE_LISTA = 50;
+    private static final int INDICE_NUMERO_EX_LISTA = 6;
+    private static final int INDICE_NAO_ENCONTRADO = -1;
+
+    private final BuscaBinaria buscaBinaria = new BuscaBinaria();
+
+    @Test
+    public void listaNulaTest() {
+        int indice = buscaBinaria.buscar(null, NUMERO_PRESENTE_LISTA);
+
+        assertEquals(INDICE_NAO_ENCONTRADO, indice);
+    }
+
+    @Test
+    public void listaVaziaTest() {
+        int indice = buscaBinaria.buscar(new int[0], NUMERO_PRESENTE_LISTA);
+
+        assertEquals(INDICE_NAO_ENCONTRADO, indice);
+    }
+
+    @Test
+    public void buscaComSucessoPrimeiraPosicaoTest() {
+        int primeiroNumeroLista = LISTA_NUMEROS[0];
+        int indice = buscaBinaria.buscar(LISTA_NUMEROS, primeiroNumeroLista);
+
+        assertEquals(0, indice);
+    }
+
+    @Test
+    public void buscaComSucessoTest() {
+        int indice = buscaBinaria.buscar(LISTA_NUMEROS, NUMERO_PRESENTE_LISTA);
+
+        assertEquals(INDICE_NUMERO_EX_LISTA, indice);
+    }
+
+    @Test
+    public void buscaComSucessoUltimaPosicaoTest() {
+        int indiceUltimoNumeroLista = LISTA_NUMEROS.length - 1;
+        int ultimoNumeroLista = LISTA_NUMEROS[indiceUltimoNumeroLista];
+        int indice = buscaBinaria.buscar(LISTA_NUMEROS, ultimoNumeroLista);
+
+        assertEquals(indiceUltimoNumeroLista, indice);
+    }
+
+    @Test
+    public void elementoNaoEncontrado() {
+        int indice = buscaBinaria.buscar(LISTA_NUMEROS, NUMERO_NAO_PRESENTE_LISTA);
+
+        assertEquals(INDICE_NAO_ENCONTRADO, indice);
+    }
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+     </div>
+          
+     <div class="pag7">
+          <p>O código acima é bastante intuitivo. Ele inicia com a definição de algums constantes que serão utilizadas nos testes, assim como a criação de uma instância da classe <b>BuscaLinear</b> criada anteriormente.</p>  
+          <p>Na sequência criamos uma série de métodos anotados com a anotação <b>@Test</b>, que representam os casos de testes no framework JUnit.</p>
+          <p>Os nomes dos métodos são bem descritivos, e informam exatamente o que está sendo testado.</p>
+          <p>Dentro de cada método fazemos uma chamada ao nosso método de busca, armazemando o seu valor de retorno.</p>
+          <p>Por fim, com o auxílio do <b>assertEquals</b> do JUnit, verificamos se o retorno da busca possui o mesmo valor do valor esperado.</p>
+      </div>
+        
+        <!-- PAGINATION:BEGIN -->
+        <br />
+        <div style="text-align: center">
+            <ul class="pagination" role="navigation" aria-label="Pagination">
+              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()">Anterior</li>
+              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()">Próximo</li>
+            </ul>
+        </div>
+        <!-- PAGINATION:END -->
+        
+        <!-- END_CLASS:BEGIN -->
+        <a class="button success expanded concluir" href="../index.html#algoritmos-busca-1" onclick="return Persistencia.completar('.algoritmos-busca-1-busca-linear', '.algoritmos-busca-1-busca-binaria');">Concluir lição</a>
+        <a class="button secondary expanded sair" href="../index.html#algoritmos-busca-1">Sair da lição</a>
+        <!-- END_CLASS:END -->
+        
+    </div>
+    <!-- MAIN:END -->
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/menu-off-canvas.js"></script>
+    <script src="../assets/js/paginacao.js"></script>
+    <script src="../assets/js/localstorage-persistencia.js"></script>
+    <script src="../assets/js/i18n-en_GB.js"></script>
+    <script>
+        $(document).foundation();
+        hljs.initHighlightingOnLoad();
+        Paginacao.init(7);
+        Paginacao.paginar();
+    </script>
+  </body>
+</html>
