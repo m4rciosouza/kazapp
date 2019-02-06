@@ -1,8 +1,7 @@
-package com.kazale.kazapp.busca;
+package kazapp;
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 public class BuscaLinearTest {
 

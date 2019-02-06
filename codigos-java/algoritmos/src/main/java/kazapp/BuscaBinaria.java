@@ -1,4 +1,4 @@
-package com.kazale.kazapp.busca;
+package kazapp;
 
 public class BuscaBinaria {
 
