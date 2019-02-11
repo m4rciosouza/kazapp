@@ -111,13 +111,13 @@ public class BuscaLinear {
       <div class="pag6">
         <h2>Validando nosso código</h2> 
         <p>Agora que você já entendeu como o algoritmo de busca linear funciona e é implementado, vamos criar uma classe de testes para validar sua implementação.</p>
-        <p>Essa classe de teste utiliza como base o framework JUnit para sua execução.</p>
+        <p>Essa classe de teste utiliza como base o framework <a href="https://junit.org/junit5" target="_blank">JUnit</a> para sua execução.</p>
         <p>Para implementá-la, crie o arquivo <b>BuscaLinearTest.java</b> com o seguinte código (que será explicado na sequência):</p>
         <!-- CODE:BEGIN -->
         <div style="text-align: left"><pre><code>
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 public class BuscaBinariaTest {
 
@@ -179,7 +179,7 @@ public class BuscaBinariaTest {
      </div>
           
      <div class="pag7">
-          <p>O código acima é bastante intuitivo. Ele inicia com a definição de algums constantes que serão utilizadas nos testes, assim como a criação de uma instância da classe <b>BuscaLinear</b> criada anteriormente.</p>  
+          <p>O código acima é bastante intuitivo. Ele inicia com a definição de algumas constantes que serão utilizadas nos testes, assim como a criação de uma instância da classe <b>BuscaLinear</b> criada anteriormente.</p>  
           <p>Na sequência criamos uma série de métodos anotados com a anotação <b>@Test</b>, que representam os casos de testes no framework JUnit.</p>
           <p>Os nomes dos métodos são bem descritivos, e informam exatamente o que está sendo testado.</p>
           <p>Dentro de cada método fazemos uma chamada ao nosso método de busca, armazemando o seu valor de retorno.</p>
