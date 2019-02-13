@@ -36,4 +36,8 @@ public class BuscaBinaria {
 
         return indice;
     }
+
+    public static void main(String args[]) {
+        new BuscaBinaria().buscar(new int[]{1,2,3,4,5,6,7,8,9}, 9);
+    }
 }
