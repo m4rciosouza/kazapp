@@ -126,6 +126,44 @@ var Persistencia = {
             "icon-sel": ".algoritmos-busca-1-exercicios-i",
             "icon-class": "fi-clipboard-pencil",
             "icon-color-style": "white"
+        },
+        { // 004-algoritmos-ordenacao-1
+            "span-sel": ".algoritmos-ordenacao-1-introducao", 
+            "span-class": "secondary", 
+            "icon-sel": ".algoritmos-ordenacao-1-introducao-i",
+            "icon-class": "fi-lock",
+            "icon-color-style": "#EEE"
+        },
+        { 
+            "span-sel": ".algoritmos-ordenacao-1-ordenacao-insercao", 
+            "span-class": "secondary", 
+            "icon-sel": ".algoritmos-ordenacao-1-ordenacao-insercao-i",
+            "icon-class": "fi-lock",
+            "icon-color-style": "#EEE"
+        },
+        { 
+            "span-sel": ".algoritmos-ordenacao-1-ordenacao-selecao", 
+            "span-class": "secondary", 
+            "icon-sel": ".algoritmos-ordenacao-1-ordenacao-selecao-i",
+            "icon-class": "fi-lock",
+            "icon-color-style": "#EEE"
+        },
+        { 
+            "span-sel": ".algoritmos-ordenacao-1-ordenacao-flutuacao", 
+            "span-class": "secondary", 
+            "icon-sel": ".algoritmos-ordenacao-1-ordenacao-flutuacao-i",
+            "icon-class": "fi-lock",
+            "icon-color-style": "#EEE"
+        },
+        { 
+            "span-sel": ".algoritmos-ordenacao-1-exercicios", 
+            //"span-class": "alert", 
+            "span-class": "secondary", 
+            "icon-sel": ".algoritmos-ordenacao-1-exercicios-i",
+            //"icon-class": "fi-clipboard-pencil",
+            //"icon-color-style": "white"
+            "icon-class": "fi-lock",
+            "icon-color-style": "#EEE"
         }
     ],
     
