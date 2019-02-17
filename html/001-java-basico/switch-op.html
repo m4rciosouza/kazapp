@@ -572,6 +572,9 @@ Number of days = 31
         hljs.initHighlightingOnLoad();
         Paginacao.init(6);
         Paginacao.paginar();
+        if (!Persistencia.temAcessoPagina('.switch-op')) {
+            Persistencia.redirecionarIndex();
+        }
     </script>
   </body>
 </html>

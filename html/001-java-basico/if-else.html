@@ -380,6 +380,9 @@ You've got ranking B.
         hljs.initHighlightingOnLoad();
         Paginacao.init(5);
         Paginacao.paginar();
+        if (!Persistencia.temAcessoPagina('.if-else')) {
+            Persistencia.redirecionarIndex();
+        }
     </script>
   </body>
 </html>

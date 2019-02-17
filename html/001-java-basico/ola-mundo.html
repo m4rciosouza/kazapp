@@ -211,6 +211,9 @@ System.out.println("Hello World!!!");
         hljs.initHighlightingOnLoad();
         Paginacao.init(3);
         Paginacao.paginar();
+        if (!Persistencia.temAcessoPagina('.ola-mundo')) {
+            Persistencia.redirecionarIndex();
+        }
     </script>
   </body>
 </html>

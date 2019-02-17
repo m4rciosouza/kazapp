@@ -229,6 +229,14 @@ var Persistencia = {
     },
     
     temAcesso: function(spanSel) {
+        var temAcesso = this.temAcessoPagina(spanSel);
+        if (!temAcesso) {
+            $('#nao-tem-acesso').foundation('open');
+        }
+        return temAcesso;
+    },
+    
+    temAcessoPagina: function(spanSel) {
         if (localStorage['kazapp-dados']) {
             this.dados = JSON.parse(localStorage['kazapp-dados']);
         }
@@ -238,7 +246,11 @@ var Persistencia = {
                 return true;
             }
         }
-        $('#nao-tem-acesso').foundation('open');
         return false;
+    },
+    
+    redirecionarIndex: function() {
+        location.href = "../index.html";
     }
+    
 };

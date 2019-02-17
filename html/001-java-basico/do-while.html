@@ -305,6 +305,9 @@ Didn't finish yet...
         hljs.initHighlightingOnLoad();
         Paginacao.init(4);
         Paginacao.paginar();
+        if (!Persistencia.temAcessoPagina('.do-while')) {
+            Persistencia.redirecionarIndex();
+        }
     </script>
   </body>
 </html>

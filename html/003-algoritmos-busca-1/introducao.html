@@ -93,6 +93,9 @@
         hljs.initHighlightingOnLoad();
         Paginacao.init(2);
         Paginacao.paginar();
+        if (!Persistencia.temAcessoPagina('.algoritmos-busca-1-introducao')) {
+            Persistencia.redirecionarIndex();
+        }
     </script>
   </body>
 </html>

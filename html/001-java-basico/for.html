@@ -350,6 +350,9 @@ java For
         hljs.initHighlightingOnLoad();
         Paginacao.init(5);
         Paginacao.paginar();
+        if (!Persistencia.temAcessoPagina('.for')) {
+            Persistencia.redirecionarIndex();
+        }
     </script>
   </body>
 </html>

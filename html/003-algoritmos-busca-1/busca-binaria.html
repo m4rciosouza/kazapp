@@ -228,6 +228,9 @@ public class BuscaBinariaTest {
         hljs.initHighlightingOnLoad();
         Paginacao.init(6);
         Paginacao.paginar();
+        if (!Persistencia.temAcessoPagina('.algoritmos-busca-1-busca-binaria')) {
+            Persistencia.redirecionarIndex();
+        }
     </script>
   </body>
 </html>

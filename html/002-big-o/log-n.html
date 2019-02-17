@@ -243,6 +243,9 @@ Experimento executado em 0ms
         hljs.initHighlightingOnLoad();
         Paginacao.init(5);
         Paginacao.paginar();
+        if (!Persistencia.temAcessoPagina('.big-o-log-n')) {
+            Persistencia.redirecionarIndex();
+        }
     </script>
   </body>
 </html>

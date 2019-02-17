@@ -171,6 +171,9 @@ Experimento executado em 0ms
         hljs.initHighlightingOnLoad();
         Paginacao.init(4);
         Paginacao.paginar();
+        if (!Persistencia.temAcessoPagina('.big-o-1')) {
+            Persistencia.redirecionarIndex();
+        }
     </script>
   </body>
 </html>

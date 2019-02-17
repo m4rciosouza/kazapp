@@ -102,6 +102,9 @@
         hljs.initHighlightingOnLoad();
         Paginacao.init(3);
         Paginacao.paginar();
+        if (!Persistencia.temAcessoPagina('.big-o-introducao')) {
+            Persistencia.redirecionarIndex();
+        }
     </script>
   </body>
 </html>
