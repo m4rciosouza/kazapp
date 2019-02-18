@@ -15,7 +15,8 @@ var menuOffCavas = '' +
                   '<li><a href="#0" onclick="I18nTraducao.definirLingua(\'pt_BR\');"><img src="/html/assets/img/pt_BR.png" style="width: 20px; height: 20px"> <span class="title-bar-title i18n-off-canvas-3">Português</span></a></li>' +
                 '</ul>' +
               '</li>' +
-              '<li><a href="#0"><span class="title-bar-title i18n-off-canvas-4">Sobre</span></a></li>' +
+              '<li><a href="sobre.html"><span class="title-bar-title i18n-off-canvas-4">Sobre</span></a></li>' +
+              '<li><a href="redes-sociais.html"><span class="title-bar-title i18n-off-canvas-4">Redes sociais</span></a></li>' +
             '</ul>' +
         '</div>' +
         '<div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">' +
