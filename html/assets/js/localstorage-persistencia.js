@@ -177,6 +177,7 @@ var Persistencia = {
                 .addClass(this.dados[i]["icon-class"])
                 .css("color", this.dados[i]["icon-color-style"]);
         }
+        this.mailboxInit();
     },
     
     completar: function(spanSelCompletar, spanSelHabilitar) {
@@ -251,6 +252,55 @@ var Persistencia = {
     
     redirecionarIndex: function() {
         location.href = "../index.html";
+    },
+    
+    // mailbox:inicio
+    mailbox: {
+        total: 2,
+        naoLidas: 2,
+        naoLidasInfo: [
+            { id: '#mail-1-subject', lida: false },
+            { id: '#mail-2-subject', lida: false }
+        ]
+    },
+    mailboxEstiloNaoLidas: function() {
+        if (localStorage['kazaap-mail']) {
+            this.mailbox = JSON.parse(localStorage['kazaap-mail']);
+        }
+        for (var i=0; i<this.mailbox.naoLidasInfo.length; i++) { 
+            if (!this.mailbox.naoLidasInfo[i].lida) {
+                $(this.mailbox.naoLidasInfo[i].id).css('fontWeight', 'bold');
+            } else {
+                $(this.mailbox.naoLidasInfo[i].id).css('fontWeight', 'normal');
+            }
+        }
+    },
+    mailMarcarLida: function(mailNumero) {
+        if (!this.mailbox.naoLidasInfo[mailNumero-1].lida) {
+            this.mailbox.naoLidas--;
+        }
+        this.mailbox.naoLidasInfo[mailNumero-1].lida = true;
+        localStorage['kazaap-mail'] = JSON.stringify(this.mailbox);
+        this.mailboxEstiloNaoLidas();
+        // atualiza info top bar a direita
+        if (this.mailbox.naoLidas > 0) {
+            $('.mailbox-nao-lidas').html(this.mailbox.naoLidas.toString());
+        } else {
+            $('.mailbox-nao-lidas').css('display', 'none');
+        }
+    },
+    mailboxInit: function() {
+        if (!localStorage['kazaap-mail']) {
+            localStorage['kazaap-mail'] = JSON.stringify(this.mailbox);
+        } /*else {
+            var kazaapMail = JSON.parse(localStorage['kazaap-mail']);
+            if (this.mailbox.naoLidasInfo.length != kazaapMail.naoLidasInfo.length) {
+                for (var k=kazaapMail.naoLidasInfo.length-1; k<kazaapMail.naoLidasInfo.length; k++) {
+                    kazaapMail.naoLidasInfo.push();
+                }
+            }
+        }*/
     }
+    // mailbox:fim
     
 };

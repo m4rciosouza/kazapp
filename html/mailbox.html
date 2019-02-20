@@ -32,21 +32,26 @@
           <h1>Mensagens</h1>
           <ul class="accordion" data-accordion>
             <li class="accordion-item is-active_" data-accordion-item>
-              <a href="#" class="accordion-title">
-                <strong>Módulo de ordenação disponível!</strong>
+              <a href="#" class="accordion-title" onclick="Persistencia.mailMarcarLida(2);">
+                <span id="mail-2-subject">Tenho um presente para você!</span>
               </a>
               <div class="accordion-content" data-tab-content >
-                <p>O novo módulo de ordenação já está disponível para estudo!</p>
-                <a href="index.html">Iniciar módulo</a>
+                <p>Ao término das lições do módulo "Algoritmos de busca 1", você poderá fazer o download gratuito de um ebook em PDF sobre como criar APIs restful com Java.</p>
+                <p>Vai perder essa oportunidade?</p>
+                <p>Tenho certeza que não, então clique no botão abaixo para iniciar os seus estudos e habilitar o download do seu ebook gratuito!</p>
+                <a href="index.html" class="button success expanded">Iniciar estudos</a>
               </div>
             </li>
             <li class="accordion-item" data-accordion-item>
-              <a href="#" class="accordion-title">
-                Seja bem vindo!
+              <a href="#" class="accordion-title" onclick="Persistencia.mailMarcarLida(1);">
+                <span id="mail-1-subject">Seja bem vindo!</span>
               </a>
               <div class="accordion-content" data-tab-content >
-                <p>Seja bem vindo ao Kazaap.</p>
-                <a href="index.html">Iniciar</a>
+                <p>Seja muito bem vindo ao Kazaap!</p>
+                <p>Espero que você esteja animado em iniciar os seus estudos sobre algoritmos em Java.</p>
+                <p>Tenho certeza que aconpanhando todas as lições você aprenderá muito sobre criar algoritmos de alta performance e qualidade.</p>
+                <p>Está animado? Então clique no botão abaixo para iniciar a aulas agora!</p>
+                <a href="index.html" class="button success expanded">Iniciar estudos</a>
               </div>
             </li>
         </ul>
@@ -58,8 +63,10 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/foundation-sites/dist/js/foundation.min.js"></script>
     <script src="assets/js/menu-off-canvas.js"></script>
+    <script src="assets/js/localstorage-persistencia.js"></script>
     <script>
         $(document).foundation();
+        Persistencia.mailboxEstiloNaoLidas();
     </script>
   </body>
 </html>
