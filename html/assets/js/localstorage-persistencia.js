@@ -292,14 +292,17 @@ var Persistencia = {
     mailboxInit: function() {
         if (!localStorage['kazaap-mail']) {
             localStorage['kazaap-mail'] = JSON.stringify(this.mailbox);
-        } /*else {
+        } else {
             var kazaapMail = JSON.parse(localStorage['kazaap-mail']);
             if (this.mailbox.naoLidasInfo.length != kazaapMail.naoLidasInfo.length) {
-                for (var k=kazaapMail.naoLidasInfo.length-1; k<kazaapMail.naoLidasInfo.length; k++) {
-                    kazaapMail.naoLidasInfo.push();
+                for (var k=kazaapMail.naoLidasInfo.length; k<this.mailbox.naoLidasInfo.length; k++) {
+                    kazaapMail.naoLidasInfo.push(this.mailbox.naoLidasInfo[k]);
+                    kazaapMail.total++;
+                    kazaapMail.naoLidas++;
                 }
+                localStorage['kazaap-mail'] = JSON.stringify(kazaapMail);
             }
-        }*/
+        }
     }
     // mailbox:fim
     
