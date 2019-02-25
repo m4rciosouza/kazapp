@@ -35,7 +35,7 @@ var menuOffCavas = '' +
                 '<button class="menu-icon" type="button" style="display: none"></button>' +
                 '<a href="#" data-toggle="offCanvasLeft" class="menu-flag-pt_BR" style="display: none"><img src="/html/assets/img/pt_BR.png" style="width: 20px; height: 20px" /></a>' +
                 '<a href="#" data-toggle="offCanvasLeft" class="menu-flag-en_GB" style="display: none"><img src="/html/assets/img/en_GB.png" style="width: 20px; height: 20px" /></a>' +
-                '<a href="loja.html" alt="Loja"><i class="fi-shopping-bag" style="font-size: 20px; color: white"></i><span class="alert badge">1</span></a>' +
+                '<a href="loja.html" alt="Loja"><i class="fi-shopping-bag" style="font-size: 20px; color: white"></i><span class="alert badge loja-alerta">!</span></a>' +
                 '&nbsp;&nbsp;&nbsp;' +
                 '<a href="mailbox.html" alt="Mensagens"><i class="fi-mail" style="font-size: 20px; color: white"></i><span class="alert badge mailbox-nao-lidas" style="display: none;">0</span></a>'+
               '</div>' +
@@ -51,4 +51,13 @@ if (localStorage['kazaap-mail']) {
         $('.mailbox-nao-lidas').html(mailNumNaoLidas.toString());
         $('.mailbox-nao-lidas').css('display', 'inline-block');
     }
+}
+// exibir alerta na loja
+var dataUltimoAcessoLoja = localStorage['kazaap-loja'];
+if (dataUltimoAcessoLoja) {
+  $('.loja-alerta').css('display', 'none');
+  var dataAtual = new Date().getTime();
+  if (dataAtual-parseInt(dataUltimoAcessoLoja,10) > (1000 * 60 * 60 * 24)) { //24 horas
+      delete localStorage['kazaap-loja'];
+  }
 }
