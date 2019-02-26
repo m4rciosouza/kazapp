@@ -15,6 +15,10 @@
             visibility: hidden;
             margin-bottom: 0;
         }
+        .star-rating {
+            font-size: 35px;
+            color: gray;
+        }
     </style>
   </head>
   <body>      
@@ -165,9 +169,22 @@ private int buscaBinaria(int[] numeros, int inicio, int fim, int numero) {
                     <p class="lead">A nota mínima para passar é 70%, tente novamente.</p>
                 </div>
                 <p class="lead">Você acertou <strong><span id="resultado">80</span>%</strong> das questões.</p>
+                <div class="passou">
+                    <p>Qual a sua avaliação sobre o conteúdo apresentado neste módulo?</p>
+                    <i class="fi-star star-rating star-rating-1" 
+                       onmouseover="selectStar(1);" onclick="selectStar(1);"></i>
+                    <i class="fi-star star-rating star-rating-2" 
+                       onmouseover="selectStar(2);" onclick="selectStar(2);"></i>
+                    <i class="fi-star star-rating star-rating-3" 
+                       onmouseover="selectStar(3);" onclick="selectStar(3);"></i>
+                    <i class="fi-star star-rating star-rating-4" 
+                       onmouseover="selectStar(4);" onclick="selectStar(4);"></i>
+                    <i class="fi-star star-rating star-rating-5" 
+                       onmouseover="selectStar(5);" onclick="selectStar(5);"></i>
+                </div>
             </div>
             <hr />
-            <a class="button primary expanded tentar_novamente passou" href="../index.html#algoritmos-busca-1" onclick="return Persistencia.completarMultiplos(['.big-o-introducao', '.big-o-n-fatorial', '.big-o-n-2', '.big-o-n-log-n', '.big-o-n', '.big-o-log-n', '.big-o-1', '.algoritmos-busca-1-introducao']);">
+            <a class="button primary expanded tentar_novamente passou" href="../index.html#algoritmos-busca-1" onclick="return avancarProximoModulo();">
                 Avançar para o próximo módulo
             </a>
             <a class="button primary expanded tentar_novamente naoPassou" href="#" onclick="location.reload();">
@@ -198,6 +215,21 @@ private int buscaBinaria(int[] numeros, int inicio, int fim, int numero) {
         hljs.initHighlightingOnLoad();
         Paginacao.init(6);
         Paginacao.paginar();
+        function avancarProximoModulo() {
+            if (avaliacaoNota > 0) {
+                alert("Resultado da avaliação: " + avaliacaoNota);
+            }
+            return  Persistencia.completarMultiplos([
+                '.big-o-introducao', 
+                '.big-o-n-fatorial', 
+                '.big-o-n-2', 
+                '.big-o-n-log-n', 
+                '.big-o-n', 
+                '.big-o-log-n', 
+                '.big-o-1', 
+                '.algoritmos-busca-1-introducao'
+            ]);
+        }
     </script>
   </body>
 </html>

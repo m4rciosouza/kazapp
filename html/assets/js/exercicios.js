@@ -85,3 +85,14 @@ $("input:radio").click(function() {
     $("."+this.name+"r"+this.value).removeClass("primary");
     $("."+this.name+"r"+this.value).addClass("success");
 });
+
+var avaliacaoNota = -1;
+function selectStar(index) {
+    avaliacaoNota = index;
+    for (var i=1; i<=5; i++) {
+        $('.star-rating-'+i).css('color', 'gray');
+    }
+    for (var i=1; i<=index; i++) {
+        $('.star-rating-'+i).css('color', 'gold');
+    }
+}

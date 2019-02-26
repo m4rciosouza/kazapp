@@ -15,6 +15,10 @@
             visibility: hidden;
             margin-bottom: 0;
         }
+        .star-rating {
+            font-size: 35px;
+            color: gray;
+        }
     </style>
   </head>
   <body>      
@@ -299,9 +303,22 @@ public class Switch {
                     <p class="lead"><span class="i18n" data-i18n="javaBasicoExercicios-t32">A nota mínima para passar é 70%, tente novamente.</span></p>
                 </div>
                 <p class="lead"><span class="i18n" data-i18n="javaBasicoExercicios-t33">Você acertou</span> <strong><span id="resultado">80</span>%</strong> <span class="i18n" data-i18n="javaBasicoExercicios-t34">das questões.</span></p>
+                <div class="passou">
+                    <p>Qual a sua avaliação sobre o conteúdo apresentado neste módulo?</p>
+                    <i class="fi-star star-rating star-rating-1" 
+                       onmouseover="selectStar(1);" onclick="selectStar(1);"></i>
+                    <i class="fi-star star-rating star-rating-2" 
+                       onmouseover="selectStar(2);" onclick="selectStar(2);"></i>
+                    <i class="fi-star star-rating star-rating-3" 
+                       onmouseover="selectStar(3);" onclick="selectStar(3);"></i>
+                    <i class="fi-star star-rating star-rating-4" 
+                       onmouseover="selectStar(4);" onclick="selectStar(4);"></i>
+                    <i class="fi-star star-rating star-rating-5" 
+                       onmouseover="selectStar(5);" onclick="selectStar(5);"></i>
+                </div>
             </div>
             <hr />
-            <a class="button primary expanded tentar_novamente passou" href="../index.html#big-o" onclick="return Persistencia.completarMultiplos(['.ola-mundo', '.if-else', '.for', '.do-while', '.switch-op', '.big-o-introducao']);">
+            <a class="button primary expanded tentar_novamente passou" href="../index.html#big-o" onclick="return avancarProximoModulo();">
                 <span class="i18n" data-i18n="javaBasicoExercicios-t35">Avançar para o próximo módulo</span>
             </a>
             <a class="button primary expanded tentar_novamente naoPassou" href="#" onclick="location.reload();">
@@ -332,6 +349,19 @@ public class Switch {
         hljs.initHighlightingOnLoad();
         Paginacao.init(6);
         Paginacao.paginar();
+        function avancarProximoModulo() {
+            if (avaliacaoNota > 0) {
+                alert("Resultado da avaliação: " + avaliacaoNota);
+            }
+            return  Persistencia.completarMultiplos([
+                '.ola-mundo', 
+                '.if-else', 
+                '.for', 
+                '.do-while', 
+                '.switch-op', 
+                '.big-o-introducao'
+            ]);
+        }
     </script>
   </body>
 </html>
