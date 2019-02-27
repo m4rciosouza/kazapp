@@ -4,7 +4,7 @@ $modulo     = $_POST['modulo'];
 $avaliacao  = $_POST['avaliacao'];
 //$comentario = $_POST['comentario'];
 
-if (!$usuarioId || !modulo || !$avaliacao) {
+if (!$usuarioId || !$modulo || !$avaliacao) {
     exit('Dado(s) de entrada inválido(s).');
 }
 
