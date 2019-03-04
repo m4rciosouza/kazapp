@@ -22,3 +22,28 @@ ALTER TABLE `rating`
 --
 ALTER TABLE `rating`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Table structure for table `dados_usuario`
+--
+
+CREATE TABLE `dados_usuario` (
+  `id` int(11) NOT NULL,
+  `id_usuario` varchar(50) NOT NULL,
+  `mail` text,
+  `dados` text,
+  `data_criacao` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Indexes for table `dados_usuario`
+--
+ALTER TABLE `dados_usuario`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for table `dados_usuario`
+--
+ALTER TABLE `dados_usuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
