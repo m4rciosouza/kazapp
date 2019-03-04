@@ -318,7 +318,7 @@ public class Switch {
                 </div>
             </div>
             <hr />
-            <a class="button primary expanded tentar_novamente passou" href="../index.html#big-o" onclick="return avancarProximoModulo();">
+            <a class="button primary expanded tentar_novamente passou" href="#" onclick="avancarProximoModulo();">
                 <span class="i18n" data-i18n="javaBasicoExercicios-t35">Avançar para o próximo módulo</span>
             </a>
             <a class="button primary expanded tentar_novamente naoPassou" href="#" onclick="location.reload();">
@@ -351,16 +351,19 @@ public class Switch {
         Paginacao.paginar();
         function avancarProximoModulo() {
             if (avaliacaoNota > 0) {
-                alert("Resultado da avaliação: " + avaliacaoNota);
+                enviarAvaliacao('java-basico', avaliacaoNota)
+                    .always(function() {
+                        Persistencia.completarMultiplos([
+                            '.ola-mundo', 
+                            '.if-else', 
+                            '.for', 
+                            '.do-while', 
+                            '.switch-op', 
+                            '.big-o-introducao'
+                        ]);
+                        location.href="../index.html#big-o";
+                    });
             }
-            return  Persistencia.completarMultiplos([
-                '.ola-mundo', 
-                '.if-else', 
-                '.for', 
-                '.do-while', 
-                '.switch-op', 
-                '.big-o-introducao'
-            ]);
         }
     </script>
   </body>

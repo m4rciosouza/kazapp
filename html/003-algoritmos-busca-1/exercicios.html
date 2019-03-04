@@ -149,7 +149,7 @@
                 </div>
             </div>
             <hr />
-            <a class="button primary expanded tentar_novamente passou" href="../index.html#algoritmos-ordenacao-1" onclick="return avancarProximoModulo();">
+            <a class="button primary expanded tentar_novamente passou" href="#" onclick="avancarProximoModulo();">
                 Avançar para o próximo módulo
             </a>
             <a class="button primary expanded tentar_novamente naoPassou" href="#" onclick="location.reload();">
@@ -182,13 +182,16 @@
         Paginacao.paginar();
         function avancarProximoModulo() {
             if (avaliacaoNota > 0) {
-                alert("Resultado da avaliação: " + avaliacaoNota);
+                enviarAvaliacao('algoritmos-busca-1', avaliacaoNota)
+                    .always(function() {
+                        Persistencia.completarMultiplos([
+                            '.algoritmos-busca-1-introducao', 
+                            '.algoritmos-busca-1-busca-linear', 
+                            '.algoritmos-busca-1-busca-binaria'
+                        ]);
+                        location.href="../index.html#algoritmos-ordenacao-1";
+                    });
             }
-            return Persistencia.completarMultiplos([
-                '.algoritmos-busca-1-introducao', 
-                '.algoritmos-busca-1-busca-linear', 
-                '.algoritmos-busca-1-busca-binaria'
-            ]);
         }
     </script>
   </body>

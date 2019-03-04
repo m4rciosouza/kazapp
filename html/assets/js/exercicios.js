@@ -96,3 +96,11 @@ function selectStar(index) {
         $('.star-rating-'+i).css('color', 'gold');
     }
 }
+
+function enviarAvaliacao(modulo, avaliacao) {
+    return $.post("http://localhost:8888/kazapp/api/rating.php", { 
+                usuarioId: "123987", 
+                modulo: modulo,
+                avaliacao: avaliacao
+            });
+}
