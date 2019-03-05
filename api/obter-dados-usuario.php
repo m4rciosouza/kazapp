@@ -1,9 +1,7 @@
 <?php
-$usuarioId  = $_POST['usuarioId'];
-$dadosMail  = $_POST['mail'];
-$dados      = $_POST['dados'];
+$usuarioId  = $_GET['usuarioId'];
 
-if (!$usuarioId || !$dadosMail || !$dados) {
+if (!$usuarioId) {
     exit('Dado(s) de entrada inválido(s).');
 }
 
@@ -29,25 +27,19 @@ $usuarioId  = $mysqli->real_escape_string($usuarioId);
 $dadosMail  = $mysqli->real_escape_string($dadosMail);
 $dados      = $mysqli->real_escape_string($dados);
 
-$id = false;
-$sql = "SELECT id FROM dados_usuario WHERE usuario_id = '$usuarioId'";
+$dadosUsuario = [];
+$sql = "SELECT usuario_id, mail, dados FROM dados_usuario WHERE usuario_id = '$usuarioId'";
 if ($result = $mysqli->query($sql)) {
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_object()){
-            $id = $row->id;
+            $dadosUsuario['usuario_id'] = $row->usuario_id;
+            $dadosUsuario['mail'] = $row->mail;
+            $dadosUsuario['dados'] = $row->dados;
         }
     }
     $result->close();
 }
 
-if ($id) {
-    $sql = "UPDATE `dados_usuario` SET `usuario_id` = '$usuarioId', `mail` = '$dadosMail', `dados` = '$dados' WHERE `dados_usuario`.`id` = $id";
-} else {
-    $sql = "INSERT INTO `dados_usuario` (`id`, `usuario_id`, `mail`, `dados`, `data_criacao`) VALUES (NULL, '$usuarioId', '$dadosMail', '$dados', CURRENT_TIMESTAMP);";
-}
-
-$mysqli->query($sql);
-
 mysqli_close($link);
     
-exit('OK');
+exit(json_encode($dadosUsuario));
