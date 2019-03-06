@@ -99,7 +99,7 @@ function selectStar(index) {
 
 function enviarAvaliacao(modulo, avaliacao) {
     return $.post("http://localhost:8888/kazapp/api/rating.php", { 
-                usuarioId: "123987", 
+                usuarioId: localStorage['kazapp-id'], 
                 modulo: modulo,
                 avaliacao: avaliacao
             });

@@ -178,6 +178,10 @@ var Persistencia = {
                 .css("color", this.dados[i]["icon-color-style"]);
         }
         this.mailboxInit();
+        if (!localStorage['kazapp-id']) {
+            localStorage['kazapp-id'] = this.gerarIdUsuario();
+        }
+        this.sincronizarDados();
     },
     
     completar: function(spanSelCompletar, spanSelHabilitar) {
@@ -207,6 +211,7 @@ var Persistencia = {
             }
         }
         localStorage['kazapp-dados'] = JSON.stringify(this.dados);
+        localStorage['kazapp-sincronizar'] = true;
         return true;
     },
     
@@ -226,6 +231,7 @@ var Persistencia = {
             }
         }
         localStorage['kazapp-dados'] = JSON.stringify(this.dados);
+        localStorage['kazapp-sincronizar'] = true;
         return true;
     },
     
@@ -264,8 +270,8 @@ var Persistencia = {
         ]
     },
     mailboxEstiloNaoLidas: function() {
-        if (localStorage['kazaap-mail']) {
-            this.mailbox = JSON.parse(localStorage['kazaap-mail']);
+        if (localStorage['kazapp-mail']) {
+            this.mailbox = JSON.parse(localStorage['kazapp-mail']);
         }
         for (var i=0; i<this.mailbox.naoLidasInfo.length; i++) { 
             if (!this.mailbox.naoLidasInfo[i].lida) {
@@ -280,7 +286,8 @@ var Persistencia = {
             this.mailbox.naoLidas--;
         }
         this.mailbox.naoLidasInfo[mailNumero-1].lida = true;
-        localStorage['kazaap-mail'] = JSON.stringify(this.mailbox);
+        localStorage['kazapp-mail'] = JSON.stringify(this.mailbox);
+        localStorage['kazapp-sincronizar'] = true;
         this.mailboxEstiloNaoLidas();
         // atualiza info top bar a direita
         if (this.mailbox.naoLidas > 0) {
@@ -290,20 +297,50 @@ var Persistencia = {
         }
     },
     mailboxInit: function() {
-        if (!localStorage['kazaap-mail']) {
-            localStorage['kazaap-mail'] = JSON.stringify(this.mailbox);
+        if (!localStorage['kazapp-mail']) {
+            localStorage['kazapp-mail'] = JSON.stringify(this.mailbox);
         } else {
-            var kazaapMail = JSON.parse(localStorage['kazaap-mail']);
-            if (this.mailbox.naoLidasInfo.length != kazaapMail.naoLidasInfo.length) {
-                for (var k=kazaapMail.naoLidasInfo.length; k<this.mailbox.naoLidasInfo.length; k++) {
-                    kazaapMail.naoLidasInfo.push(this.mailbox.naoLidasInfo[k]);
-                    kazaapMail.total++;
-                    kazaapMail.naoLidas++;
+            var kazappMail = JSON.parse(localStorage['kazapp-mail']);
+            if (this.mailbox.naoLidasInfo.length != kazappMail.naoLidasInfo.length) {
+                for (var k=kazappMail.naoLidasInfo.length; k<this.mailbox.naoLidasInfo.length; k++) {
+                    kazappMail.naoLidasInfo.push(this.mailbox.naoLidasInfo[k]);
+                    kazappMail.total++;
+                    kazappMail.naoLidas++;
                 }
-                localStorage['kazaap-mail'] = JSON.stringify(kazaapMail);
+                localStorage['kazapp-mail'] = JSON.stringify(kazappMail);
+                localStorage['kazapp-sincronizar'] = true;
             }
         }
-    }
+    },
     // mailbox:fim
     
+    // sincronização:início
+    sincronizarDados: function() {
+        var dados = localStorage['kazapp-dados'] || false;
+        var mail = localStorage['kazapp-mail'] || false;
+        if (!dados || !mail) {
+            return;
+        }
+        var sincronizar = localStorage['kazapp-sincronizar'] || 'true';
+        var idUsuario   = localStorage['kazapp-id'] || false;
+        if (sincronizar == 'true' && idUsuario) {
+            $.post("http://localhost:8888/kazapp/api/dados-usuario.php", { 
+                usuarioId: idUsuario, 
+                dados: dados,
+                mail: mail
+            }).done(function() {
+                localStorage['kazapp-sincronizar'] = false;
+            });
+        } else {
+            console.log("Nada para sincronizar else...");
+        }
+    },
+    alterarIdUsuario: function() {
+        //TODO implementar lógica  
+    },
+    gerarIdUsuario: function() {
+        //TODO implementar lógica
+        return "ABCD1234567890";
+    }
+    // sincronização:fim
 };

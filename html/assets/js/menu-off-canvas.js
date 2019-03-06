@@ -44,20 +44,20 @@ var menuOffCavas = '' +
       '</div>';
 $(".off-canvas-wrapper").html(menuOffCavas);
 // exibir num. não lidas
-if (localStorage['kazaap-mail']) {
-    var kazaapMail = JSON.parse(localStorage['kazaap-mail']);
-    var mailNumNaoLidas = kazaapMail.naoLidas;
+if (localStorage['kazapp-mail']) {
+    var kazappMail = JSON.parse(localStorage['kazapp-mail']);
+    var mailNumNaoLidas = kazappMail.naoLidas;
     if (mailNumNaoLidas > 0) {
         $('.mailbox-nao-lidas').html(mailNumNaoLidas.toString());
         $('.mailbox-nao-lidas').css('display', 'inline-block');
     }
 }
 // exibir alerta na loja
-var dataUltimoAcessoLoja = localStorage['kazaap-loja'];
+var dataUltimoAcessoLoja = localStorage['kazapp-loja'];
 if (dataUltimoAcessoLoja) {
   $('.loja-alerta').css('display', 'none');
   var dataAtual = new Date().getTime();
   if (dataAtual-parseInt(dataUltimoAcessoLoja,10) > (1000 * 60 * 60 * 24)) { //24 horas
-      delete localStorage['kazaap-loja'];
+      delete localStorage['kazapp-loja'];
   }
 }
