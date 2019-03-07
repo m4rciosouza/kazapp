@@ -339,8 +339,21 @@ var Persistencia = {
         //TODO implementar lógica  
     },
     gerarIdUsuario: function() {
-        //TODO implementar lógica
-        return "ABCD1234567890";
+        var prefixo = String.fromCharCode(this.gerarNumAleatorio(65, 91),
+                                          this.gerarNumAleatorio(65, 91),
+                                          this.gerarNumAleatorio(65, 91));
+        var timestamp = new Date().getTime().toString();
+        var sufixo = '-';
+        for (var i=0; i<timestamp.length; i++) {
+            sufixo += timestamp.charAt(i);
+            if (i > 0 && i != (timestamp.length-1) && i % 4 == 0) {
+                sufixo += '-';
+            }
+        }
+        return prefixo + sufixo;
+    },
+    gerarNumAleatorio: function(min, max) {
+        return Math.random() * (max - min) + min;
     }
     // sincronização:fim
 };
