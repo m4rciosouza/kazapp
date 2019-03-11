@@ -1,5 +1,5 @@
 .DS_Store
-html/node_modules
+app/node_modules
 codigo-fonte/.idea
 codigo-fonte/target
 codigo-fonte/codigo-fonte.iml
