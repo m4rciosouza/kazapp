@@ -1,0 +1,370 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprenda Java e Algoritmos | Kazapp</title>
+    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
+    <style>
+        body { background-color: #FFF; padding: 5px; } 
+        .rounded { border-radius: 25px; }
+        input[type="radio"] {
+            visibility: hidden;
+            margin-bottom: 0;
+        }
+        .star-rating {
+            font-size: 35px;
+            color: gray;
+        }
+    </style>
+  </head>
+  <body>      
+    <!-- Set up Off-canvas -->
+    <div class="off-canvas-wrapper"></div>
+      
+    <!-- MAIN:BEGIN -->
+    <div>
+        <!-- BREADCRUMBS:BEGIN -->
+        <br />
+        <nav role="navigation">
+          <ul class="breadcrumbs">
+              <li><a href="../index.html"><span class="i18n" data-i18n="javaBasicoExercicios-t1">Início</span></a></li>
+              <li><a href="../index.html#java-basico"><span class="i18n" data-i18n="javaBasicoExercicios-t2">Java Básico</span></a></li>
+              <li><span class="i18n" data-i18n="javaBasicoExercicios-t37">Exercícios</span></li>
+          </ul>
+        </nav>
+        <!-- BREADCRUMBS:END -->
+        
+        <!-- PROGRESS:BEGIN -->
+        <div class="primary progress" role="progressbar" tabindex="0" aria-valuenow="50" 
+             aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+          <div class="progress-meter" style="width: 50%">
+            <p class="progress-meter-text">50%</p>
+          </div>
+        </div>
+        <!-- PROGRESS:END -->
+        
+      <div class="pag1">
+          <h2><span class="i18n" data-i18n="javaBasicoExercicios-t3">Qual o comando utilizado para compilar o códigos fonte em Java pela linha de comando?</span></h2>
+          <div class="callout primary rounded p1 p1r1"><label><input type="radio" name="p1" value="1"><span class="primary label p1 p1r1 rounded">A</span> <span class="i18n" data-i18n="javaBasicoExercicios-t4">java NOME_CLASSE.java</span></label></div>
+          <div class="callout primary rounded p1 p1r2"><label><input type="radio" name="p1" value="2"><span class="primary label p1 p1r2 rounded">B</span> <span class="i18n" data-i18n="javaBasicoExercicios-t5">javac NOME_CLASSE.java</span></label></div>
+          <div class="callout primary rounded p1 p1r3"><label><input type="radio" name="p1" value="3"><span class="primary label p1 p1r3 rounded">C</span> <span class="i18n" data-i18n="javaBasicoExercicios-t6">java -jar NOME_CLASSE.java</span></label></div>
+          <div class="callout primary rounded p1 p1r4"><label><input type="radio" name="p1" value="4"><span class="primary label p1 p1r4 rounded">D</span> <span class="i18n" data-i18n="javaBasicoExercicios-t7">javaw NOME_CLASSE.java</span></label></div>
+      </div>
+        
+      <div class="pag2">
+          <h2><span class="i18n" data-i18n="javaBasicoExercicios-t8">O que será impresso no terminal ao executar o código a seguir?</span></h2>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+public class IfElse {
+  public static void main(String[] args) {
+    int nota = 80;
+
+    if (nota >= 70 && nota <= 80) {
+      System.out.println("Passou no teste com nota B.");
+    } else {
+      System.out.println("Passou no teste com nota diferente de B.");
+    }
+  }   
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+public class IfElse {
+  public static void main(String[] args) {
+    int grade = 80;
+
+    if (grade >= 70 && grade <= 80) {
+      System.out.println("Passed the test with grade B.");
+    } else {
+      System.out.println("Passed the test with a grade other than B.");
+    }
+  }   
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+            <div class="callout primary rounded p2 p2r1"><label><input type="radio" name="p2" value="1"><span class="primary label p2 p2r1 rounded">A</span> <span class="i18n" data-i18n="javaBasicoExercicios-t9">O código não compila.</span></label></div>
+            <div class="callout primary rounded p2 p2r2"><label><input type="radio" name="p2" value="2"><span class="primary label p2 p2r2 rounded">B</span> <span class="i18n" data-i18n="javaBasicoExercicios-t10">Passou no teste com nota B.</span></label></div>
+            <div class="callout primary rounded p2 p2r3"><label><input type="radio" name="p2" value="3"><span class="primary label p2 p2r3 rounded">C</span> <span class="i18n" data-i18n="javaBasicoExercicios-t11">Passou no teste com nota diferente de B.</span></label></div>
+            <div class="callout primary rounded p2 p2r4"><label><input type="radio" name="p2" value="4"><span class="primary label p2 p2r4 rounded">D</span> <span class="i18n" data-i18n="javaBasicoExercicios-t12">Não é impresso nada.</span></label></div>
+      </div>
+          
+      <div class="pag3">
+          <h2><span class="i18n" data-i18n="javaBasicoExercicios-t13">O que será impresso no terminal ao executar o código a seguir?</span></h2>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+public class IfElse {
+  public static void main(String[] args) {
+    int nota = 79;
+
+    if (nota % 2 == 0) {
+      System.out.println("A linha do IF foi executada.");
+    } else {
+      System.out.println("A linha do ELSE foi executada.");
+    }
+  }   
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+public class IfElse {
+  public static void main(String[] args) {
+    int grade = 79;
+
+    if (grade % 2 == 0) {
+      System.out.println("The 'IF' line was executed.");
+    } else {
+      System.out.println("The 'ELSE' line was executed.");
+    }
+  }   
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          <div class="callout primary rounded p3 p3r1"><label><input type="radio" name="p3" value="1"><span class="primary label p3 p3r1 rounded">A</span> <span class="i18n" data-i18n="javaBasicoExercicios-t14">A linha do IF foi executada.</span></label></div>
+          <div class="callout primary rounded p3 p3r2"><label><input type="radio" name="p3" value="2"><span class="primary label p3 p3r2 rounded">B</span> <span class="i18n" data-i18n="javaBasicoExercicios-t15">O código não compila.</span></label></div>
+          <div class="callout primary rounded p3 p3r3"><label><input type="radio" name="p3" value="3"><span class="primary label p3 p3r3 rounded">C</span> <span class="i18n" data-i18n="javaBasicoExercicios-t16">Não é impresso nada.</span></label></div>
+          <div class="callout primary rounded p3 p3r4"><label><input type="radio" name="p3" value="4"><span class="primary label p3 p3r4 rounded">D</span> <span class="i18n" data-i18n="javaBasicoExercicios-t17">A linha do ELSE foi executada.</span></label></div>
+      </div>
+          
+      <div class="pag4">
+          <h2><span class="i18n" data-i18n="javaBasicoExercicios-t18">O que será impresso no terminal ao executar o código a seguir?</span></h2>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+public class For {
+  public static void main(String[] args) {
+    int[] numeros = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    
+    for (int i=0; i<10; i++) {
+      System.out.println(i);
+    }
+  }   
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+public class For {
+  public static void main(String[] args) {
+    int[] numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    
+    for (int i=0; i<10; i++) {
+      System.out.println(i);
+    }
+  }   
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+            <div class="callout primary rounded p4 p4r1"><label><input type="radio" name="p4" value="1"><span class="primary label p4 p4r1 rounded">A</span> <span class="i18n" data-i18n="javaBasicoExercicios-t19">Os números de 1 a 10.</span></label></div>
+            <div class="callout primary rounded p4 p4r2"><label><input type="radio" name="p4" value="2"><span class="primary label p4 p4r2 rounded">B</span> <span class="i18n" data-i18n="javaBasicoExercicios-t20">O código não compila.</span></label></div>
+            <div class="callout primary rounded p4 p4r3"><label><input type="radio" name="p4" value="3"><span class="primary label p4 p4r3 rounded">C</span> <span class="i18n" data-i18n="javaBasicoExercicios-t21">Os números de 0 a 10.</span></label></div>
+            <div class="callout primary rounded p4 p4r4"><label><input type="radio" name="p4" value="4"><span class="primary label p4 p4r4 rounded">D</span> <span class="i18n" data-i18n="javaBasicoExercicios-t22">Os números de 0 a 9.</span></label></div>
+      </div>
+          
+      <div class="pag5">
+          <h2><span class="i18n" data-i18n="javaBasicoExercicios-t23">O que será impresso no terminal ao executar o código a seguir?</span></h2>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+public class DoWhile {
+  public static void main(String[] args) {
+    int numero = 1;
+
+    do {
+      System.out.println(numero);
+      numero++;
+    } while (numero <= 10);
+  }   
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+public class DoWhile {
+  public static void main(String[] args) {
+    int number = 1;
+
+    do {
+      System.out.println(number);
+      number++;
+    } while (number <= 10);
+  }   
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+            <div class="callout primary rounded p5 p5r1"><label><input type="radio" name="p5" value="1"><span class="primary label p5 p5r1 rounded">A</span> <span class="i18n" data-i18n="javaBasicoExercicios-t24">Os números de 1 a 10.</span></label></div>
+            <div class="callout primary rounded p5 p5r2"><label><input type="radio" name="p5" value="2"><span class="primary label p5 p5r2 rounded">B</span> <span class="i18n" data-i18n="javaBasicoExercicios-t25">O código não compila.</span></label></div>
+            <div class="callout primary rounded p5 p5r3"><label><input type="radio" name="p5" value="3"><span class="primary label p5 p5r3 rounded">C</span> <span class="i18n" data-i18n="javaBasicoExercicios-t26">Os números de 1 a 11.</span></label></div>
+            <div class="callout primary rounded p5 p5r4"><label><input type="radio" name="p5" value="4"><span class="primary label p5 p5r4 rounded">D</span> <span class="i18n" data-i18n="javaBasicoExercicios-t27">Os números de 0 a 9.</span></label></div>
+      </div>
+          
+      <div class="pag6">
+          <h2><span class="i18n" data-i18n="javaBasicoExercicios-t28">Dado o código a seguir, qual o valor da variável "<b>mes</b>" para que sejam impressos no terminal os meses "Outubro", "Novembro" e "Dezembro"?</span></h2>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+public class Switch {
+  public static void main(String[] args) {
+    int mes = ?; //qual o número a ser utilizado aqui?
+
+    switch (mes) {
+      case 1:  System.out.println("Janeiro");
+      case 2:  System.out.println("Fevereiro");
+      case 3:  System.out.println("Março");
+      case 4:  System.out.println("Abril");
+      case 5:  System.out.println("Maio");
+      case 6:  System.out.println("Junho");
+      case 7:  System.out.println("Julho");
+      case 8:  System.out.println("Agosto");
+      case 9:  System.out.println("Setembro");
+      case 10: System.out.println("Outubro");
+      case 11: System.out.println("Novembro");
+      case 12: System.out.println("Dezembro");
+               break;
+      default: break;
+    }
+  }   
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+          <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+public class Switch {
+  public static void main(String[] args) {
+    int month = ?; //what's the number to be replaced here?
+
+    switch (month) {
+      case 1:  System.out.println("January");
+      case 2:  System.out.println("February");
+      case 3:  System.out.println("March");
+      case 4:  System.out.println("April");
+      case 5:  System.out.println("May");
+      case 6:  System.out.println("June");
+      case 7:  System.out.println("July");
+      case 8:  System.out.println("August");
+      case 9:  System.out.println("September");
+      case 10: System.out.println("October");
+      case 11: System.out.println("November");
+      case 12: System.out.println("December");
+               break;
+      default: break;
+    }
+  }   
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <div class="callout primary rounded p6 p6r1"><label><input type="radio" name="p6" value="1"><span class="primary label p6 p6r1 rounded">A</span> 3</label></div>
+        <div class="callout primary rounded p6 p6r2"><label><input type="radio" name="p6" value="2"><span class="primary label p6 p6r2 rounded">B</span> 9</label></div>
+        <div class="callout primary rounded p6 p6r3"><label><input type="radio" name="p6" value="3"><span class="primary label p6 p6r3 rounded">C</span> 10</label></div>
+        <div class="callout primary rounded p6 p6r4"><label><input type="radio" name="p6" value="4"><span class="primary label p6 p6r4 rounded">D</span> 11</label></div>
+      </div>
+        
+        <!-- PAGINATION:BEGIN -->
+        <br />
+        <div style="text-align: center">
+            <ul class="pagination" role="navigation" aria-label="Pagination">
+              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()"><span class="i18n-pag-anterior">Anterior</span></li>
+              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()"><span class="i18n-pag-proximo">Próximo</span></li>
+            </ul>
+        </div>
+        <!-- PAGINATION:END -->
+        
+        <!-- END_CLASS:BEGIN -->
+        <a class="button success expanded concluir" 
+           data-open="exercicios-java-basico" 
+           id="ex-java-basico" 
+           onclick="calcularJavaBasicoExercicios();">
+            <span class="i18n" data-i18n="javaBasicoExercicios-t29">Enviar respostas</span>
+        </a>
+        <div class="reveal" id="exercicios-java-basico" data-reveal>
+            <h1><span class="i18n" data-i18n="javaBasicoExercicios-t30">Resultado</span></h1>
+            <div style="text-align: center">
+                <div class="passou">
+                    <p>
+                        <span class="success badge" style="font-size: 35px;">
+                            <i class="fi-like" style="font-size: 35px; color: white"></i>
+                        </span>
+                    </p>
+                    <p class="lead"><span class="i18n" data-i18n="javaBasicoExercicios-t31">Parabéns, você concluiu o módulo com sucesso!</span></p>
+                </div>
+                <div class="naoPassou">
+                    <p>
+                        <span class="alert badge" style="font-size: 35px;">
+                            <i class="fi-dislike" style="font-size: 35px; color: white"></i>
+                        </span>
+                    </p>
+                    <p class="lead"><span class="i18n" data-i18n="javaBasicoExercicios-t32">A nota mínima para passar é 70%, tente novamente.</span></p>
+                </div>
+                <p class="lead"><span class="i18n" data-i18n="javaBasicoExercicios-t33">Você acertou</span> <strong><span id="resultado">80</span>%</strong> <span class="i18n" data-i18n="javaBasicoExercicios-t34">das questões.</span></p>
+                <div class="passou">
+                    <p>Qual a sua avaliação sobre o conteúdo apresentado neste módulo?</p>
+                    <i class="fi-star star-rating star-rating-1" 
+                       onmouseover="selectStar(1);" onclick="selectStar(1);"></i>
+                    <i class="fi-star star-rating star-rating-2" 
+                       onmouseover="selectStar(2);" onclick="selectStar(2);"></i>
+                    <i class="fi-star star-rating star-rating-3" 
+                       onmouseover="selectStar(3);" onclick="selectStar(3);"></i>
+                    <i class="fi-star star-rating star-rating-4" 
+                       onmouseover="selectStar(4);" onclick="selectStar(4);"></i>
+                    <i class="fi-star star-rating star-rating-5" 
+                       onmouseover="selectStar(5);" onclick="selectStar(5);"></i>
+                </div>
+            </div>
+            <hr />
+            <a class="button primary expanded tentar_novamente passou" href="#" onclick="avancarProximoModulo();">
+                <span class="i18n" data-i18n="javaBasicoExercicios-t35">Avançar para o próximo módulo</span>
+            </a>
+            <a class="button primary expanded tentar_novamente naoPassou" href="#" onclick="location.reload();">
+                <span class="i18n" data-i18n="javaBasicoExercicios-t36">Tentar novamente</span>
+            </a>
+            <a class="button secondary expanded sair" href="../index.html#java-basico"><span class="i18n-sair-licao">Sair da lição</span></a>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>  
+          
+          <a class="button secondary expanded sair" href="../index.html#java-basico"><span class="i18n-sair-licao">Sair da lição</span></a>
+        <!-- END_CLASS:END -->
+        
+    </div>
+    <!-- MAIN:END -->
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/menu-off-canvas.js"></script>
+    <script src="../assets/js/paginacao.js"></script>
+    <script src="../assets/js/localstorage-persistencia.js"></script>
+    <script src="../assets/js/exercicios.js"></script>
+    <script src="../assets/js/i18n-en_GB.js"></script>
+    <script>
+        $(document).foundation();
+        hljs.initHighlightingOnLoad();
+        Paginacao.init(6);
+        Paginacao.paginar();
+        function avancarProximoModulo() {
+            if (avaliacaoNota > 0) {
+                enviarAvaliacao('java-basico', avaliacaoNota)
+                    .always(function() {
+                        Persistencia.completarMultiplos([
+                            '.ola-mundo', 
+                            '.if-else', 
+                            '.for', 
+                            '.do-while', 
+                            '.switch-op', 
+                            '.big-o-introducao'
+                        ]);
+                        location.href="../index.html#big-o";
+                    });
+            }
+        }
+    </script>
+  </body>
+</html>

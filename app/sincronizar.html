@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprenda Java e Algoritmos | Kazapp</title>
+    <link rel="stylesheet" href="node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="node_modules/highlight.js/styles/androidstudio.css" />
+    <style>
+        body { background-color: #FFF; padding: 5px; } 
+    </style>
+  </head>
+  <body>      
+    <!-- Set up Off-canvas -->
+    <div class="off-canvas-wrapper"></div>
+      
+    <!-- MAIN:BEGIN -->
+    <div>
+        <!-- BREADCRUMBS:BEGIN -->
+        <br />
+        <nav role="navigation">
+          <ul class="breadcrumbs">
+              <li><a href="index.html">Início</a></li>
+              <li>Sincronizar</li>
+          </ul>
+        </nav>
+        <!-- BREADCRUMBS:END -->
+        
+      <div>
+          <h1>Sincronizar progresso</h1>
+          <h2>Abaixo segue o seu ID pessoal.</h2>
+          <p>Este ID é importante caso você deseje acessar o aplicativo em outro dispositivo, como outro navegador, computador, ou dispositivo móvel.</p>
+          <div class="callout primary">
+            Clique em sincronizar sempre que os dados não tiverem atualizados.
+        </div>
+          <p>Para sincronizar os dados em outro dispositivo, anote o ID a seguir e adicione o mesmo em outro dispositivo que deseje carregar os dados com o seu progresso.</p>
+          <p><input type="text" id="idUsuario" class="expanded" /></p>
+          <p style="text-align: center">   
+            <a data-open="aviso-sincronizar" class="button success expanded sincronizar" href="#">
+                Sincronizar
+            </a>
+            <div class="reveal" id="aviso-sincronizar" data-reveal  style="text-align: center">
+                <br />
+                <p class="sincronizando">
+                    Sincronizando dados 
+                    <img src="assets/img/loading.gif" alt="Sincronizando" /> 
+                </p>
+                <p class="sinc-sucesso">
+                    <span class="success badge" style="font-size: 35px;">
+                        <i class="fi-check" style="font-size: 35px; color: white"></i>
+                    </span>
+                    <br />
+                    <br />
+                    Dados sincronizados com sucesso!
+                </p>
+                <p class="sinc-erro">
+                    <span class="alert badge" style="font-size: 35px;">
+                        <i class="fi-x" style="font-size: 35px; color: white"></i>
+                    </span>
+                    <br />
+                    <br />
+                    Erro sincronizando dados, certifique-se de ter inserido um ID válido e tente novamente mais tarde.
+                </p>
+                <hr />
+                <p><a class="button primary expanded" data-close href="index.html">Continuar</a></p>
+                <button class="close-button" data-close aria-label="Close reveal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>  
+          </p>
+          <a class="button secondary expanded sair" href="index.html">Voltar</a>
+      </div>
+    </div>
+    <!-- MAIN:END -->
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="assets/js/menu-off-canvas.js"></script>
+      <script src="assets/js/localstorage-persistencia.js"></script>
+    <script>
+        $(document).foundation();
+        $(document).ready(function() {
+            $('.sinc-sucesso').css('display', 'none');
+            $('.sinc-erro').css('display', 'none');
+            localStorage['kazapp-aviso-sincronizar'] = false;
+            $("#idUsuario").val(localStorage['kazapp-id'] || '');
+            $(".sincronizar").click(function() {
+                Persistencia.sincronizarIdUsuario($("#idUsuario").val())
+                  .done(function() {
+                    $('.sincronizando').css('display', 'none');
+                    $('.sinc-sucesso').css('display', 'block');
+                  })
+                  .fail(function() {
+                    $('.sincronizando').css('display', 'none');
+                    $('.sinc-erro').css('display', 'block');
+                  });
+            });
+        });
+    </script>
+  </body>
+</html>

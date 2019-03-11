@@ -42,4 +42,9 @@ if ($result = $mysqli->query($sql)) {
 
 mysqli_close($link);
     
-exit(json_encode($dadosUsuario));
+if (count($dadosUsuario) > 0) {
+    exit(json_encode($dadosUsuario));
+}
+
+http_response_code(400);
+exit();

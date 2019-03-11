@@ -1,0 +1,198 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprenda Java e Algoritmos | Kazapp</title>
+    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
+    <style>
+        body { background-color: #FFF; padding: 5px; } 
+        .rounded { border-radius: 25px; }
+        input[type="radio"] {
+            visibility: hidden;
+            margin-bottom: 0;
+        }
+        .star-rating {
+            font-size: 35px;
+            color: gray;
+        }
+    </style>
+  </head>
+  <body>      
+    <!-- Set up Off-canvas -->
+    <div class="off-canvas-wrapper"></div>
+      
+    <!-- MAIN:BEGIN -->
+    <div>
+        <!-- BREADCRUMBS:BEGIN -->
+        <br />
+        <nav role="navigation">
+          <ul class="breadcrumbs">
+              <li><a href="../index.html">Início</a></li>
+              <li><a href="../index.html#algoritmos-busca-1">Algoritmos de busca 1</a></li>
+              <li>Exercícios</li>
+          </ul>
+        </nav>
+        <!-- BREADCRUMBS:END -->
+        
+        <!-- PROGRESS:BEGIN -->
+        <div class="primary progress" role="progressbar" tabindex="0" aria-valuenow="50" 
+             aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+          <div class="progress-meter" style="width: 50%">
+            <p class="progress-meter-text">50%</p>
+          </div>
+        </div>
+        <!-- PROGRESS:END -->
+        
+      <div class="pag1">
+          <h2>Qual dos algoritmos de busca abaixo percorre a lista sequencialmente até encontrar o elemento desejado?</h2>
+          <div class="callout primary rounded p1 p1r1"><label><input type="radio" name="p1" value="1"><span class="primary label p1 p1r1 rounded">A</span> Busca binária</label></div>
+          <div class="callout primary rounded p1 p1r2"><label><input type="radio" name="p1" value="2"><span class="primary label p1 p1r2 rounded">B</span> Busca linear</label></div>
+          <div class="callout primary rounded p1 p1r3"><label><input type="radio" name="p1" value="3"><span class="primary label p1 p1r3 rounded">C</span> Busca em largura</label></div>
+          <div class="callout primary rounded p1 p1r4"><label><input type="radio" name="p1" value="4"><span class="primary label p1 p1r4 rounded">D</span> Busca por força bruta</label></div>
+      </div>
+        
+      <div class="pag2">
+          <h2>Qual a performance do algoritmo de busca linear?</h2>
+          <div class="callout primary rounded p2 p2r1"><label><input type="radio" name="p2" value="1"><span class="primary label p2 p2r1 rounded">A</span> O(log n)</label></div>
+          <div class="callout primary rounded p2 p2r2"><label><input type="radio" name="p2" value="2"><span class="primary label p2 p2r2 rounded">B</span> O(1)</label></div>
+          <div class="callout primary rounded p2 p2r3"><label><input type="radio" name="p2" value="3"><span class="primary label p2 p2r3 rounded">C</span> O(n log n)</label></div>
+          <div class="callout primary rounded p2 p2r4"><label><input type="radio" name="p2" value="4"><span class="primary label p2 p2r4 rounded">D</span> O(n)</label></div>
+      </div>
+          
+      <div class="pag3">
+          <h2>Qual dos algoritmos de busca abaixo utiliza o método dividir para conquistar para encontrar o elemento desejado?</h2>
+          <div class="callout primary rounded p3 p3r1"><label><input type="radio" name="p3" value="1"><span class="primary label p3 p3r1 rounded">A</span> Busca em profundidade</label></div>
+          <div class="callout primary rounded p3 p3r2"><label><input type="radio" name="p3" value="2"><span class="primary label p3 p3r2 rounded">B</span> Busca por força bruta</label></div>
+          <div class="callout primary rounded p3 p3r3"><label><input type="radio" name="p3" value="3"><span class="primary label p3 p3r3 rounded">C</span> Busca binária</label></div>
+          <div class="callout primary rounded p3 p3r4"><label><input type="radio" name="p3" value="4"><span class="primary label p3 p3r4 rounded">D</span> Busca linear</label></div>
+      </div>
+          
+      <div class="pag4">
+        <h2>Qual a performance do algoritmo de busca binária?</h2>
+        <br />
+        <div class="callout primary rounded p4 p4r1"><label><input type="radio" name="p4" value="1"><span class="primary label p4 p4r1 rounded">A</span> O(n)</label></div>
+        <div class="callout primary rounded p4 p4r2"><label><input type="radio" name="p4" value="2"><span class="primary label p4 p4r2 rounded">B</span> O(log n)</label></div>
+        <div class="callout primary rounded p4 p4r3"><label><input type="radio" name="p4" value="3"><span class="primary label p4 p4r3 rounded">C</span> O(n log n)</label></div>
+        <div class="callout primary rounded p4 p4r4"><label><input type="radio" name="p4" value="4"><span class="primary label p4 p4r4 rounded">D</span> O(n<sup>2</sup>)</label></div>
+      </div>
+          
+      <div class="pag5">
+        <h2>Qual o requisito necessário para a execução do algoritmo de busca binária?</h2>
+        <div class="callout primary rounded p5 p5r1"><label><input type="radio" name="p5" value="1"><span class="primary label p5 p5r1 rounded">A</span> A lista de dados de entrada deve estar ordenada em ordem decrescente.</label></div>
+        <div class="callout primary rounded p5 p5r2"><label><input type="radio" name="p5" value="2"><span class="primary label p5 p5r2 rounded">B</span> A lista de dados de entrada d não poderá conter mais do que 1024 elementos.</label></div>
+        <div class="callout primary rounded p5 p5r3"><label><input type="radio" name="p5" value="3"><span class="primary label p5 p5r3 rounded">C</span>  A lista de entrada de dados deve estar ordenada em ordem crescente.</label></div>
+        <div class="callout primary rounded p5 p5r4"><label><input type="radio" name="p5" value="4"><span class="primary label p5 p5r4 rounded">D</span> Não existe nenhum requisito.</label></div>
+      </div>
+          
+      <div class="pag6">
+        <h2>Dados os algoritmos de busca binária e busca linear, qual apresenta melhor performance?</h2>
+        <br />
+        <div class="callout primary rounded p6 p6r1"><label><input type="radio" name="p6" value="1"><span class="primary label p6 p6r1 rounded">A</span> A busca binária possui melhor performance.</label></div>
+        <div class="callout primary rounded p6 p6r2"><label><input type="radio" name="p6" value="2"><span class="primary label p6 p6r2 rounded">B</span> Ambos algoritmos possuem a mesma performance para o pior caso.</label></div>
+        <div class="callout primary rounded p6 p6r3"><label><input type="radio" name="p6" value="3"><span class="primary label p6 p6r3 rounded">C</span> A busca linear possui melhor performance.</label></div>
+        <div class="callout primary rounded p6 p6r4"><label><input type="radio" name="p6" value="4"><span class="primary label p6 p6r4 rounded">D</span> Nenhuma das alternativas estão corretas.</label></div>
+      </div>
+        
+        <!-- PAGINATION:BEGIN -->
+        <br />
+        <div style="text-align: center">
+            <ul class="pagination" role="navigation" aria-label="Pagination">
+              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()"><span class="i18n-pag-anterior">Anterior</span></li>
+              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()"><span class="i18n-pag-proximo">Próximo</span></li>
+            </ul>
+        </div>
+        <!-- PAGINATION:END -->
+        
+        <!-- END_CLASS:BEGIN -->
+        <a class="button success expanded concluir" 
+           data-open="exercicios-algoritmos-busca-1" 
+           id="ex-algoritmos-busca-1" 
+           onclick="calcularAlgoritmosBusca1Exercicios();">
+            Enviar respostas
+        </a>
+        <div class="reveal" id="exercicios-algoritmos-busca-1" data-reveal>
+            <h1>Resultado</h1>
+            <div style="text-align: center">
+                <div class="passou">
+                    <p>
+                        <span class="success badge" style="font-size: 35px;">
+                            <i class="fi-like" style="font-size: 35px; color: white"></i>
+                        </span>
+                    </p>
+                    <p class="lead">Parabéns, você concluiu o módulo com sucesso!</p>
+                </div>
+                <div class="naoPassou">
+                    <p>
+                        <span class="alert badge" style="font-size: 35px;">
+                            <i class="fi-dislike" style="font-size: 35px; color: white"></i>
+                        </span>
+                    </p>
+                    <p class="lead">A nota mínima para passar é 70%, tente novamente.</p>
+                </div>
+                <p class="lead">Você acertou <strong><span id="resultado">80</span>%</strong> das questões.</p>
+                <div class="passou">
+                    <p>Qual a sua avaliação sobre o conteúdo apresentado neste módulo?</p>
+                    <i class="fi-star star-rating star-rating-1" 
+                       onmouseover="selectStar(1);" onclick="selectStar(1);"></i>
+                    <i class="fi-star star-rating star-rating-2" 
+                       onmouseover="selectStar(2);" onclick="selectStar(2);"></i>
+                    <i class="fi-star star-rating star-rating-3" 
+                       onmouseover="selectStar(3);" onclick="selectStar(3);"></i>
+                    <i class="fi-star star-rating star-rating-4" 
+                       onmouseover="selectStar(4);" onclick="selectStar(4);"></i>
+                    <i class="fi-star star-rating star-rating-5" 
+                       onmouseover="selectStar(5);" onclick="selectStar(5);"></i>
+                </div>
+            </div>
+            <hr />
+            <a class="button primary expanded tentar_novamente passou" href="#" onclick="avancarProximoModulo();">
+                Avançar para o próximo módulo
+            </a>
+            <a class="button primary expanded tentar_novamente naoPassou" href="#" onclick="location.reload();">
+                Tentar novamente
+            </a>
+            <a class="button secondary expanded sair" href="../index.html#algoritmos-busca-1">Sair da lição</a>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>  
+          
+          <a class="button secondary expanded sair" href="../index.html#algoritmos-busca-1">Sair da lição</a>
+        <!-- END_CLASS:END -->
+        
+    </div>
+    <!-- MAIN:END -->
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/menu-off-canvas.js"></script>
+    <script src="../assets/js/paginacao.js"></script>
+    <script src="../assets/js/localstorage-persistencia.js"></script>
+    <script src="../assets/js/exercicios.js"></script>
+    <script src="../assets/js/i18n-en_GB.js"></script>
+    <script>
+        $(document).foundation();
+        hljs.initHighlightingOnLoad();
+        Paginacao.init(6);
+        Paginacao.paginar();
+        function avancarProximoModulo() {
+            if (avaliacaoNota > 0) {
+                enviarAvaliacao('algoritmos-busca-1', avaliacaoNota)
+                    .always(function() {
+                        Persistencia.completarMultiplos([
+                            '.algoritmos-busca-1-introducao', 
+                            '.algoritmos-busca-1-busca-linear', 
+                            '.algoritmos-busca-1-busca-binaria'
+                        ]);
+                        location.href="../index.html#algoritmos-ordenacao-1";
+                    });
+            }
+        }
+    </script>
+  </body>
+</html>

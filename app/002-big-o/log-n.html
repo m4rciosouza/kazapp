@@ -1,0 +1,251 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprenda Java e Algoritmos | Kazapp</title>
+    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
+    <style>
+        body { background-color: #FFF; padding: 5px; } 
+    </style>
+  </head>
+  <body>      
+    <!-- Set up Off-canvas -->
+    <div class="off-canvas-wrapper"></div>
+      
+    <!-- MAIN:BEGIN -->
+    <div>
+        <!-- BREADCRUMBS:BEGIN -->
+        <br />
+        <nav role="navigation">
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#big-o">Big-O</a></li>
+            <li>O(log n)</li>
+          </ul>
+        </nav>
+        <!-- BREADCRUMBS:END -->
+        
+        <!-- PROGRESS:BEGIN -->
+        <div class="primary progress" role="progressbar" tabindex="0" aria-valuenow="50" 
+             aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+          <div class="progress-meter" style="width: 50%">
+            <p class="progress-meter-text">50%</p>
+          </div>
+        </div>
+        <!-- PROGRESS:END -->
+        
+      <div class="pag1">
+        <h2>Complexidade O(log n)</h2>
+        <p>A complexidade O(log n) é a quinta notação que estudaremos.</p>
+        <p>Agora que você já possui conhecimento na notação O(n log n), entender a O(log n) será fácil, uma vez que a diferença entre elas é que somente temos a referência ao logaritmo de "n".</p>
+        <p>Somente para revisar e reforçar o conceito estudado anteriormente, vamos definir novamente o que é um logaritmo.</p>
+          <p>Na matemática, o logaritmo de um número é o expoente a que outro valor fixo, a base, deve ser elevado para produzir este número. Por exemplo, o logaritmo de 1000 na base 10 é 3 porque 10 ao cubo é 1000 (1000 = 10 * 10 * 10 = 10<sup>3</sup>).</p>  
+          <p>Agora que já reforçamos o conceito de logaritmo, vamos olhar e comparar alguns casos para entender seu comportamento:</p>
+          <ul>
+            <li>Para n=1 -> (log 1) = 0</li>
+            <li>Para n=2 -> (log 2) = 0.3</li>
+            <li>Para n=3 -> (log 3) = 0.47</li>
+            <li>Para n=4 -> (log 4) = 0.6</li>
+            <li>Para n=5 -> (log 5) = 0.69</li>
+            <li>Para n=6 -> (log 6) = 0.77</li>
+            <li>Para n=7 -> (log 7) = 0.84</li>
+            <li>Para n=8 -> (log 8) = 0.9</li>
+            <li>Para n=9 -> (log 9) = 0.95</li>
+            <li>Para n=10 -> (log 10) = 1</li>
+          </ul>
+          <p>Conforme você pode reparar, os números incrementam em intervalos muito pequenos entre eles, além de se manterem bem abaixo do valor de "n", que seria o tamanho da entrada de dados.</p>  
+          <p>Isso é ótimo, pois significa que um algoritmo O(log n) terá um processamento abaixo de quantidade de dados de entrada, o que resultará em uma excelente performance.</p>  
+          <p>Na prática, esses algoritmos são otimizados para iterar parcialmente nos dados de entrada, como é o caso da busca binária que será apresentado na sequencia.</p> 
+      </div>
+        
+      <div class="pag2">
+        <h2>Complexidade O(log n)</h2>    
+        <p>Se colocarmos a complexidade O(log n) em um gráfico, teremos a seguinte representação:</p> 
+          <p><img src="../assets/img/log-n.png" alt="O(log n)" /></p>
+          <p>Repare que a curva formada é no sentido de "x", o que significa que seu desempenho vai se estabilizando e se mantendo abaixo a medida em que adicionamos mais dados de entrada.</p>  
+      </div>
+        
+      <div class="pag3">
+        <h2>Complexidade O(log n)</h2>
+        <p>Vamos agora ver como seria uma implementação do mesmo na prática.</p>
+          <p>Como demonstração usaremos um popular algoritmo de busca chamado busca binária, que através do conceito de dividir para conquistar, vai separando a lista na metade, e verificando para qual dos lados da lista devemos seguir a busca.</p>
+          <p>Com isso, a cada verificação vamos eleminando metade dos dados a serem verificados, encontrando o valor desejado em apenas algumas operações.</p>
+          <p>Este algoritmo necessita de uma lista de dados previamente ordenada para funcionar.</p>
+          <p>Não se preocupe em entender todos os detalhes desse algoritmo, pois ele será estudado em detalhes em uma lição futura desse curso.</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+private int buscaBinaria(int[] numeros, int inicio, int fim, int numero) {
+    int indice = -1;
+
+    while (inicio <= fim) {
+        int meio = (inicio + fim) / 2;
+        if (numeros[meio] < numero) {
+            inicio = meio + 1;
+        } else if (numeros[meio] > numero) {
+            fim = meio - 1;
+        } else if (numeros[meio] == numero) {
+            indice = meio;
+            break;
+        }
+    }
+    return indice;
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          <p>A busca binária itera sob uma lista ordenada de dados através de um laço <b>while</b>, e para cada iteração ele elimina metade da lista, até encontrar o elemento desejado.</p>
+          <p>Caso o elemento não seja encontrado, ele retona "-1", assim como será retornado o índice do elemento na lista para quando ele estiver presente.</p>
+          <p>Somente para relelmbrar, esse algoritmo será estudo em detalhes em uma lição futura.</p>
+      </div>
+          
+      <div class="pag4">
+        <h2>Vamos praticar?</h2>
+        <p>Para você testar na prática e verificar a performance de um algoritmo O(log n), vamos criar uma classe contendo um experimento que demonstrará a performance do algoritmo busca binária.</p>
+        <p>Para isso crie um arquivo chamado <b>OrdemLogN.java</b> com o seguinte código:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+public class OrdemLogN {
+
+    private int buscaBinaria(int[] numeros, int inicio, int fim, int numero) {
+        int indice = -1;
+
+        while (inicio <= fim) {
+            int meio = (inicio + fim) / 2;
+            if (numeros[meio] < numero) {
+                inicio = meio + 1;
+            } else if (numeros[meio] > numero) {
+                fim = meio - 1;
+            } else if (numeros[meio] == numero) {
+                indice = meio;
+                break;
+            }
+        }
+        return indice;
+    }
+
+    private static void executarExperimento(OrdemLogN ordemLogN, int qtdNumeros, int numero) {
+        int[] numeros = new int[qtdNumeros];
+        for (int i=0; i < qtdNumeros; i++) {
+            numeros[i] = i + 1;
+        }
+        long inicio = System.currentTimeMillis();
+        System.out.println("Executando experimento para lista de " + qtdNumeros + " números.");
+        int indice = ordemLogN.buscaBinaria(numeros, 0, qtdNumeros-1, numero);
+        long fim = System.currentTimeMillis();
+        System.out.println("Encontrado valor " + numeros[indice] + " no índice " + indice);
+        System.out.println("Experimento executado em " + (fim - inicio) + "ms\n");
+    }
+
+    public static void main(String[] args) {
+        OrdemLogN ordemLogN = new OrdemLogN();
+        executarExperimento(ordemLogN, 1, 1);
+        executarExperimento(ordemLogN, 100, 100);
+        executarExperimento(ordemLogN, 1000, 1000);
+        executarExperimento(ordemLogN, 100000, 100000);
+        executarExperimento(ordemLogN, 1000000, 1000000);
+        executarExperimento(ordemLogN, 10000000, 10000000);
+        executarExperimento(ordemLogN, 100000000, 100000000);
+        executarExperimento(ordemLogN, 200000000, 200000000);
+        executarExperimento(ordemLogN, 300000000, 300000000);
+        executarExperimento(ordemLogN, 350000000, 350000000);
+    }
+
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>O código acima chama o mesmo método estudado anteriormente, porém com diferentes valores de entrada, e registra o tempo de execução para cada chamada.</p>    
+      </div>
+          
+      <div class="pag5">
+        <h2>Vamos praticar?</h2> 
+        <p>Usando os conceitos aprendidos no primeiro módulo do curso, compile e execute a classe Java, você deverá ver no terminal algo similar a:</p> 
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+Executando experimento para lista de 1 números.
+Encontrado valor 1 no índice 0
+Experimento executado em 1ms
+
+Executando experimento para lista de 100 números.
+Encontrado valor 100 no índice 99
+Experimento executado em 0ms
+
+Executando experimento para lista de 1000 números.
+Encontrado valor 1000 no índice 999
+Experimento executado em 0ms
+
+Executando experimento para lista de 100000 números.
+Encontrado valor 100000 no índice 99999
+Experimento executado em 0ms
+
+Executando experimento para lista de 1000000 números.
+Encontrado valor 1000000 no índice 999999
+Experimento executado em 0ms
+
+Executando experimento para lista de 10000000 números.
+Encontrado valor 10000000 no índice 9999999
+Experimento executado em 0ms
+
+Executando experimento para lista de 100000000 números.
+Encontrado valor 100000000 no índice 99999999
+Experimento executado em 1ms
+
+Executando experimento para lista de 200000000 números.
+Encontrado valor 200000000 no índice 199999999
+Experimento executado em 0ms
+
+Executando experimento para lista de 300000000 números.
+Encontrado valor 300000000 no índice 299999999
+Experimento executado em 0ms
+
+Executando experimento para lista de 350000000 números.
+Encontrado valor 350000000 no índice 349999999
+Experimento executado em 0ms  
+        </code></pre></div>
+        <!-- CODE:END -->
+          <br />
+          <p>Repare que interessante os tempos de execução, onde mesmo para uma lista contendo 35 milhões de números, seu tempo de execução foi praticamente nulo!</p>
+          <p>Portanto concluímos que algoritmos do tipo O(log n) são muito bons em termos de performance.</p>
+          <p>Aproveite também para testar a execução com outros valores, até estar confortável com o entendimento de execução desse algoritmo.</p>    
+      </div>
+        
+        <!-- PAGINATION:BEGIN -->
+        <br />
+        <div style="text-align: center">
+            <ul class="pagination" role="navigation" aria-label="Pagination">
+              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()">Anterior</li>
+              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()">Próximo</li>
+            </ul>
+        </div>
+        <!-- PAGINATION:END -->
+        
+        <!-- END_CLASS:BEGIN -->
+        <a class="button success expanded concluir" href="../index.html#big-o" onclick="return Persistencia.completar('.big-o-log-n', '.big-o-1');">Concluir lição</a>
+        <a class="button secondary expanded sair" href="../index.html#big-o">Sair da lição</a>
+        <!-- END_CLASS:END -->
+        
+    </div>
+    <!-- MAIN:END -->
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/menu-off-canvas.js"></script>
+    <script src="../assets/js/paginacao.js"></script>
+    <script src="../assets/js/localstorage-persistencia.js"></script>
+    <script src="../assets/js/i18n-en_GB.js"></script>
+    <script>
+        $(document).foundation();
+        hljs.initHighlightingOnLoad();
+        Paginacao.init(5);
+        Paginacao.paginar();
+        if (!Persistencia.temAcessoPagina('.big-o-log-n')) {
+            Persistencia.redirecionarIndex();
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,580 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprenda Java e Algoritmos | Kazapp</title>
+    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
+    <style>
+        body { background-color: #FFF; padding: 5px; } 
+    </style>
+  </head>
+  <body>      
+    <!-- Set up Off-canvas -->
+    <div class="off-canvas-wrapper"></div>
+      
+    <!-- MAIN:BEGIN -->
+    <div>
+        <!-- BREADCRUMBS:BEGIN -->
+        <br />
+        <nav role="navigation">
+          <ul class="breadcrumbs">
+              <li><a href="../index.html"><span class="i18n" data-i18n="switchOp-t1">Início</span></a></li>
+              <li><a href="../index.html#java-basico"><span class="i18n" data-i18n="switchOp-t2">Java Básico</span></a></li>
+            <li>Switch</li>
+          </ul>
+        </nav>
+        <!-- BREADCRUMBS:END -->
+        
+        <!-- PROGRESS:BEGIN -->
+        <div class="primary progress" role="progressbar" tabindex="0" aria-valuenow="50" 
+             aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+          <div class="progress-meter" style="width: 50%">
+            <p class="progress-meter-text">50%</p>
+          </div>
+        </div>
+        <!-- PROGRESS:END -->
+        
+      <div class="pag1">
+        <h2>Switch</h2>
+          <p><span class="i18n" data-i18n="switchOp-t3">O <b>switch</b> é um comando utilizado para executar uma determinada ação de acordo com o valor passado a ele para verificação.</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t4">Ele recebe um único parâmetro como entrada, e para este valor ele verifica se existe uma condição (case) definida nele.</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t5">O <b>switch</b> pode possuir inúmeros "cases", assim como uma codição padrão (default), que será executada caso a entrada não atenda a nenhum "case".</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t6">O <b>switch</b> é bastante similar ao <b>if/else</b>, mas sua grande vantagem é que sua legibilidade é melhor para quando queremos fazer diversas verificações.</span></p>
+      </div>
+        
+      <div class="pag2">    
+          <h2><span class="i18n" data-i18n="switchOp-t7">Sintaxe do switch</span></h2>
+          <p><span class="i18n" data-i18n="switchOp-t8">Verifique no código a seguir a definição do comando <b>switch</b>:</span></p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+switch(VALOR_A_SER_VERIFICADO) {
+   // o VALOR_A_SER_VERIFICADO deve ser do mesmo tipo do validado a seguir
+   case VALOR_1:
+      // seu código para o VALOR_1
+      break; // opcional, interrompe a execução do switch
+   
+   case VALOR_2:
+      // seu código para o VALOR_2
+      break; // opcional, interrompe a execução do switch
+   
+   default : 
+      // código padrão para quando nenhuma condição for válida
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+switch(VALUE_TO_BE_MATCHED) {
+   // VALUE_TO_BE_MATCHED needs to be the same type as in the following check
+   case VALUE_1:
+      // code to VALUE_1
+      break; // optional, breaks the current switch
+   
+   case VALUE_2:
+      // code to VALUE_2
+      break; // optional, breaks the current switch
+   
+   default : 
+      // default code to be executed when no match found
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          <p><span class="i18n" data-i18n="switchOp-t9">O <b>switch</b> recebe um valor que será utilizado nas verificações das possibilidades (case).</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t10">Dentro do <b>switch</b> temos as definições das condições (case), onde verificamos cada um dos possíveis valores.</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t11">Utilizamos o <b>break</b>, que é opcional para terminar a execução para cada caso.</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t12">Podemos também adicionar a entrada <b>default</b>, que é um <b>case</b> especial para quando nenhuma condição for encontrada.</span></p>
+      </div>
+        
+      <div class="pag3">    
+          <h2><span class="i18n" data-i18n="switchOp-t13">O switch na prática</span></h2>
+          <p><span class="i18n" data-i18n="switchOp-t14">Vamos primeiramente estudar o uso do <b>switch</b> para retornar o nome de um mês dado um valor numérico entre 1 e 12.</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t15">Para qualquer outro valor retornamos que o mês é inválido.</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t16">Veja a seguir o código:</span></p>
+          
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+int mes = 7;
+String nomeMes;
+
+switch (mes) {
+  case 1:
+    nomeMes = "Janeiro";
+    break;
+  case 2:
+    nomeMes = "Fevereiro";
+    break;
+  case 3:
+    nomeMes = "Março";
+    break;
+  case 4:
+    nomeMes = "Abril";
+    break;
+  case 5:
+    nomeMes = "Maio";
+    break;
+  case 6:
+    nomeMes = "Junho";
+    break;
+  case 7:
+    nomeMes = "Julho";
+    break;
+  case 8:
+    nomeMes = "Agosto";
+    break;
+  case 9:
+    nomeMes = "Setembro";
+    break;
+  case 10:
+    nomeMes = "Outubro";
+    break;
+  case 11:
+    nomeMes = "Novembro";
+    break;
+  case 12:
+    nomeMes = "Dezembro";
+    break;
+  default:
+    nomeMes = "Mês inválido";
+    break;
+}
+System.out.println(nomeMes);
+        </code></pre></div>
+        <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+int month = 7;
+String monthName;
+
+switch (month) {
+  case 1:
+    monthName = "January";
+    break;
+  case 2:
+    monthName = "February";
+    break;
+  case 3:
+    monthName = "March";
+    break;
+  case 4:
+    monthName = "April";
+    break;
+  case 5:
+    monthName = "May";
+    break;
+  case 6:
+    monthName = "June";
+    break;
+  case 7:
+    monthName = "July";
+    break;
+  case 8:
+    monthName = "August";
+    break;
+  case 9:
+    monthName = "September";
+    break;
+  case 10:
+    monthName = "October";
+    break;
+  case 11:
+    monthName = "November";
+    break;
+  case 12:
+    monthName = "December";
+    break;
+  default:
+    monthName = "Invalid month";
+    break;
+}
+System.out.println(monthName);
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          <p><span class="i18n" data-i18n="switchOp-t17">No código anterior imprimimos o valor do mês 7, que no caso é julho.</span></p>
+      </div>
+        
+      <div class="pag4">
+          <h2><span class="i18n" data-i18n="switchOp-t18">Sintaxe do switch, segundo exemplo</span></h2>
+          <p><span class="i18n" data-i18n="switchOp-t19">Neste segundo exemplo, vamos imprimir todos os nomes dos meses a partir do mês passado no comando <b>switch</b>.</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t20">Segue o código do exemplo:</span></p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+int mes = 7;
+
+switch (mes) {
+  case 1:  System.out.println("Janeiro");
+  case 2:  System.out.println("Fevereiro");
+  case 3:  System.out.println("Março");
+  case 4:  System.out.println("Abril");
+  case 5:  System.out.println("Maio");
+  case 6:  System.out.println("Junho");
+  case 7:  System.out.println("Julho");
+  case 8:  System.out.println("Agosto");
+  case 9:  System.out.println("Setembro");
+  case 10: System.out.println("Outubro");
+  case 11: System.out.println("Novembro");
+  case 12: System.out.println("Dezembro");
+           break;
+  default: break;
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+int month = 7;
+
+switch (month) {
+  case 1:  System.out.println("January");
+  case 2:  System.out.println("February");
+  case 3:  System.out.println("March");
+  case 4:  System.out.println("April");
+  case 5:  System.out.println("May");
+  case 6:  System.out.println("June");
+  case 7:  System.out.println("July");
+  case 8:  System.out.println("August");
+  case 9:  System.out.println("September");
+  case 10: System.out.println("October");
+  case 11: System.out.println("November");
+  case 12: System.out.println("December");
+           break;
+  default: break;
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          <p><span class="i18n" data-i18n="switchOp-t21">Repare no uso do <b>break</b> somente no final do <b>case</b> 12, pois assim as condições serão executadas sequencialmente a partir do mês passado como parâmetro.</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t22">Caso seja passado um valor diferente de 1 a 12, nada será impresso, pois a condição <b>default</b> não executando nenhum comando.</span></p>
+        <div class="callout primary">
+            <h5><span class="i18n" data-i18n="switchOp-t23">Uso do "default"</span></h5>
+            <p><span class="i18n" data-i18n="switchOp-t24">Embora o comando <b>default</b> seja opcional, é sempre recomendado sua utilização, pois assim teremos a certeza de que trataremos todas as possíveis condições do nosso <b>switch</b>.</span></p>
+        </div>
+      </div>
+        
+      <div class="pag5">
+          <h2><span class="i18n" data-i18n="switchOp-t25">Sintaxe do switch, terceiro exemplo</span></h2>
+          <p><span class="i18n" data-i18n="switchOp-t26">No terceiro exemplo, vamos imprimir o número de dias de um determinado mês.</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t27">Usaremos <b>case</b>(s) agrupados para representar os meses com 30 dias, 31 dias, e para o caso particular de fevereiro, que pode conter 28 ou 29 dias.</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t28">Verifique o código a seguir:</span></p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+int mes = 7;
+int ano = 2018;
+int numDias = 0;
+
+switch (mes) {
+  case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+    numDias = 31;
+    break;
+  case 4: case 6: case 9: case 11:
+    numDias = 30;
+    break;
+  case 2:
+    if (((ano % 4 == 0) && !(ano % 100 == 0)) || (ano % 400 == 0)) {
+      numDias = 29;
+    } else {
+      numDias = 28;
+    }
+    break;
+  default:
+    System.out.println("Mês inválido.");
+    break;
+}
+System.out.println("Número de dias = " + numDias);
+        </code></pre></div>
+        <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+int month = 7;
+int year = 2018;
+int daysNumber = 0;
+
+switch (month) {
+  case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+    daysNumber = 31;
+    break;
+  case 4: case 6: case 9: case 11:
+    daysNumber = 30;
+    break;
+  case 2:
+    if (((year % 4 == 0) && !(year % 100 == 0)) || (year % 400 == 0)) {
+      daysNumber = 29;
+    } else {
+      daysNumber = 28;
+    }
+    break;
+  default:
+    System.out.println("Invalid month.");
+    break;
+}
+System.out.println("Number of days = " + daysNumber);
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          <p><span class="i18n" data-i18n="switchOp-t29">Repare que agrupamos os <b>case</b>(s) simplesmente adicionando a entrada <b>case</b>, uma seguindo a outra, sem nenhuma implementação, até que a última possua o código para tratar todos os casos anteriores, seguido do <b>break</b> para terminar a execução do comando.</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t30">Esse comportamento apresentado é muito similar ao <b>if</b> utilizando condições compostas com o "ou" (<b>||</b>).</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t31">O exemplo acima imprimirá "Número de dias = 31", pois é a quantidade de dias do mês 7 (julho).</span></p>
+      </div>
+        
+      <div class="pag6">
+          <h2><span class="i18n" data-i18n="switchOp-t32">Vamos praticar?</span></h2>
+          <p><span class="i18n" data-i18n="switchOp-t33">A melhor forma de aprender é praticando, portanto vamos seguir um passo a passo para executar o código estudado nas aulas anteriores.</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t34">Crie o arquivo <b>Switch.java</b> em um diretório de sua preferência.</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t35">Adicione o seguinte código nele:</span></p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+public class Switch {
+  public static void main(String[] args) {
+    int mes = 7;
+    int ano = 2018;
+    int numDias = 0;
+    String nomeMes;
+
+    switch (mes) {
+      case 1:
+        nomeMes = "Janeiro";
+        break;
+      case 2:
+        nomeMes = "Fevereiro";
+        break;
+      case 3:
+        nomeMes = "Março";
+        break;
+      case 4:
+        nomeMes = "Abril";
+        break;
+      case 5:
+        nomeMes = "Maio";
+        break;
+      case 6:
+        nomeMes = "Junho";
+        break;
+      case 7:
+        nomeMes = "Julho";
+        break;
+      case 8:
+        nomeMes = "Agosto";
+        break;
+      case 9:
+        nomeMes = "Setembro";
+        break;
+      case 10:
+        nomeMes = "Outubro";
+        break;
+      case 11:
+        nomeMes = "Novembro";
+        break;
+      case 12:
+        nomeMes = "Dezembro";
+        break;
+      default:
+        nomeMes = "Mês inválido";
+        break;
+    }
+    System.out.println(nomeMes);
+
+    switch (mes) {
+      case 1:  System.out.println("Janeiro");
+      case 2:  System.out.println("Fevereiro");
+      case 3:  System.out.println("Março");
+      case 4:  System.out.println("Abril");
+      case 5:  System.out.println("Maio");
+      case 6:  System.out.println("Junho");
+      case 7:  System.out.println("Julho");
+      case 8:  System.out.println("Agosto");
+      case 9:  System.out.println("Setembro");
+      case 10: System.out.println("Outubro");
+      case 11: System.out.println("Novembro");
+      case 12: System.out.println("Dezembro");
+               break;
+      default: break;
+    }
+
+    switch (mes) {
+      case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+        numDias = 31;
+        break;
+      case 4: case 6: case 9: case 11:
+        numDias = 30;
+        break;
+      case 2:
+        if (((ano % 4 == 0) && !(ano % 100 == 0)) || (ano % 400 == 0)) {
+          numDias = 29;
+        } else {
+          numDias = 28;
+        }
+        break;
+      default:
+        System.out.println("Mês inválido.");
+        break;
+    }
+    System.out.println("Número de dias = " + numDias);
+  }
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-en_GB"><pre><code>
+public class Switch {
+  public static void main(String[] args) {
+    int month = 7;
+    int year = 2018;
+    int daysNumber = 0;
+    String monthName;
+
+    switch (month) {
+      case 1:
+        monthName = "January";
+        break;
+      case 2:
+        monthName = "February";
+        break;
+      case 3:
+        monthName = "March";
+        break;
+      case 4:
+        monthName = "April";
+        break;
+      case 5:
+        monthName = "May";
+        break;
+      case 6:
+        monthName = "June";
+        break;
+      case 7:
+        monthName = "July";
+        break;
+      case 8:
+        monthName = "August";
+        break;
+      case 9:
+        monthName = "September";
+        break;
+      case 10:
+        monthName = "October";
+        break;
+      case 11:
+        monthName = "November";
+        break;
+      case 12:
+        monthName = "December";
+        break;
+      default:
+        monthName = "Invalid month";
+        break;
+    }
+    System.out.println(monthName);
+
+    switch (month) {
+      case 1:  System.out.println("January");
+      case 2:  System.out.println("February");
+      case 3:  System.out.println("March");
+      case 4:  System.out.println("April");
+      case 5:  System.out.println("May");
+      case 6:  System.out.println("June");
+      case 7:  System.out.println("July");
+      case 8:  System.out.println("August");
+      case 9:  System.out.println("September");
+      case 10: System.out.println("October");
+      case 11: System.out.println("November");
+      case 12: System.out.println("December");
+               break;
+      default: break;
+    }
+
+    switch (month) {
+      case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+        daysNumber = 31;
+        break;
+      case 4: case 6: case 9: case 11:
+        daysNumber = 30;
+        break;
+      case 2:
+        if (((year % 4 == 0) && !(year % 100 == 0)) || (year % 400 == 0)) {
+          daysNumber = 29;
+        } else {
+          daysNumber = 28;
+        }
+        break;
+      default:
+        System.out.println("Invalid month.");
+        break;
+    }
+    System.out.println("Number of days = " + daysNumber);
+  }
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          <p><span class="i18n" data-i18n="switchOp-t36">Compile o código fonte, executando no terminal no diretório onde o arquivo foi criado:</span></p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+javac Switch.java        
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          <p><span class="i18n" data-i18n="switchOp-t37">O arquivo <b>Switch.class</b> será gerado no mesmo diretório.</span></p>
+          <p><span class="i18n" data-i18n="switchOp-t38">Execute o código compilado no terminal com:</span></p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+java Switch        
+        </code></pre></div>
+        <!-- CODE:END --> 
+        <br />
+          <p><span class="i18n" data-i18n="switchOp-t39">Você deverá ver o seguinte no terminal:</span></p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left" class="source-code code-pt_BR"><pre><code>
+July
+July
+August
+September
+October
+November
+December
+Number of days = 31
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          <p><span class="i18n" data-i18n="switchOp-t40">Parabéns!!! Você concluiu com sucesso o seu estudo do comando <b>switch</b>.</span></p>
+      </div>
+        
+        <!-- PAGINATION:BEGIN -->
+        <br />
+        <div style="text-align: center">
+            <ul class="pagination" role="navigation" aria-label="Pagination">
+              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()"><span class="i18n-pag-anterior">Anterior</span></li>
+              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()"><span class="i18n-pag-proximo">Próximo</span></li>
+            </ul>
+        </div>
+        <!-- PAGINATION:END -->
+        
+        <!-- END_CLASS:BEGIN -->
+        <a class="button success expanded concluir" href="../index.html#java-basico" onclick="return Persistencia.completar('.switch-op', '');"><span class="i18n-concluir-licao">Concluir lição</span></a>
+        <a class="button secondary expanded sair" href="../index.html#java-basico"><span class="i18n-sair-licao">Sair da lição</span></a>
+        <!-- END_CLASS:END -->
+        
+    </div>
+    <!-- MAIN:END -->
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/menu-off-canvas.js"></script>
+    <script src="../assets/js/paginacao.js"></script>
+    <script src="../assets/js/localstorage-persistencia.js"></script>
+    <script src="../assets/js/i18n-en_GB.js"></script>
+    <script>
+        $(document).foundation();
+        hljs.initHighlightingOnLoad();
+        Paginacao.init(6);
+        Paginacao.paginar();
+        if (!Persistencia.temAcessoPagina('.switch-op')) {
+            Persistencia.redirecionarIndex();
+        }
+    </script>
+  </body>
+</html>

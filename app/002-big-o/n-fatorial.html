@@ -1,0 +1,234 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprenda Java e Algoritmos | Kazapp</title>
+    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
+    <style>
+        body { background-color: #FFF; padding: 5px; } 
+    </style>
+  </head>
+  <body>      
+    <!-- Set up Off-canvas -->
+    <div class="off-canvas-wrapper"></div>
+      
+    <!-- MAIN:BEGIN -->
+    <div>
+        <!-- BREADCRUMBS:BEGIN -->
+        <br />
+        <nav role="navigation">
+          <ul class="breadcrumbs">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../index.html#big-o">Big-O</a></li>
+            <li>O(n!)</li>
+          </ul>
+        </nav>
+        <!-- BREADCRUMBS:END -->
+        
+        <!-- PROGRESS:BEGIN -->
+        <div class="primary progress" role="progressbar" tabindex="0" aria-valuenow="50" 
+             aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+          <div class="progress-meter" style="width: 50%">
+            <p class="progress-meter-text">50%</p>
+          </div>
+        </div>
+        <!-- PROGRESS:END -->
+        
+      <div class="pag1">
+        <h2>Complexidade fatorial O(n!)</h2>
+        <p>A complexidade fatorial O(n!) é a pior das complexidades estudadas neste módulo.</p>  
+        <p>O fatorial por definição na matemática, diz que seu valor é calculado através da multiplicação de um número por todos os seus antecessores, até chegar ao número 1 (excluindo o zero).</p>  
+          <p>Ele é representado pelo sinal de exclamação "!", por isso dizemos O(n!), que significa notação Big-O com complexidade fatorial.</p>
+          <p>Vamos olhar e comparar alguns casos de fatorial na matemática para entender seu comportamento:</p>
+          <ul>
+            <li>0! = 1</li>
+            <li>1! = 1</li>
+            <li>2! = 2 * 1 = 2</li>
+            <li>3! = 3 * 2 * 1 = 6</li>
+            <li>4! = 4 * 3 * 2 * 1 = 24</li>
+            <li>5! = 5 * 4 * 3 * 2 * 1 = 120</li>
+            <li>6! = 6 * 5 * 4 * 3 * 2 * 1 = 720</li>
+            <li>7! = 7 * 6 * 5 * 4 * 3 * 2 * 1 = 5.040</li>
+            <li>8! = 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 = 40.320</li>
+            <li>9! = 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 = 362.880</li>
+            <li>10! = 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 = 3.628.800</li>
+          </ul>
+          <p>O que você pode concluir olhando para os casos listados acima?</p>  
+          <p>Se você respondeu que o resultado cresce de modo muito rápido, você está correto!</p>  
+          <p>Repare que o fatorial de 1 é 1, de 5 é 120, e de 10 é 3.628.800.</p>  
+          <p>O que eu quero mostrar com isso é justamente a velocidade com que os resultados crescem a medida que adicionamos um único número.</p>  
+          <p>E é essa analogia que levamos para o nosso algoritmo de complexidade fatorial.</p>  
+          <p>Um algoritmo de complexidade fatorial, é um algortimo que em seu pocessamento cresce de modo muito rápido, o que significa que ele se tornará inviável ao tentarmos executá-lo com valores muito grandes.</p> 
+      </div>
+        
+      <div class="pag2">    
+        <h2>Complexidade fatorial O(n!)</h2>
+        <p>Se colocarmos a complexidade fatorial em um gráfico, teremos a seguinte representação:</p> 
+          <p><img src="../assets/img/n-fatorial.png" alt="O(n!)" /></p>
+          <p>Olhando para o gráfico acima você consegue reparar em quão rápido a curva cresce a medida que incrementamos nosso número de entrada?</p>  
+          <p>Portanto, o algoritmo de complexidade fatorial é aquele que necessita de muito processamento a medida que incrementamos nossos dados de entrada.</p>  
+          <p>E o que concluímos com isso?</p>  
+          <p>Concluímos que esse tipo de algoritmo é limitado a resolver problemas com poucos dados de entrada, pois ele terá uma performance muito ruim para grandes quantidades de dados.</p> 
+      </div>
+        
+      <div class="pag3">
+        <h2>Complexidade fatorial O(n!)</h2>
+        <p>Agora que você já sabe o que é um algoritmo de complexidade fatorial, vamos ver um exemplo de código que possui essa complexidade:</p>  
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+private void algoritmoComplexidadeFatorial(int numero) {
+    for (int i=0; i < numero; i++) {
+        algoritmoComplexidadeFatorial(i-1);
+    }
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+          <p>Repare que o método acima é bastante simples, porém tem uma performance muito ruim a medida que incrementamos seu valor de entrada.</p>  
+          <p>Isso ocorre porque o método acima chama a si mesmo dentro de um laço <b>for</b>, fazendo com que muitas executações desse laço sejam executadas para cada número a mais adicionado a sua chamada, fazendo ele crescer em tempo de execução de modo muito similar a curva fatorial demonstrada anteriormente.</p>  
+      </div>
+          
+      <div class="pag4">
+        <h2>Vamos praticar?</h2>
+        <p>Para você testar na prática e verificar a performance de um algoritmo fatorial, vamos criar uma classe contendo um experimento que demonstrará a performance do algoritmo estudado anteriormente.</p>
+        <p>Para isso crie um arquivo chamado <b>OrdemFatorial.java</b> com o seguinte código:</p>
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+public class OrdemFatorial {
+
+    private static long numIteracoes;
+
+    private void executar(int numero) {
+        for (int i=0; i < numero; i++) {
+            OrdemFatorial.numIteracoes++;
+            executar(i-1);
+        }
+    }
+
+    private static void executarExperimento(OrdemFatorial ordemFatorial, int numero) {
+        OrdemFatorial.numIteracoes = 0;
+        long inicio = System.currentTimeMillis();
+        System.out.println("Executando experimento para número = " + numero);
+        ordemFatorial.executar(numero);
+        long fim = System.currentTimeMillis();
+        System.out.println("Experimento iterado " + OrdemFatorial.numIteracoes + " vezes.");
+        System.out.println("Experimento executado em " + (fim - inicio) + "ms\n");
+    }
+
+    public static void main(String[] args) {
+        OrdemFatorial ordemFatorial = new OrdemFatorial();
+        executarExperimento(ordemFatorial, 1);
+        executarExperimento(ordemFatorial, 2);
+        executarExperimento(ordemFatorial, 3);
+        executarExperimento(ordemFatorial, 4);
+        executarExperimento(ordemFatorial, 5);
+        executarExperimento(ordemFatorial, 10);
+        executarExperimento(ordemFatorial, 20);
+        executarExperimento(ordemFatorial, 30);
+        executarExperimento(ordemFatorial, 40);
+        executarExperimento(ordemFatorial, 45);
+        executarExperimento(ordemFatorial, 50);
+    }
+
+}
+        </code></pre></div>
+        <!-- CODE:END -->
+        <br />
+        <p>O código acima chama o mesmo método estudado anteriormente, porém com diferentes valores de entrada, e registra o tempo de execução para cada chamada, assim como a quantidade de iterações por execução.</p>    
+      </div>
+          
+      <div class="pag5">
+        <h2>Vamos praticar?</h2> 
+        <p>Usando os conceitos aprendidos no primeiro módulo do curso, compile e execute a classe Java, você deverá ver no terminal algo similar a:</p> 
+        <!-- CODE:BEGIN -->
+        <div style="text-align: left"><pre><code>
+Executando experimento para número = 1
+Experimento iterado 1 vezes.
+Experimento executado em 1ms
+
+Executando experimento para número = 2
+Experimento iterado 2 vezes.
+Experimento executado em 0ms
+
+Executando experimento para número = 3
+Experimento iterado 4 vezes.
+Experimento executado em 0ms
+
+Executando experimento para número = 4
+Experimento iterado 7 vezes.
+Experimento executado em 0ms
+
+Executando experimento para número = 5
+Experimento iterado 12 vezes.
+Experimento executado em 0ms
+
+Executando experimento para número = 10
+Experimento iterado 143 vezes.
+Experimento executado em 0ms
+
+Executando experimento para número = 20
+Experimento iterado 17710 vezes.
+Experimento executado em 0ms
+
+Executando experimento para número = 30
+Experimento iterado 2178308 vezes.
+Experimento executado em 7ms
+
+Executando experimento para número = 40
+Experimento iterado 267914295 vezes.
+Experimento executado em 638ms
+
+Executando experimento para número = 45
+Experimento iterado 2971215072 vezes.
+Experimento executado em 6656ms
+
+Executando experimento para número = 50
+Experimento iterado 32951280098 vezes.
+Experimento executado em 72958ms        
+        </code></pre></div>
+        <!-- CODE:END -->
+          <br />
+          <p>Verifique o tempo de execução e número de iterações para ver como a performance diminui a medida que adicionamos valores maiores de entrada.</p>  
+          <p>Aproveite também para testar a execução com outros valores, até estar confortável com o entendimento de execução desse algoritmo.</p>    
+      </div>
+        
+        <!-- PAGINATION:BEGIN -->
+        <br />
+        <div style="text-align: center">
+            <ul class="pagination" role="navigation" aria-label="Pagination">
+              <li class="disabled anterior" style="cursor: pointer" onclick="Paginacao.paginaAnterior()">Anterior</li>
+              <li class="proxima" style="cursor: pointer" onclick="Paginacao.proximaPagina()">Próximo</li>
+            </ul>
+        </div>
+        <!-- PAGINATION:END -->
+        
+        <!-- END_CLASS:BEGIN -->
+        <a class="button success expanded concluir" href="../index.html#big-o" onclick="return Persistencia.completar('.big-o-n-fatorial', '.big-o-n-2');">Concluir lição</a>
+        <a class="button secondary expanded sair" href="../index.html#big-o">Sair da lição</a>
+        <!-- END_CLASS:END -->
+        
+    </div>
+    <!-- MAIN:END -->
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/menu-off-canvas.js"></script>
+    <script src="../assets/js/paginacao.js"></script>
+    <script src="../assets/js/localstorage-persistencia.js"></script>
+    <script src="../assets/js/i18n-en_GB.js"></script>
+    <script>
+        $(document).foundation();
+        hljs.initHighlightingOnLoad();
+        Paginacao.init(5);
+        Paginacao.paginar();
+        if (!Persistencia.temAcessoPagina('.big-o-n-fatorial')) {
+            Persistencia.redirecionarIndex();
+        }
+    </script>
+  </body>
+</html>
