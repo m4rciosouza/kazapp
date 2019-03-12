@@ -1,3 +1,7 @@
+var API_BASE_URL            = "http://localhost:8888/kazapp/api/";
+var URL_DADOS_USUARIO       = API_BASE_URL + "dados-usuario.php";
+var URL_OBTER_DADOS_USUARIO = API_BASE_URL + "obter-dados-usuario.php?usuarioId=";
+
 var Persistencia = {
     
     dados: [
@@ -257,7 +261,7 @@ var Persistencia = {
     },
     
     redirecionarIndex: function() {
-        location.href = "../index.html";
+        location.href = "../../index.html";
     },
     
     // mailbox:inicio
@@ -324,7 +328,7 @@ var Persistencia = {
         var sincronizar = localStorage['kazapp-sincronizar'] || 'true';
         var idUsuario   = localStorage['kazapp-id'] || false;
         if (sincronizar == 'true' && idUsuario) {
-            $.post("http://localhost:8888/kazapp/api/dados-usuario.php", { 
+            $.post(URL_DADOS_USUARIO, { 
                 usuarioId: idUsuario, 
                 dados: dados,
                 mail: mail
@@ -337,8 +341,7 @@ var Persistencia = {
         if (!idUsuario) {
             return;
         }
-        var url = "http://localhost:8888/kazapp/api/obter-dados-usuario.php?usuarioId=" + idUsuario;
-        return $.getJSON(url, function(data) {
+        return $.getJSON(URL_OBTER_DADOS_USUARIO + idUsuario, function(data) {
             localStorage['kazapp-dados'] = data.dados;
             localStorage['kazapp-mail']  = data.mail;      
             localStorage['kazapp-id']    = data.usuario_id;

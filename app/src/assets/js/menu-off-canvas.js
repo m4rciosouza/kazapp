@@ -8,13 +8,6 @@ var menuOffCavas = '' +
             '<br />' +
             '<br />' +
             '<ul class="vertical menu" data-accordion-menu>' +
-              '<li style="display: none">' +
-                '<a href="#0"><span class="title-bar-title i18n-off-canvas-1">Língua</span></a>' +
-                '<ul class="menu vertical nested is-active">' +
-                  '<li><a href="#0" onclick="I18nTraducao.definirLingua(\'en_GB\');"><img src="/html/assets/img/en_GB.png" style="width: 20px; height: 20px"> <span class="title-bar-title i18n-off-canvas-2">Inglês</span></a></li>' +
-                  '<li><a href="#0" onclick="I18nTraducao.definirLingua(\'pt_BR\');"><img src="/html/assets/img/pt_BR.png" style="width: 20px; height: 20px"> <span class="title-bar-title i18n-off-canvas-3">Português</span></a></li>' +
-                '</ul>' +
-              '</li>' +
               '<li><a href="sobre.html"><i class="fi-info" style="font-size: 20px; color: #1779ba"></i> <span class="title-bar-title i18n-off-canvas-4">Sobre</span></a></li>' +
               '<li><a href="redes-sociais.html"><i class="fi-address-book" style="font-size: 20px; color: #1779ba"></i> <span class="title-bar-title i18n-off-canvas-4">Redes sociais</span></a></li>' +
               '<li><a href="loja.html"><span class="title-bar-title i18n-off-canvas-4"><i class="fi-shopping-bag" style="font-size: 20px; color: #1779ba"></i> Loja</span></a></li>' +
@@ -34,8 +27,6 @@ var menuOffCavas = '' +
               '</div>' +
               '<div class="title-bar-right" style="display: block">' +
                 '<button class="menu-icon" type="button" style="display: none"></button>' +
-                '<a href="#" data-toggle="offCanvasLeft" class="menu-flag-pt_BR" style="display: none"><img src="/html/assets/img/pt_BR.png" style="width: 20px; height: 20px" /></a>' +
-                '<a href="#" data-toggle="offCanvasLeft" class="menu-flag-en_GB" style="display: none"><img src="/html/assets/img/en_GB.png" style="width: 20px; height: 20px" /></a>' +
                 '<a href="sincronizar.html" alt="Sincronizar"><i class="fi-loop" style="font-size: 20px; color: white"></i><span class="alert badge aviso-sincronizar">!</span></a>' +
                 '&nbsp;&nbsp;&nbsp;' +
                 '<a href="loja.html" alt="Loja"><i class="fi-shopping-bag" style="font-size: 20px; color: white"></i><span class="alert badge loja-alerta">!</span></a>' +
@@ -68,4 +59,11 @@ if (dataUltimoAcessoLoja) {
 // exibir alerta de sincronização de id de usuário
 if (localStorage['kazapp-aviso-sincronizar'] == 'false') {
      $('.aviso-sincronizar').css('display', 'none');
+}
+// atualiza o path das urls
+if (window.location.pathname.indexOf('/aulas/') !== -1) {
+    $('.off-canvas-wrapper-inner a').each(function() {
+        var href = $(this).attr('href');
+        $(this).attr('href', '../../' + href);
+    });
 }
