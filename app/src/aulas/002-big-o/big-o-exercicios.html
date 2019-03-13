@@ -5,9 +5,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aprenda Java e Algoritmos | Kazapp</title>
-    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.min.css" />
-    <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
-    <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
+    <link rel="stylesheet" href="../../../node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="../../assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="../../../node_modules/highlight.js/styles/androidstudio.css" />
     <style>
         body { background-color: #FFF; padding: 5px; } 
         .rounded { border-radius: 25px; }
@@ -31,8 +31,8 @@
         <br />
         <nav role="navigation">
           <ul class="breadcrumbs">
-              <li><a href="../index.html">Início</a></li>
-              <li><a href="../index.html#big-o">Big-O</a></li>
+              <li><a href="../../index.html">Início</a></li>
+              <li><a href="../../index.html#big-o">Big-O</a></li>
               <li>Exercícios</li>
           </ul>
         </nav>
@@ -49,7 +49,7 @@
         
       <div class="pag1">
           <h2>Dado o gráfico a seguir, qual a complexidade de PIOR performance contida nele?</h2>
-          <p><img src="../assets/img/big-o-comparacao.png" alt="Big-O" /></p>
+          <p><img src="../../assets/img/big-o-comparacao.png" alt="Big-O" /></p>
           <div class="callout primary rounded p1 p1r1"><label><input type="radio" name="p1" value="1"><span class="primary label p1 p1r1 rounded">A</span> O(n log n)</label></div>
           <div class="callout primary rounded p1 p1r2"><label><input type="radio" name="p1" value="2"><span class="primary label p1 p1r2 rounded">B</span> O(n!)</label></div>
           <div class="callout primary rounded p1 p1r3"><label><input type="radio" name="p1" value="3"><span class="primary label p1 p1r3 rounded">C</span> O(1)</label></div>
@@ -58,7 +58,7 @@
         
       <div class="pag2">
           <h2>Dado o gráfico a seguir, qual a complexidade de MELHOR performance contida nele?</h2>
-          <p><img src="../assets/img/big-o-comparacao.png" alt="Big-O" /></p>
+          <p><img src="../../assets/img/big-o-comparacao.png" alt="Big-O" /></p>
           <div class="callout primary rounded p2 p2r1"><label><input type="radio" name="p2" value="1"><span class="primary label p2 p2r1 rounded">A</span> O(n)</label></div>
           <div class="callout primary rounded p2 p2r2"><label><input type="radio" name="p2" value="2"><span class="primary label p2 p2r2 rounded">B</span> O(1)</label></div>
           <div class="callout primary rounded p2 p2r3"><label><input type="radio" name="p2" value="3"><span class="primary label p2 p2r3 rounded">C</span> O(n log n)</label></div>
@@ -190,26 +190,26 @@ private int buscaBinaria(int[] numeros, int inicio, int fim, int numero) {
             <a class="button primary expanded tentar_novamente naoPassou" href="#" onclick="location.reload();">
                 Tentar novamente
             </a>
-            <a class="button secondary expanded sair" href="../index.html#big-o">Sair da lição</a>
+            <a class="button secondary expanded sair" href="../../index.html#big-o">Sair da lição</a>
             <button class="close-button" data-close aria-label="Close reveal" type="button">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>  
           
-          <a class="button secondary expanded sair" href="../index.html#big-o">Sair da lição</a>
+          <a class="button secondary expanded sair" href="../../index.html#big-o">Sair da lição</a>
         <!-- END_CLASS:END -->
         
     </div>
     <!-- MAIN:END -->
 
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
-    <script src="../assets/js/highlight.min.js"></script>
-    <script src="../assets/js/menu-off-canvas.js"></script>
-    <script src="../assets/js/paginacao.js"></script>
-    <script src="../assets/js/localstorage-persistencia.js"></script>
-    <script src="../assets/js/exercicios.js"></script>
-    <script src="../assets/js/i18n-en_GB.js"></script>
+    <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/menu-off-canvas.js"></script>
+    <script src="../../assets/js/paginacao.js"></script>
+    <script src="../../assets/js/localstorage-persistencia.js"></script>
+    <script src="../../assets/js/exercicios.js"></script>
+    <script src="../../assets/js/i18n-en_GB.js"></script>
     <script>
         $(document).foundation();
         hljs.initHighlightingOnLoad();
@@ -219,19 +219,24 @@ private int buscaBinaria(int[] numeros, int inicio, int fim, int numero) {
             if (avaliacaoNota > 0) {
                 enviarAvaliacao('big-o', avaliacaoNota)
                     .always(function() {
-                        Persistencia.completarMultiplos([
-                            '.big-o-introducao', 
-                            '.big-o-n-fatorial', 
-                            '.big-o-n-2', 
-                            '.big-o-n-log-n', 
-                            '.big-o-n', 
-                            '.big-o-log-n', 
-                            '.big-o-1', 
-                            '.algoritmos-busca-1-introducao'
-                        ]);
-                        location.href="../index.html#algoritmos-busca-1";
+                        completarModulo();            
                     });
+            } else {
+                completarModulo();
             }
+        }
+        function completarModulo() {
+            Persistencia.completarMultiplos([
+                '.big-o-introducao', 
+                '.big-o-n-fatorial', 
+                '.big-o-n-2', 
+                '.big-o-n-log-n', 
+                '.big-o-n', 
+                '.big-o-log-n', 
+                '.big-o-1', 
+                '.algoritmos-busca-1-introducao'
+            ]);
+            location.href="../../index.html#algoritmos-busca-1";
         }
     </script>
   </body>

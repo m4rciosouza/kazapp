@@ -1,3 +1,6 @@
+var API_BASE_URL_RATING = "http://localhost:8888/kazapp/api/";
+var URL_RATING          = API_BASE_URL_RATING + "rating.php";
+
 function calcularJavaBasicoExercicios() {
     var resultados = [
         { res: "2", sel: $("input[name='p1']:checked").val() },
@@ -98,7 +101,7 @@ function selectStar(index) {
 }
 
 function enviarAvaliacao(modulo, avaliacao) {
-    return $.post("http://localhost:8888/kazapp/api/rating.php", { 
+    return $.post(URL_RATING, { 
                 usuarioId: localStorage['kazapp-id'], 
                 modulo: modulo,
                 avaliacao: avaliacao

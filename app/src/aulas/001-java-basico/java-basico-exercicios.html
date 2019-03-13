@@ -5,9 +5,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aprenda Java e Algoritmos | Kazapp</title>
-    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.min.css" />
-    <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
-    <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
+    <link rel="stylesheet" href="../../../node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="../../assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="../../../node_modules/highlight.js/styles/androidstudio.css" />
     <style>
         body { background-color: #FFF; padding: 5px; } 
         .rounded { border-radius: 25px; }
@@ -31,8 +31,8 @@
         <br />
         <nav role="navigation">
           <ul class="breadcrumbs">
-              <li><a href="../index.html"><span class="i18n" data-i18n="javaBasicoExercicios-t1">Início</span></a></li>
-              <li><a href="../index.html#java-basico"><span class="i18n" data-i18n="javaBasicoExercicios-t2">Java Básico</span></a></li>
+              <li><a href="../../index.html"><span class="i18n" data-i18n="javaBasicoExercicios-t1">Início</span></a></li>
+              <li><a href="../../index.html#java-basico"><span class="i18n" data-i18n="javaBasicoExercicios-t2">Java Básico</span></a></li>
               <li><span class="i18n" data-i18n="javaBasicoExercicios-t37">Exercícios</span></li>
           </ul>
         </nav>
@@ -324,7 +324,7 @@ public class Switch {
             <a class="button primary expanded tentar_novamente naoPassou" href="#" onclick="location.reload();">
                 <span class="i18n" data-i18n="javaBasicoExercicios-t36">Tentar novamente</span>
             </a>
-            <a class="button secondary expanded sair" href="../index.html#java-basico"><span class="i18n-sair-licao">Sair da lição</span></a>
+            <a class="button secondary expanded sair" href="../../index.html#java-basico"><span class="i18n-sair-licao">Sair da lição</span></a>
             <button class="close-button" data-close aria-label="Close reveal" type="button">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -336,14 +336,14 @@ public class Switch {
     </div>
     <!-- MAIN:END -->
 
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
-    <script src="../assets/js/highlight.min.js"></script>
-    <script src="../assets/js/menu-off-canvas.js"></script>
-    <script src="../assets/js/paginacao.js"></script>
-    <script src="../assets/js/localstorage-persistencia.js"></script>
-    <script src="../assets/js/exercicios.js"></script>
-    <script src="../assets/js/i18n-en_GB.js"></script>
+    <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/menu-off-canvas.js"></script>
+    <script src="../../assets/js/paginacao.js"></script>
+    <script src="../../assets/js/localstorage-persistencia.js"></script>
+    <script src="../../assets/js/exercicios.js"></script>
+    <script src="../../assets/js/i18n-en_GB.js"></script>
     <script>
         $(document).foundation();
         hljs.initHighlightingOnLoad();
@@ -353,17 +353,22 @@ public class Switch {
             if (avaliacaoNota > 0) {
                 enviarAvaliacao('java-basico', avaliacaoNota)
                     .always(function() {
-                        Persistencia.completarMultiplos([
-                            '.ola-mundo', 
-                            '.if-else', 
-                            '.for', 
-                            '.do-while', 
-                            '.switch-op', 
-                            '.big-o-introducao'
-                        ]);
-                        location.href="../index.html#big-o";
+                        completarModulo();
                     });
+            } else {
+                completarModulo();
             }
+        }
+        function completarModulo() {
+            Persistencia.completarMultiplos([
+                '.ola-mundo', 
+                '.if-else', 
+                '.for', 
+                '.do-while', 
+                '.switch-op', 
+                '.big-o-introducao'
+            ]);
+            location.href="../../index.html#big-o";
         }
     </script>
   </body>

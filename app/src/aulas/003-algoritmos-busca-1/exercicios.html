@@ -5,9 +5,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aprenda Java e Algoritmos | Kazapp</title>
-    <link rel="stylesheet" href="../node_modules/foundation-sites/dist/css/foundation.min.css" />
-    <link rel="stylesheet" href="../assets/foundation-icons/foundation-icons.css" />
-    <link rel="stylesheet" href="../node_modules/highlight.js/styles/androidstudio.css" />
+    <link rel="stylesheet" href="../../../node_modules/foundation-sites/dist/css/foundation.min.css" />
+    <link rel="stylesheet" href="../../assets/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="../../../node_modules/highlight.js/styles/androidstudio.css" />
     <style>
         body { background-color: #FFF; padding: 5px; } 
         .rounded { border-radius: 25px; }
@@ -31,8 +31,8 @@
         <br />
         <nav role="navigation">
           <ul class="breadcrumbs">
-              <li><a href="../index.html">Início</a></li>
-              <li><a href="../index.html#algoritmos-busca-1">Algoritmos de busca 1</a></li>
+              <li><a href="../../index.html">Início</a></li>
+              <li><a href="../../index.html#algoritmos-busca-1">Algoritmos de busca 1</a></li>
               <li>Exercícios</li>
           </ul>
         </nav>
@@ -155,26 +155,26 @@
             <a class="button primary expanded tentar_novamente naoPassou" href="#" onclick="location.reload();">
                 Tentar novamente
             </a>
-            <a class="button secondary expanded sair" href="../index.html#algoritmos-busca-1">Sair da lição</a>
+            <a class="button secondary expanded sair" href="../../index.html#algoritmos-busca-1">Sair da lição</a>
             <button class="close-button" data-close aria-label="Close reveal" type="button">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>  
           
-          <a class="button secondary expanded sair" href="../index.html#algoritmos-busca-1">Sair da lição</a>
+          <a class="button secondary expanded sair" href="../../index.html#algoritmos-busca-1">Sair da lição</a>
         <!-- END_CLASS:END -->
         
     </div>
     <!-- MAIN:END -->
 
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
-    <script src="../assets/js/highlight.min.js"></script>
-    <script src="../assets/js/menu-off-canvas.js"></script>
-    <script src="../assets/js/paginacao.js"></script>
-    <script src="../assets/js/localstorage-persistencia.js"></script>
-    <script src="../assets/js/exercicios.js"></script>
-    <script src="../assets/js/i18n-en_GB.js"></script>
+    <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../../node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="../../assets/js/menu-off-canvas.js"></script>
+    <script src="../../assets/js/paginacao.js"></script>
+    <script src="../../assets/js/localstorage-persistencia.js"></script>
+    <script src="../../assets/js/exercicios.js"></script>
+    <script src="../../assets/js/i18n-en_GB.js"></script>
     <script>
         $(document).foundation();
         hljs.initHighlightingOnLoad();
@@ -184,14 +184,19 @@
             if (avaliacaoNota > 0) {
                 enviarAvaliacao('algoritmos-busca-1', avaliacaoNota)
                     .always(function() {
-                        Persistencia.completarMultiplos([
-                            '.algoritmos-busca-1-introducao', 
-                            '.algoritmos-busca-1-busca-linear', 
-                            '.algoritmos-busca-1-busca-binaria'
-                        ]);
-                        location.href="../index.html#algoritmos-ordenacao-1";
+                        completarModulo();       
                     });
+            } else {
+                completarModulo();
             }
+        }
+        function completarModulo() {
+            Persistencia.completarMultiplos([
+                '.algoritmos-busca-1-introducao', 
+                '.algoritmos-busca-1-busca-linear', 
+                '.algoritmos-busca-1-busca-binaria'
+            ]);
+            location.href="../../index.html#algoritmos-ordenacao-1";
         }
     </script>
   </body>
