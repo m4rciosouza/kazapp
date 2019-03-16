@@ -266,11 +266,11 @@ var Persistencia = {
     
     // mailbox:inicio
     mailbox: {
-        total: 2,
-        naoLidas: 2,
+        total: 1,
+        naoLidas: 1,
         naoLidasInfo: [
-            { id: '#mail-1-subject', lida: false },
-            { id: '#mail-2-subject', lida: false }
+            { id: '#mail-1-subject', lida: false }//,
+            //{ id: '#mail-2-subject', lida: false }
         ]
     },
     mailboxEstiloNaoLidas: function() {
