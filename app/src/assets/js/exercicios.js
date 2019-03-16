@@ -1,5 +1,5 @@
-//var API_BASE_URL_RATING = "http://localhost:8888/kazapp/api/";
-var API_BASE_URL_RATING = "http://app.kazale.com/api/";
+var API_BASE_URL_RATING = "http://localhost:8888/kazapp/api/";
+//var API_BASE_URL_RATING = "http://app.kazale.com/api/";
 var URL_RATING          = API_BASE_URL_RATING + "rating.php";
 
 function calcularJavaBasicoExercicios() {
