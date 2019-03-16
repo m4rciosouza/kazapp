@@ -1,4 +1,5 @@
-var API_BASE_URL            = "http://localhost:8888/kazapp/api/";
+//var API_BASE_URL            = "http://localhost:8888/kazapp/api/";
+var API_BASE_URL            = "http://app.kazale.com/api/";
 var URL_DADOS_USUARIO       = API_BASE_URL + "dados-usuario.php";
 var URL_OBTER_DADOS_USUARIO = API_BASE_URL + "obter-dados-usuario.php?usuarioId=";
 

@@ -28,11 +28,11 @@ $dadosMail  = $mysqli->real_escape_string($dadosMail);
 $dados      = $mysqli->real_escape_string($dados);
 
 $dadosUsuario = [];
-$sql = "SELECT usuario_id, mail, dados FROM dados_usuario WHERE usuario_id = '$usuarioId'";
+$sql = "SELECT id_usuario, mail, dados FROM dados_usuario WHERE id_usuario = '$usuarioId'";
 if ($result = $mysqli->query($sql)) {
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_object()){
-            $dadosUsuario['usuario_id'] = $row->usuario_id;
+            $dadosUsuario['usuario_id'] = $row->id_usuario;
             $dadosUsuario['mail'] = $row->mail;
             $dadosUsuario['dados'] = $row->dados;
         }
@@ -40,7 +40,7 @@ if ($result = $mysqli->query($sql)) {
     $result->close();
 }
 
-mysqli_close($link);
+mysqli_close($mysqli);
     
 if (count($dadosUsuario) > 0) {
     exit(json_encode($dadosUsuario));

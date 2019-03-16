@@ -30,7 +30,7 @@ $dadosMail  = $mysqli->real_escape_string($dadosMail);
 $dados      = $mysqli->real_escape_string($dados);
 
 $id = false;
-$sql = "SELECT id FROM dados_usuario WHERE usuario_id = '$usuarioId'";
+$sql = "SELECT id FROM dados_usuario WHERE id_usuario = '$usuarioId'";
 if ($result = $mysqli->query($sql)) {
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_object()){
@@ -41,13 +41,13 @@ if ($result = $mysqli->query($sql)) {
 }
 
 if ($id) {
-    $sql = "UPDATE `dados_usuario` SET `usuario_id` = '$usuarioId', `mail` = '$dadosMail', `dados` = '$dados' WHERE `dados_usuario`.`id` = $id";
+    $sql = "UPDATE `dados_usuario` SET `id_usuario` = '$usuarioId', `mail` = '$dadosMail', `dados` = '$dados' WHERE `dados_usuario`.`id` = $id";
 } else {
-    $sql = "INSERT INTO `dados_usuario` (`id`, `usuario_id`, `mail`, `dados`, `data_criacao`) VALUES (NULL, '$usuarioId', '$dadosMail', '$dados', CURRENT_TIMESTAMP);";
+    $sql = "INSERT INTO `dados_usuario` (`id`, `id_usuario`, `mail`, `dados`, `data_criacao`) VALUES (NULL, '$usuarioId', '$dadosMail', '$dados', CURRENT_TIMESTAMP);";
 }
 
 $mysqli->query($sql);
 
-mysqli_close($link);
+mysqli_close($mysqli);
     
 exit('OK');
