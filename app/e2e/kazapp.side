@@ -10,7 +10,7 @@
       "id": "05bc0f03-74ac-4460-b4c3-194b71a522b5",
       "comment": "",
       "command": "open",
-      "target": "/src",
+      "target": "/",
       "targets": [],
       "value": ""
     }, {
@@ -497,7 +497,7 @@
       "id": "2f93f58e-717e-4e81-8b22-d36ed512bc9e",
       "comment": "",
       "command": "open",
-      "target": "/src",
+      "target": "/",
       "targets": [],
       "value": ""
     }, {
@@ -1318,7 +1318,7 @@
       "id": "9eeb8ee2-fc9b-4148-9c05-c891d2b83238",
       "comment": "",
       "command": "open",
-      "target": "/src",
+      "target": "/",
       "targets": [],
       "value": ""
     }, {
